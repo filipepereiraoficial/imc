@@ -157,7 +157,7 @@ export function Nucleos() {
                 <div className="mt-auto flex items-center gap-3 border-t border-line pt-3">
                   {dirigente && <Avatar nome={dirigente.nomeCompleto} tamanho="xs" />}
                   <span className="min-w-0 flex-1 truncate text-xs text-ink-faint">
-                    {dirigente ? `Dirigente: ${dirigente.nomeExibicao}` : 'Sem dirigente designado'}
+                    {dirigente ? `Mestre Titular: ${dirigente.nomeExibicao}` : 'Sem Mestre Titular designado'}
                   </span>
                   <span className="shrink-0 text-sm font-bold tabular-nums text-ink">{membros.length}</span>
                   <Icone nome="groups" className="shrink-0 text-[16px] text-ink-faint" />
@@ -348,12 +348,16 @@ export function NucleoDetalhe({ proprio }: { proprio?: boolean }) {
 
         <aside className="min-w-0 space-y-4">
           <Cartao>
-            <CabecalhoCartao titulo="Direção" icone="workspace_premium" />
+            <CabecalhoCartao
+              titulo="Direção do Núcleo"
+              descricao="Est. Art. 60 — o Mestre Titular administra a unidade local."
+              icone="workspace_premium"
+            />
             <ul className="mt-4 space-y-3">
               {[
-                { rotulo: 'Dirigente', pessoa: dirigente },
-                { rotulo: 'Secretário', pessoa: secretario },
-                { rotulo: 'Tesoureiro', pessoa: tesoureiro },
+                { rotulo: 'Mestre Titular', pessoa: dirigente },
+                { rotulo: 'Secretário do Núcleo', pessoa: secretario },
+                { rotulo: 'Tesoureiro do Núcleo', pessoa: tesoureiro },
               ].map((c) => (
                 <li key={c.rotulo} className="flex items-center gap-3">
                   {c.pessoa ? (
@@ -516,9 +520,9 @@ function ModalEdicaoNucleo({ nucleo, aoFechar }: { nucleo: Nucleo; aoFechar: () 
         </Selecao>
         <div className="grid gap-4 [&>*]:min-w-0 sm:grid-cols-3">
           {[
-            { rotulo: 'Dirigente', valor: dirigenteId, definir: setDirigenteId },
-            { rotulo: 'Secretário', valor: secretarioId, definir: setSecretarioId },
-            { rotulo: 'Tesoureiro', valor: tesoureiroId, definir: setTesoureiroId },
+            { rotulo: 'Mestre Titular', valor: dirigenteId, definir: setDirigenteId },
+            { rotulo: 'Secretário do Núcleo', valor: secretarioId, definir: setSecretarioId },
+            { rotulo: 'Tesoureiro do Núcleo', valor: tesoureiroId, definir: setTesoureiroId },
           ].map((c) => (
             <Selecao key={c.rotulo} rotulo={c.rotulo} value={c.valor} onChange={(e) => c.definir(e.target.value)}>
               <option value="">Não designado</option>

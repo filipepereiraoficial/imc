@@ -3237,9 +3237,9 @@ const DADOS: Carga = {
       "municipioId": "mu-jaboatao",
       "endereco": "Rua da Formação, 120 — Centro",
       "dataFundacao": "2026-02-14T12:00:00.000Z",
-      "dirigenteId": "me-001",
-      "secretarioId": "me-010",
-      "tesoureiroId": "me-019",
+      "dirigenteId": "me-019",
+      "secretarioId": "me-001",
+      "tesoureiroId": "me-010",
       "situacao": "ativo",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
       "contatoEmail": "nucleo-jaboatao-dos-guararapes@aordem.org",
@@ -3254,8 +3254,8 @@ const DADOS: Carga = {
       "municipioId": "mu-recife",
       "endereco": "Rua da Formação, 157 — Centro",
       "dataFundacao": "2025-09-03T12:00:00.000Z",
-      "dirigenteId": "me-002",
-      "secretarioId": "me-011",
+      "dirigenteId": "me-011",
+      "secretarioId": "me-002",
       "tesoureiroId": "me-020",
       "situacao": "ativo",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
@@ -3271,8 +3271,8 @@ const DADOS: Carga = {
       "municipioId": "mu-sp",
       "endereco": "Rua da Formação, 194 — Centro",
       "dataFundacao": "2025-05-20T12:00:00.000Z",
-      "dirigenteId": "me-003",
-      "secretarioId": "me-012",
+      "dirigenteId": "me-012",
+      "secretarioId": "me-003",
       "tesoureiroId": "me-021",
       "situacao": "ativo",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
@@ -3288,8 +3288,8 @@ const DADOS: Carga = {
       "municipioId": "mu-campinas",
       "endereco": "Rua da Formação, 231 — Centro",
       "dataFundacao": "2026-01-11T12:00:00.000Z",
-      "dirigenteId": "me-004",
-      "secretarioId": "me-013",
+      "dirigenteId": "me-013",
+      "secretarioId": "me-004",
       "tesoureiroId": "me-022",
       "situacao": "ativo",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
@@ -3305,8 +3305,8 @@ const DADOS: Carga = {
       "municipioId": "mu-rj",
       "endereco": "Rua da Formação, 268 — Centro",
       "dataFundacao": "2025-07-08T12:00:00.000Z",
-      "dirigenteId": "me-005",
-      "secretarioId": "me-014",
+      "dirigenteId": "me-014",
+      "secretarioId": "me-005",
       "tesoureiroId": "me-023",
       "situacao": "ativo",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
@@ -3322,8 +3322,8 @@ const DADOS: Carga = {
       "municipioId": "mu-bh",
       "endereco": "Rua da Formação, 305 — Centro",
       "dataFundacao": "2026-03-02T12:00:00.000Z",
-      "dirigenteId": "me-006",
-      "secretarioId": "me-015",
+      "dirigenteId": "me-015",
+      "secretarioId": "me-006",
       "tesoureiroId": "me-024",
       "situacao": "ativo",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
@@ -3339,8 +3339,8 @@ const DADOS: Carga = {
       "municipioId": "mu-salvador",
       "endereco": "Rua da Formação, 342 — Centro",
       "dataFundacao": "2026-04-19T12:00:00.000Z",
-      "dirigenteId": "me-007",
-      "secretarioId": "me-016",
+      "dirigenteId": "me-016",
+      "secretarioId": "me-007",
       "tesoureiroId": "me-025",
       "situacao": "em_formacao",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
@@ -3356,8 +3356,8 @@ const DADOS: Carga = {
       "municipioId": "mu-brasilia",
       "endereco": "Rua da Formação, 379 — Centro",
       "dataFundacao": "2025-11-27T12:00:00.000Z",
-      "dirigenteId": "me-008",
-      "secretarioId": "me-017",
+      "dirigenteId": "me-017",
+      "secretarioId": "me-008",
       "tesoureiroId": "me-026",
       "situacao": "ativo",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
@@ -3373,8 +3373,8 @@ const DADOS: Carga = {
       "municipioId": "mu-lisboa",
       "endereco": "Rua da Formação, 416 — Centro",
       "dataFundacao": "2026-05-30T12:00:00.000Z",
-      "dirigenteId": "me-009",
-      "secretarioId": "me-018",
+      "dirigenteId": "me-018",
+      "secretarioId": "me-009",
       "tesoureiroId": "me-027",
       "situacao": "em_formacao",
       "descricao": "Unidade territorial responsável pela formação, mobilização e representação da Ordem em sua área de atuação.",
@@ -12554,7 +12554,7 @@ const DADOS: Carga = {
     {
       "id": "as-021",
       "orgaoId": "org-jaboatao-local",
-      "membroId": "me-001",
+      "membroId": "me-019",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12563,7 +12563,7 @@ const DADOS: Carga = {
     {
       "id": "as-022",
       "orgaoId": "org-recife-local",
-      "membroId": "me-002",
+      "membroId": "me-011",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12572,7 +12572,7 @@ const DADOS: Carga = {
     {
       "id": "as-023",
       "orgaoId": "org-sp-local",
-      "membroId": "me-003",
+      "membroId": "me-012",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12581,7 +12581,7 @@ const DADOS: Carga = {
     {
       "id": "as-024",
       "orgaoId": "org-campinas-local",
-      "membroId": "me-004",
+      "membroId": "me-013",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12590,7 +12590,7 @@ const DADOS: Carga = {
     {
       "id": "as-025",
       "orgaoId": "org-rj-local",
-      "membroId": "me-005",
+      "membroId": "me-014",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12599,7 +12599,7 @@ const DADOS: Carga = {
     {
       "id": "as-026",
       "orgaoId": "org-bh-local",
-      "membroId": "me-006",
+      "membroId": "me-015",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12608,7 +12608,7 @@ const DADOS: Carga = {
     {
       "id": "as-027",
       "orgaoId": "org-salvador-local",
-      "membroId": "me-007",
+      "membroId": "me-016",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12617,7 +12617,7 @@ const DADOS: Carga = {
     {
       "id": "as-028",
       "orgaoId": "org-brasilia-local",
-      "membroId": "me-008",
+      "membroId": "me-017",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12626,7 +12626,7 @@ const DADOS: Carga = {
     {
       "id": "as-029",
       "orgaoId": "org-lisboa-local",
-      "membroId": "me-009",
+      "membroId": "me-018",
       "funcao": "Coordenador",
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
@@ -12640,7 +12640,7 @@ const DADOS: Carga = {
       "membroId": "me-001",
       "nucleoId": "nu-jaboatao",
       "celebradoEm": "2023-05-28T13:00:00.000Z",
-      "presididoPorId": "me-001",
+      "presididoPorId": "me-019",
       "local": "Núcleo Jaboatão dos Guararapes",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12651,7 +12651,7 @@ const DADOS: Carga = {
       "membroId": "me-002",
       "nucleoId": "nu-recife",
       "celebradoEm": "2023-06-22T13:00:00.000Z",
-      "presididoPorId": "me-002",
+      "presididoPorId": "me-011",
       "local": "Núcleo Recife Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12662,7 +12662,7 @@ const DADOS: Carga = {
       "membroId": "me-003",
       "nucleoId": "nu-sp",
       "celebradoEm": "2023-07-17T13:00:00.000Z",
-      "presididoPorId": "me-003",
+      "presididoPorId": "me-012",
       "local": "Núcleo São Paulo Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12673,7 +12673,7 @@ const DADOS: Carga = {
       "membroId": "me-004",
       "nucleoId": "nu-campinas",
       "celebradoEm": "2023-08-11T13:00:00.000Z",
-      "presididoPorId": "me-004",
+      "presididoPorId": "me-013",
       "local": "Núcleo Campinas",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12684,7 +12684,7 @@ const DADOS: Carga = {
       "membroId": "me-005",
       "nucleoId": "nu-rj",
       "celebradoEm": "2023-09-05T13:00:00.000Z",
-      "presididoPorId": "me-005",
+      "presididoPorId": "me-014",
       "local": "Núcleo Rio de Janeiro",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12695,7 +12695,7 @@ const DADOS: Carga = {
       "membroId": "me-006",
       "nucleoId": "nu-bh",
       "celebradoEm": "2023-09-30T13:00:00.000Z",
-      "presididoPorId": "me-006",
+      "presididoPorId": "me-015",
       "local": "Núcleo Belo Horizonte",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12706,7 +12706,7 @@ const DADOS: Carga = {
       "membroId": "me-007",
       "nucleoId": "nu-salvador",
       "celebradoEm": "2023-10-25T13:00:00.000Z",
-      "presididoPorId": "me-007",
+      "presididoPorId": "me-016",
       "local": "Núcleo Salvador",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12717,7 +12717,7 @@ const DADOS: Carga = {
       "membroId": "me-008",
       "nucleoId": "nu-brasilia",
       "celebradoEm": "2023-11-19T13:00:00.000Z",
-      "presididoPorId": "me-008",
+      "presididoPorId": "me-017",
       "local": "Núcleo Brasília",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12728,7 +12728,7 @@ const DADOS: Carga = {
       "membroId": "me-009",
       "nucleoId": "nu-lisboa",
       "celebradoEm": "2023-12-14T13:00:00.000Z",
-      "presididoPorId": "me-009",
+      "presididoPorId": "me-018",
       "local": "Núcleo Lisboa",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12739,7 +12739,7 @@ const DADOS: Carga = {
       "membroId": "me-010",
       "nucleoId": "nu-jaboatao",
       "celebradoEm": "2024-01-08T13:00:00.000Z",
-      "presididoPorId": "me-001",
+      "presididoPorId": "me-019",
       "local": "Núcleo Jaboatão dos Guararapes",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12750,7 +12750,7 @@ const DADOS: Carga = {
       "membroId": "me-011",
       "nucleoId": "nu-recife",
       "celebradoEm": "2024-02-02T13:00:00.000Z",
-      "presididoPorId": "me-002",
+      "presididoPorId": "me-011",
       "local": "Núcleo Recife Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12761,7 +12761,7 @@ const DADOS: Carga = {
       "membroId": "me-012",
       "nucleoId": "nu-sp",
       "celebradoEm": "2024-02-27T13:00:00.000Z",
-      "presididoPorId": "me-003",
+      "presididoPorId": "me-012",
       "local": "Núcleo São Paulo Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12772,7 +12772,7 @@ const DADOS: Carga = {
       "membroId": "me-013",
       "nucleoId": "nu-campinas",
       "celebradoEm": "2024-03-23T13:00:00.000Z",
-      "presididoPorId": "me-004",
+      "presididoPorId": "me-013",
       "local": "Núcleo Campinas",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12783,7 +12783,7 @@ const DADOS: Carga = {
       "membroId": "me-014",
       "nucleoId": "nu-rj",
       "celebradoEm": "2024-04-17T13:00:00.000Z",
-      "presididoPorId": "me-005",
+      "presididoPorId": "me-014",
       "local": "Núcleo Rio de Janeiro",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12794,7 +12794,7 @@ const DADOS: Carga = {
       "membroId": "me-015",
       "nucleoId": "nu-bh",
       "celebradoEm": "2024-05-12T13:00:00.000Z",
-      "presididoPorId": "me-006",
+      "presididoPorId": "me-015",
       "local": "Núcleo Belo Horizonte",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12805,7 +12805,7 @@ const DADOS: Carga = {
       "membroId": "me-016",
       "nucleoId": "nu-salvador",
       "celebradoEm": "2024-06-06T13:00:00.000Z",
-      "presididoPorId": "me-007",
+      "presididoPorId": "me-016",
       "local": "Núcleo Salvador",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12816,7 +12816,7 @@ const DADOS: Carga = {
       "membroId": "me-017",
       "nucleoId": "nu-brasilia",
       "celebradoEm": "2024-07-01T13:00:00.000Z",
-      "presididoPorId": "me-008",
+      "presididoPorId": "me-017",
       "local": "Núcleo Brasília",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12827,7 +12827,7 @@ const DADOS: Carga = {
       "membroId": "me-018",
       "nucleoId": "nu-lisboa",
       "celebradoEm": "2024-07-26T13:00:00.000Z",
-      "presididoPorId": "me-009",
+      "presididoPorId": "me-018",
       "local": "Núcleo Lisboa",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12838,7 +12838,7 @@ const DADOS: Carga = {
       "membroId": "me-019",
       "nucleoId": "nu-jaboatao",
       "celebradoEm": "2024-08-20T13:00:00.000Z",
-      "presididoPorId": "me-001",
+      "presididoPorId": "me-019",
       "local": "Núcleo Jaboatão dos Guararapes",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12849,7 +12849,7 @@ const DADOS: Carga = {
       "membroId": "me-020",
       "nucleoId": "nu-recife",
       "celebradoEm": "2024-09-14T13:00:00.000Z",
-      "presididoPorId": "me-002",
+      "presididoPorId": "me-011",
       "local": "Núcleo Recife Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12860,7 +12860,7 @@ const DADOS: Carga = {
       "membroId": "me-021",
       "nucleoId": "nu-sp",
       "celebradoEm": "2024-10-09T13:00:00.000Z",
-      "presididoPorId": "me-003",
+      "presididoPorId": "me-012",
       "local": "Núcleo São Paulo Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12871,7 +12871,7 @@ const DADOS: Carga = {
       "membroId": "me-022",
       "nucleoId": "nu-campinas",
       "celebradoEm": "2024-11-03T13:00:00.000Z",
-      "presididoPorId": "me-004",
+      "presididoPorId": "me-013",
       "local": "Núcleo Campinas",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12882,7 +12882,7 @@ const DADOS: Carga = {
       "membroId": "me-023",
       "nucleoId": "nu-rj",
       "celebradoEm": "2024-11-28T13:00:00.000Z",
-      "presididoPorId": "me-005",
+      "presididoPorId": "me-014",
       "local": "Núcleo Rio de Janeiro",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12893,7 +12893,7 @@ const DADOS: Carga = {
       "membroId": "me-024",
       "nucleoId": "nu-bh",
       "celebradoEm": "2024-12-23T13:00:00.000Z",
-      "presididoPorId": "me-006",
+      "presididoPorId": "me-015",
       "local": "Núcleo Belo Horizonte",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12904,7 +12904,7 @@ const DADOS: Carga = {
       "membroId": "me-025",
       "nucleoId": "nu-salvador",
       "celebradoEm": "2025-01-17T13:00:00.000Z",
-      "presididoPorId": "me-007",
+      "presididoPorId": "me-016",
       "local": "Núcleo Salvador",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12915,7 +12915,7 @@ const DADOS: Carga = {
       "membroId": "me-026",
       "nucleoId": "nu-brasilia",
       "celebradoEm": "2025-02-11T13:00:00.000Z",
-      "presididoPorId": "me-008",
+      "presididoPorId": "me-017",
       "local": "Núcleo Brasília",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12926,7 +12926,7 @@ const DADOS: Carga = {
       "membroId": "me-027",
       "nucleoId": "nu-lisboa",
       "celebradoEm": "2025-03-08T13:00:00.000Z",
-      "presididoPorId": "me-009",
+      "presididoPorId": "me-018",
       "local": "Núcleo Lisboa",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12937,7 +12937,7 @@ const DADOS: Carga = {
       "membroId": "me-028",
       "nucleoId": "nu-jaboatao",
       "celebradoEm": "2025-04-02T13:00:00.000Z",
-      "presididoPorId": "me-001",
+      "presididoPorId": "me-019",
       "local": "Núcleo Jaboatão dos Guararapes",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12948,7 +12948,7 @@ const DADOS: Carga = {
       "membroId": "me-029",
       "nucleoId": "nu-recife",
       "celebradoEm": "2025-04-27T13:00:00.000Z",
-      "presididoPorId": "me-002",
+      "presididoPorId": "me-011",
       "local": "Núcleo Recife Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12959,7 +12959,7 @@ const DADOS: Carga = {
       "membroId": "me-030",
       "nucleoId": "nu-sp",
       "celebradoEm": "2025-05-22T13:00:00.000Z",
-      "presididoPorId": "me-003",
+      "presididoPorId": "me-012",
       "local": "Núcleo São Paulo Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12970,7 +12970,7 @@ const DADOS: Carga = {
       "membroId": "me-031",
       "nucleoId": "nu-campinas",
       "celebradoEm": "2025-06-16T13:00:00.000Z",
-      "presididoPorId": "me-004",
+      "presididoPorId": "me-013",
       "local": "Núcleo Campinas",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12981,7 +12981,7 @@ const DADOS: Carga = {
       "membroId": "me-032",
       "nucleoId": "nu-rj",
       "celebradoEm": "2025-07-11T13:00:00.000Z",
-      "presididoPorId": "me-005",
+      "presididoPorId": "me-014",
       "local": "Núcleo Rio de Janeiro",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -12992,7 +12992,7 @@ const DADOS: Carga = {
       "membroId": "me-033",
       "nucleoId": "nu-bh",
       "celebradoEm": "2025-08-05T13:00:00.000Z",
-      "presididoPorId": "me-006",
+      "presididoPorId": "me-015",
       "local": "Núcleo Belo Horizonte",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13003,7 +13003,7 @@ const DADOS: Carga = {
       "membroId": "me-034",
       "nucleoId": "nu-salvador",
       "celebradoEm": "2025-08-30T13:00:00.000Z",
-      "presididoPorId": "me-007",
+      "presididoPorId": "me-016",
       "local": "Núcleo Salvador",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13014,7 +13014,7 @@ const DADOS: Carga = {
       "membroId": "me-035",
       "nucleoId": "nu-brasilia",
       "celebradoEm": "2025-09-24T13:00:00.000Z",
-      "presididoPorId": "me-008",
+      "presididoPorId": "me-017",
       "local": "Núcleo Brasília",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13025,7 +13025,7 @@ const DADOS: Carga = {
       "membroId": "me-036",
       "nucleoId": "nu-lisboa",
       "celebradoEm": "2025-10-19T13:00:00.000Z",
-      "presididoPorId": "me-009",
+      "presididoPorId": "me-018",
       "local": "Núcleo Lisboa",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13036,7 +13036,7 @@ const DADOS: Carga = {
       "membroId": "me-037",
       "nucleoId": "nu-jaboatao",
       "celebradoEm": "2025-11-13T13:00:00.000Z",
-      "presididoPorId": "me-001",
+      "presididoPorId": "me-019",
       "local": "Núcleo Jaboatão dos Guararapes",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13047,7 +13047,7 @@ const DADOS: Carga = {
       "membroId": "me-038",
       "nucleoId": "nu-recife",
       "celebradoEm": "2025-12-08T13:00:00.000Z",
-      "presididoPorId": "me-002",
+      "presididoPorId": "me-011",
       "local": "Núcleo Recife Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13058,7 +13058,7 @@ const DADOS: Carga = {
       "membroId": "me-039",
       "nucleoId": "nu-sp",
       "celebradoEm": "2026-01-02T13:00:00.000Z",
-      "presididoPorId": "me-003",
+      "presididoPorId": "me-012",
       "local": "Núcleo São Paulo Central",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13069,7 +13069,7 @@ const DADOS: Carga = {
       "membroId": "me-040",
       "nucleoId": "nu-campinas",
       "celebradoEm": "2026-01-27T13:00:00.000Z",
-      "presididoPorId": "me-004",
+      "presididoPorId": "me-013",
       "local": "Núcleo Campinas",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13080,7 +13080,7 @@ const DADOS: Carga = {
       "membroId": "me-044",
       "nucleoId": "nu-brasilia",
       "celebradoEm": "2026-05-07T13:00:00.000Z",
-      "presididoPorId": "me-008",
+      "presididoPorId": "me-017",
       "local": "Núcleo Brasília",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13091,7 +13091,7 @@ const DADOS: Carga = {
       "membroId": "me-045",
       "nucleoId": "nu-lisboa",
       "celebradoEm": "2026-06-01T13:00:00.000Z",
-      "presididoPorId": "me-009",
+      "presididoPorId": "me-018",
       "local": "Núcleo Lisboa",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null
@@ -13102,7 +13102,7 @@ const DADOS: Carga = {
       "membroId": "me-046",
       "nucleoId": "nu-jaboatao",
       "celebradoEm": "2026-06-26T13:00:00.000Z",
-      "presididoPorId": "me-001",
+      "presididoPorId": "me-019",
       "local": "Núcleo Jaboatão dos Guararapes",
       "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
       "grauAlcancadoId": null

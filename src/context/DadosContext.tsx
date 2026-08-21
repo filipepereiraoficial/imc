@@ -21,7 +21,7 @@ const Contexto = createContext<ValorDados | null>(null);
  * Versao da forma da base persistida. Incrementar sempre que o modelo mudar de
  * maneira incompativel — a carga antiga e descartada em vez de quebrar a tela.
  */
-const VERSAO_BASE = 5;
+const VERSAO_BASE = 6;
 
 function carregarBase(): BaseDados {
   const versao = ler<number>('versao-base', 0);
