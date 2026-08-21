@@ -46,7 +46,7 @@ const semente = {
   orgaosLocais: ORGAOS_OBRIGATORIOS_LOCAIS,
 };
 
-const destino = `${raiz}/api/instalacao/semente.json`;
+const destino = `${raiz}/api/nucleo/semente.json`;
 mkdirSync(dirname(destino), { recursive: true });
 writeFileSync(destino, JSON.stringify(semente, null, 2) + '\n', 'utf8');
 console.log(

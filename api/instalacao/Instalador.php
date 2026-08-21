@@ -73,8 +73,8 @@ final class Instalador
         $itens[] = [
             'nome'    => 'Semente de cargos e graus',
             'exigido' => true,
-            'atende'  => is_file(__DIR__ . '/semente.json'),
-            'detalhe' => 'api/instalacao/semente.json',
+            'atende'  => Semente::disponivel(),
+            'detalhe' => 'api/nucleo/semente.json',
         ];
         $itens[] = [
             'nome'    => 'Esquema do banco',
@@ -115,20 +115,6 @@ final class Instalador
             // instalação pode prosseguir e refazer o que falta.
             return false;
         }
-    }
-
-    /** @return array<string,mixed> */
-    public static function semente(): array
-    {
-        $bruto = file_get_contents(__DIR__ . '/semente.json');
-        if ($bruto === false) {
-            throw new \RuntimeException('semente.json não pôde ser lido.');
-        }
-        $dados = json_decode($bruto, true);
-        if (!is_array($dados)) {
-            throw new \RuntimeException('semente.json está corrompido.');
-        }
-        return $dados;
     }
 
     /**
@@ -187,9 +173,7 @@ final class Instalador
      */
     public static function semear(array $identidade): void
     {
-        $semente = self::semente();
-
-        foreach ($semente['cargos'] as $cargo) {
+        foreach (Semente::cargos() as $cargo) {
             Banco::inserir('cargos', [
                 'id'          => $cargo['id'],
                 'codigo'      => $cargo['codigo'],
@@ -207,7 +191,7 @@ final class Instalador
             }
         }
 
-        foreach ($semente['graus'] as $grau) {
+        foreach (Semente::graus() as $grau) {
             Banco::inserir('graus', [
                 'id'          => $grau['id'],
                 'codigo'      => $grau['codigo'],
@@ -219,7 +203,7 @@ final class Instalador
             ]);
         }
 
-        foreach ($semente['orgaosCentrais'] as $orgao) {
+        foreach (Semente::orgaosCentrais() as $orgao) {
             Banco::inserir('orgaos', [
                 'id'             => $orgao['id'],
                 'codigo'         => $orgao['codigo'],
