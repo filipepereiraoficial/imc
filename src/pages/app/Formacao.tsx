@@ -115,12 +115,32 @@ export function Formacao() {
               to={`/formacao/${curso.id}`}
               className="flex flex-col overflow-hidden rounded-card border border-line bg-surface-card shadow-suave transition hover:shadow-elevado"
             >
-              <div className="relative h-24 overflow-hidden" style={{ backgroundColor: curso.capaCor }}>
-                <div className="trama absolute inset-0 opacity-20" aria-hidden />
-                <span className="absolute right-3 top-3 rounded-full bg-black/25 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-white">
+              {/*
+                A capa é institucional, não decorativa: o mesmo grafite quente da
+                carteira, com a trilha distinguida por uma faixa fina de cor —
+                cor saturada em área grande destoaria da identidade da Ordem.
+              */}
+              <div
+                className="relative h-24 overflow-hidden"
+                style={{
+                  background:
+                    'linear-gradient(135deg, rgb(30 26 19) 0%, rgb(22 19 14) 55%, rgb(38 31 16) 100%)',
+                }}
+              >
+                <div className="trama absolute inset-0 opacity-[0.16]" aria-hidden />
+                <span className="absolute right-3 top-3 rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-white/85">
                   {curso.trilha}
                 </span>
-                <Icone nome="school" className="absolute bottom-3 left-3 text-[30px] text-white/85" />
+                <Icone
+                  nome="school"
+                  className="absolute bottom-4 left-3 text-[30px]"
+                  style={{ color: curso.capaCor }}
+                />
+                <span
+                  className="absolute inset-x-0 bottom-0 h-1"
+                  style={{ backgroundColor: curso.capaCor }}
+                  aria-hidden
+                />
               </div>
               <div className="flex flex-1 flex-col p-4">
                 <h3 className="font-bold leading-snug text-ink">{curso.titulo}</h3>

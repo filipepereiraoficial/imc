@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Acusa ícones referenciados no código que não estejam em scripts/icones.txt.
-# Sem eles no subconjunto, o símbolo simplesmente não é desenhado.
+# Sem eles no subconjunto da fonte, o símbolo simplesmente não é desenhado.
+#
+# Termos que a busca captura mas não são ícones ficam em scripts/nao-icones.txt.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -13,16 +15,22 @@ USADOS=$(
   } | sort -u
 )
 
-FALTANDO=$(comm -23 <(echo "$USADOS") <(sort -u scripts/icones.txt) || true)
+CONHECIDOS=$(
+  {
+    grep -vE '^\s*(#|$)' scripts/icones.txt
+    grep -vE '^\s*(#|$)' scripts/nao-icones.txt
+  } | sort -u
+)
+
+FALTANDO=$(comm -23 <(echo "$USADOS") <(echo "$CONHECIDOS") || true)
 
 if [ -n "$FALTANDO" ]; then
   echo "Ícones ausentes de scripts/icones.txt:"
   echo "$FALTANDO" | sed 's/^/  - /'
   echo
-  echo "Acrescente-os ao arquivo e rode ./scripts/fontes.sh."
-  echo "Se algum item acima não for um ícone (é uma string qualquer capturada"
-  echo "pela busca), pode ser ignorado."
+  echo "Se forem ícones, acrescente-os àquele arquivo e rode ./scripts/fontes.sh."
+  echo "Se não forem, acrescente-os a scripts/nao-icones.txt."
   exit 1
 fi
 
-echo "Todos os ícones usados estão no subconjunto."
+echo "Todos os ícones usados estão no subconjunto ($(echo "$USADOS" | wc -l) referências)."

@@ -1,0 +1,7 @@
+# Termos capturados pela busca de ícones que NÃO são ícones: são valores de
+# enum comparados dentro de expressões, como
+#   nome={anexo.tipo === 'documento' ? 'description' : 'link'}
+# Mantenha esta lista curta e revise sempre que crescer.
+documento
+online
+suspenso

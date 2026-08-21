@@ -4635,7 +4635,7 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "responsavelId": "me-007",
       "xpConclusao": 250,
       "emiteCertificado": true,
-      "capaCor": "#2a78d6"
+      "capaCor": "#E8B21A"
     },
     {
       "id": "cu-002",
@@ -4646,7 +4646,7 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "responsavelId": "me-016",
       "xpConclusao": 200,
       "emiteCertificado": true,
-      "capaCor": "#eb6834"
+      "capaCor": "#3E9E76"
     },
     {
       "id": "cu-003",
@@ -4657,7 +4657,7 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "responsavelId": "me-003",
       "xpConclusao": 300,
       "emiteCertificado": true,
-      "capaCor": "#1baf7a"
+      "capaCor": "#6CA6EC"
     },
     {
       "id": "cu-004",
@@ -4668,7 +4668,7 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "responsavelId": "me-004",
       "xpConclusao": 180,
       "emiteCertificado": true,
-      "capaCor": "#eda100"
+      "capaCor": "#C99A6B"
     }
   ],
   "modulos": [
