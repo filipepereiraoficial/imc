@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Fontes auto-hospedadas.
+ *
+ * A tipografia e os icones sao servidos pela propria aplicacao, sem CDN: a
+ * interface precisa renderizar corretamente em rede restrita, offline ou sob
+ * politicas de seguranca que bloqueiem terceiros. Os arquivos em
+ * public/fontes sao subconjuntos gerados por scripts/fontes.sh.
+ */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/fontes/texto-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/fontes/texto-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/*
+ * Icones. `font-display: block` evita o "flash" em que a ligadura ainda nao
+ * resolveu e o nome do icone aparece como texto.
+ */
+@font-face {
+  font-family: 'Simbolos da Ordem';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url('/fontes/simbolos.woff2') format('woff2');
+}
+
+@layer base {
+  :root {
+    /* Superficies quentes e neutras */
+    --c-surface: 255 252 246;
+    --c-surface-card: 255 255 255;
+    --c-surface-muted: 247 242 233;
+    --c-surface-strong: 238 231 217;
+    --c-border: 231 222 205;
+    --c-border-strong: 214 202 178;
+
+    /* Tinta */
+    --c-ink: 26 22 14;
+    --c-ink-soft: 96 88 71;
+    --c-ink-faint: 142 133 114;
+    --c-ink-inverse: 255 252 246;
+
+    /* Ouro institucional */
+    --c-gold: 214 158 11;
+    --c-gold-soft: 245 197 24;
+    --c-gold-deep: 108 78 0;
+    --c-gold-wash: 253 243 214;
+
+    /* Semanticas */
+    --c-positive: 21 122 76;
+    --c-warning: 176 110 0;
+    --c-danger: 186 40 33;
+    --c-info: 33 96 168;
+
+    /* Visualizacao de dados — paleta validada (ver docs/DESIGN-SYSTEM.md) */
+    --viz-serie-1: #2a78d6;
+    --viz-serie-2: #eb6834;
+    --viz-sequencial: #2a78d6;
+    --viz-grade: #e7dfd0;
+    --viz-eixo: #cabfa8;
+    --viz-rotulo: #8e8572;
+    --viz-bom: #006300;
+    --viz-critico: #d03b3b;
+  }
+
+  .dark {
+    --c-surface: 18 17 14;
+    --c-surface-card: 28 26 21;
+    --c-surface-muted: 37 34 28;
+    --c-surface-strong: 48 44 36;
+    --c-border: 56 51 42;
+    --c-border-strong: 78 71 58;
+
+    --c-ink: 245 240 231;
+    --c-ink-soft: 183 175 160;
+    --c-ink-faint: 138 130 115;
+    --c-ink-inverse: 20 18 14;
+
+    --c-gold: 240 193 16;
+    --c-gold-soft: 255 214 64;
+    --c-gold-deep: 255 224 139;
+    --c-gold-wash: 60 48 14;
+
+    --c-positive: 62 172 118;
+    --c-warning: 224 160 40;
+    --c-danger: 240 116 106;
+    --c-info: 108 166 236;
+
+    --viz-serie-1: #3987e5;
+    --viz-serie-2: #d95926;
+    --viz-sequencial: #3987e5;
+    --viz-grade: #302c24;
+    --viz-eixo: #4e473a;
+    --viz-rotulo: #8a8273;
+    --viz-bom: #0ca30c;
+    --viz-critico: #e66767;
+  }
+
+  * {
+    @apply border-line;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgb(var(--c-gold) / 0.28);
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ouro ring-offset-2 ring-offset-surface;
+  }
+
+  /* Rolagem discreta */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--c-border-strong) / 0.8);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  .icone {
+    font-family: 'Simbolos da Ordem';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    user-select: none;
+  }
+
+  .icone-preenchido {
+    font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* Trama sutil usada em cartoes de destaque e na carteira */
+  .trama {
+    background-image: radial-gradient(rgb(var(--c-ink) / 0.18) 1px, transparent 1px);
+    background-size: 14px 14px;
+  }
+
+  .rotulo {
+    @apply text-rotulo uppercase text-ink-faint;
+  }
+
+  .link-sutil {
+    @apply text-ouro-deep underline-offset-4 hover:underline dark:text-ouro;
+  }
+
+  .brilho {
+    position: relative;
+    overflow: hidden;
+  }
+  .brilho::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.35), transparent);
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+@layer utilities {
+  .area-segura-inferior {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px));
+  }
+  .sem-barra::-webkit-scrollbar {
+    display: none;
+  }
+  .sem-barra {
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

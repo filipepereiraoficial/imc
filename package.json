@@ -1,0 +1,31 @@
+{
+  "name": "ordem-plataforma",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Plataforma institucional da Ordem — rede interna, carteira digital de membro, secretaria, tesouraria, formação e gestão territorial.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "fontes": "./scripts/fontes.sh",
+    "icones:verificar": "./scripts/verificar-icones.sh"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9"
+  }
+}
