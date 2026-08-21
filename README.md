@@ -23,8 +23,23 @@ npm run dev      # http://localhost:5173
 | `npm run build` | Verificação de tipos + build de produção |
 | `npm run preview` | Serve o build |
 | `npm run typecheck` | Só a verificação de tipos |
+| `npm run pagina-unica` | Empacota tudo em um único arquivo HTML |
 | `npm run fontes` | Regenera as fontes auto-hospedadas |
 | `npm run icones:verificar` | Acusa ícones fora do subconjunto |
+
+### Distribuir sem servidor
+
+`npm run pagina-unica` gera dois arquivos em `dist-unico/`, ambos sem nenhuma
+requisição externa — JavaScript e CSS embutidos, fontes em data URI:
+
+| Arquivo | Para quê |
+|---|---|
+| `a-ordem.html` | Documento completo: abre direto do disco ou de qualquer hospedagem estática |
+| `a-ordem-embutida.html` | Fragmento, para hospedagens que fornecem o esqueleto do documento |
+
+Nesse modo o roteamento passa a ser por hash (`#/feed`), já que não há servidor
+para responder aos caminhos. A exportação de CSV detecta se o ambiente medeia a
+gravação de arquivos e usa o canal adequado — ver `src/lib/baixar.ts`.
 
 ### Contas de demonstração
 

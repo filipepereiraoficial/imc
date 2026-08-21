@@ -16,8 +16,24 @@ function prefereEscuro(): boolean {
   return typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
+/**
+ * Tema inicial, em ordem de precedencia:
+ *  1. a escolha ja feita pelo membro;
+ *  2. o tema do ambiente que hospeda a pagina, quando ela e embutida em outro
+ *     contexto que marca `data-theme` na raiz;
+ *  3. o tema do sistema operacional.
+ */
+function temaInicial(): Tema {
+  const guardado = ler<Tema | null>(CHAVES.tema, null);
+  if (guardado) return guardado;
+  const hospedeiro = document.documentElement.dataset.theme;
+  if (hospedeiro === 'dark') return 'escuro';
+  if (hospedeiro === 'light') return 'claro';
+  return 'sistema';
+}
+
 export function ProvedorTema({ children }: { children: ReactNode }) {
-  const [tema, setTema] = useState<Tema>(() => ler<Tema>(CHAVES.tema, 'claro'));
+  const [tema, setTema] = useState<Tema>(temaInicial);
   const [escuroSistema, setEscuroSistema] = useState(prefereEscuro);
 
   useEffect(() => {

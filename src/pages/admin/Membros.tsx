@@ -6,6 +6,7 @@ import { useAviso } from '@/context/AvisoContext';
 import { localidade, nucleoPorId } from '@/lib/consultas';
 import { podeAtribuirCargo } from '@/lib/rbac';
 import { contem, data as formatarData, numero } from '@/lib/formato';
+import { baixarTexto, montarCSV } from '@/lib/baixar';
 import type { Membro, SituacaoMembresia } from '@/types';
 import { ROTULO_SITUACAO, TOM_SITUACAO } from '@/components/domain/Itens';
 import {
@@ -108,25 +109,26 @@ export function Membros() {
     avisar('sucesso', 'Situação alterada', `${alvo.nomeExibicao}: ${ROTULO_SITUACAO[situacao]}`);
   };
 
-  const exportar = () => {
+  const exportar = async () => {
     if (!autor) return;
-    const cabecalho = ['Registro', 'Nome', 'Núcleo', 'Situação', 'Nível', 'XP', 'Ingresso'];
-    const linhas = lista.map((m) => [
-      m.numeroMembro,
-      m.nomeCompleto,
-      nucleoPorId(base, m.nucleoId)?.nome ?? '',
-      ROTULO_SITUACAO[m.situacao],
-      String(m.nivel),
-      String(m.xp),
-      formatarData(m.dataIngresso),
-    ]);
-    const csv = [cabecalho, ...linhas].map((l) => l.map((c) => `"${c}"`).join(';')).join('\n');
-    const url = URL.createObjectURL(new Blob([`﻿${csv}`], { type: 'text/csv;charset=utf-8' }));
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'membros-a-ordem.csv';
-    link.click();
-    URL.revokeObjectURL(url);
+    const csv = montarCSV(
+      ['Registro', 'Nome', 'Núcleo', 'Situação', 'Nível', 'XP', 'Ingresso'],
+      lista.map((m) => [
+        m.numeroMembro,
+        m.nomeCompleto,
+        nucleoPorId(base, m.nucleoId)?.nome ?? '',
+        ROTULO_SITUACAO[m.situacao],
+        m.nivel,
+        m.xp,
+        formatarData(m.dataIngresso),
+      ]),
+    );
+    const desfecho = await baixarTexto('membros-a-ordem.csv', csv, 'text/csv;charset=utf-8');
+    if (desfecho === 'recusado') return;
+    if (desfecho === 'indisponivel') {
+      avisar('atencao', 'Download indisponível', 'Este ambiente não permite salvar arquivos.');
+      return;
+    }
     auditar({
       membroId: autor.id,
       acao: 'Exportou dados',

@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "fontes": "./scripts/fontes.sh",
-    "icones:verificar": "./scripts/verificar-icones.sh"
+    "icones:verificar": "./scripts/verificar-icones.sh",
+    "pagina-unica": "VITE_PAGINA_UNICA=1 vite build && node scripts/pagina-unica.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

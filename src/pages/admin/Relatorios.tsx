@@ -12,6 +12,7 @@ import {
 } from '@/lib/consultas';
 import { data as formatarData, moeda, numero, percentual } from '@/lib/formato';
 import { ordenarRanking } from '@/lib/xp';
+import { baixarTexto, montarCSV } from '@/lib/baixar';
 import {
   Abas,
   Botao,
@@ -63,14 +64,17 @@ export function Relatorios() {
 
   if (!tem('relatorios.gerar')) return <SemAcesso modulo="os relatórios institucionais" />;
 
-  const exportar = (nome: string, colunas: string[], linhas: (string | number)[][]) => {
-    const csv = [colunas, ...linhas].map((l) => l.map((c) => `"${c}"`).join(';')).join('\n');
-    const url = URL.createObjectURL(new Blob([`﻿${csv}`], { type: 'text/csv;charset=utf-8' }));
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${nome}.csv`;
-    link.click();
-    URL.revokeObjectURL(url);
+  const exportar = async (nome: string, colunas: string[], linhas: (string | number)[][]) => {
+    const desfecho = await baixarTexto(
+      `${nome}.csv`,
+      montarCSV(colunas, linhas),
+      'text/csv;charset=utf-8',
+    );
+    if (desfecho === 'recusado') return;
+    if (desfecho === 'indisponivel') {
+      avisar('atencao', 'Download indisponível', 'Este ambiente não permite salvar arquivos.');
+      return;
+    }
     avisar('sucesso', 'Relatório exportado', `${nome}.csv`);
   };
 
