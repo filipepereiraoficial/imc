@@ -1,7 +1,13 @@
-# A Ordem — Plataforma Institucional
+# OMCL — Plataforma Institucional
 
-Plataforma digital de uma Ordem filosófico-política, destinada exclusivamente
-aos seus membros. Reúne em um só aplicativo o que costuma viver em cinco
+Plataforma digital da **Ordem dos Monarquistas Conservadores-Liberais**,
+destinada exclusivamente aos seus associados — os **Eunomitas** (Est. Art. 15).
+
+A estrutura segue o **Estatuto Social** (75 artigos) e o **Códice Verde**
+(117 capítulos): cargos, categorias associativas, graus de formação, hierarquia
+normativa e modalidades de contribuição vêm dos documentos da Ordem, não de
+convenções genéricas de software. O mapeamento artigo a artigo está em
+[`docs/MAPEAMENTO-NORMATIVO.md`](docs/MAPEAMENTO-NORMATIVO.md). Reúne em um só aplicativo o que costuma viver em cinco
 sistemas separados: **rede social privada**, **carteira digital de membro**,
 **secretaria**, **tesouraria** e **formação**, sobre uma organização territorial
 por Núcleos que já nasce preparada para múltiplos países.
@@ -27,6 +33,24 @@ npm run dev      # http://localhost:5173
 | `npm run fontes` | Regenera as fontes auto-hospedadas |
 | `npm run icones:verificar` | Acusa ícones fora do subconjunto |
 
+### Hospedar
+
+A plataforma compila para **arquivos estáticos** — não exige Node, banco nem
+runtime no servidor. Isso a torna instalável em praticamente qualquer lugar, e
+o repositório já traz o adaptador de cada plataforma:
+
+| Plataforma | O que usar | Já configurado |
+|---|---|---|
+| Docker (qualquer VPS) | `docker build -t omcl . && docker run -p 8080:8080 omcl` | `Dockerfile`, `implantacao/nginx.conf` |
+| Vercel | Importar o repositório | `vercel.json` |
+| Netlify · Cloudflare Pages | Importar o repositório | `netlify.toml`, `public/_redirects` |
+| GitHub Pages | Settings → Pages → GitHub Actions | `.github/workflows/paginas.yml` |
+| Apache · cPanel · hospedagem compartilhada | Enviar `dist/` para `public_html` | `public/.htaccess` |
+| Nginx próprio | Copiar `implantacao/nginx.conf` | ✓ |
+| Sem servidor algum | `npm run pagina-unica` | arquivo único de 740 KB |
+
+Detalhes e passo a passo em [`docs/IMPLANTACAO.md`](docs/IMPLANTACAO.md).
+
 ### Distribuir sem servidor
 
 `npm run pagina-unica` gera dois arquivos em `dist-unico/`, ambos sem nenhuma
@@ -45,13 +69,13 @@ gravação de arquivos e usa o canal adequado — ver `src/lib/baixar.ts`.
 
 Senha única: **`ordem2026`**
 
-| E-mail | Perfil | O que demonstra |
+| E-mail | Cargo | O que demonstra |
 |---|---|---|
-| `filipeedito@gmail.com` | Membro | A experiência do membro comum |
-| `helenacastro@aordem.org` | Administrador | Acesso integral, permissões, auditoria |
-| `beatrizalves@aordem.org` | Secretário | Cadastros, Núcleos, documentos — **sem valores financeiros** |
-| `marcosteixeira@aordem.org` | Tesoureiro | Financeiro integral — **sem alteração cadastral** |
-| `rafaellins@aordem.org` | Presidente | Visão institucional completa |
+| `filipeedito@gmail.com` | Eunomita · Membro | A experiência do associado comum |
+| `rafaellins@aordem.org` | Grão-Mestre | Visão institucional completa (Est. Art. 33) |
+| `beatrizalves@aordem.org` | Secretário-Geral | Cadastros, Núcleos, documentos — **sem valores financeiros** |
+| `marcosteixeira@aordem.org` | Tesoureiro-Geral | Financeiro integral — **sem alteração cadastral** |
+| `helenacastro@aordem.org` | Administrador | Função técnica da plataforma, sem previsão estatutária |
 
 A tela de acesso traz esses perfis como atalho. Entrar com cada um mostra o RBAC
 em funcionamento: o menu, as páginas e as ações mudam conforme o cargo.
@@ -113,6 +137,8 @@ API é mecânica.
 | [`docs/RBAC.md`](docs/RBAC.md) | Cargos, permissões, escopo e precedência |
 | [`docs/DESIGN-SYSTEM.md`](docs/DESIGN-SYSTEM.md) | Cor, tipografia, componentes, dataviz, acessibilidade |
 | [`docs/SEGURANCA.md`](docs/SEGURANCA.md) | O que está feito e o que exige servidor |
+| [`docs/MAPEAMENTO-NORMATIVO.md`](docs/MAPEAMENTO-NORMATIVO.md) | Estatuto e Códice → funções do sistema |
+| [`docs/IMPLANTACAO.md`](docs/IMPLANTACAO.md) | Como hospedar, em qualquer plataforma |
 
 ---
 

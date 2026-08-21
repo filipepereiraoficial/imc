@@ -89,14 +89,23 @@ export type Permissao =
   | 'permissoes.gerenciar'
   | 'configuracoes.gerenciar';
 
+/**
+ * Cargos da OMCL, conforme o Estatuto Social (Arts. 16, 33, 41, 60) e o
+ * Codice Verde (C10:36 a C10:50). Ver docs/MAPEAMENTO-NORMATIVO.md.
+ */
 export type CodigoCargo =
-  | 'administrador'
-  | 'presidente'
-  | 'vice_presidente'
-  | 'secretario'
-  | 'tesoureiro'
-  | 'dirigente_nucleo'
-  | 'coordenador'
+  | 'administrador'      // funcao tecnica da plataforma, sem previsao estatutaria
+  | 'grao_mestre'        // Est. Art. 33 — Moderador Presidente
+  | 'chanceler'          // Est. Art. 41 — gestao administrativa cotidiana
+  | 'secretario_geral'   // Est. Art. 41, II
+  | 'tesoureiro_geral'   // Est. Art. 41, III
+  | 'moderador'          // C10:42 — autoridade doutrinaria estadual ou nacional
+  | 'auguere'            // C10:40 — estrategia superior e ortodoxia doutrinaria
+  | 'epopte'             // C10:38 — supervisao macro-regional
+  | 'afentis'            // C10:36 — Mestre Titular do Nucleo (Est. Art. 60)
+  | 'thesi'              // C10:28 — supervisao senior da etapa auxiliar
+  | 'syntrofo'           // C10:26 — escudo operacional das liderancas de base
+  | 'embaixador'         // Est. Art. 16 — representacao protocolar
   | 'membro'
   | 'candidato';
 
@@ -115,6 +124,51 @@ export interface Cargo {
   /** Cargos internos nao podem ser removidos pelo administrador. */
   sistema: boolean;
 }
+
+/* ------------------------------------------------------------------ */
+/* Categoria associativa e graus de formacao                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Categoria do quadro associativo — Est. Art. 14. E o vinculo juridico do
+ * associado com a Ordem, independente do grau de formacao.
+ */
+export type CategoriaAssociativa =
+  | 'transicao'
+  | 'efetivo'
+  | 'honorario'
+  | 'benemerito'
+  | 'juvenil';
+
+/** Categoria do grau na escala ascetica — Codice C10:24, C10:26, C10:54. */
+export type CategoriaGrau = 'formacao' | 'mediadora' | 'mestria';
+
+/**
+ * Grau de formacao — Codice C10:24 e seguintes.
+ *
+ * A escala e distinta da categoria associativa e do cargo: um mesmo membro e,
+ * ao mesmo tempo, efetivo (categoria), Aretaios (grau) e eventualmente Kyrios
+ * (titulo lateral). A elevacao se da pelo rito da Prokope (C10:19), nunca por
+ * acumulo automatico de XP.
+ */
+export interface Grau {
+  id: ID;
+  codigo: string;
+  nome: string;
+  categoria: CategoriaGrau;
+  /** Posicao na escala. A Mestria ocupa os graus 15 a 19 (C10:54). */
+  ordem: number;
+  descricao: string;
+  /** XP sugerido para que a Mestria considere a elevacao. Nao promove sozinho. */
+  xpSugerido: number;
+}
+
+/**
+ * Titulos concedidos fora da progressao linear — Codice C10:49, C10:50.
+ * `regalis`: clerigos ordenados associados. `kyrios`: conselheiros eleitos
+ * pelas bases. Ambos dependem de aprovacao do Grao-Mestre.
+ */
+export type TituloLateral = 'regalis' | 'kyrios';
 
 /* ------------------------------------------------------------------ */
 /* Membros e contas                                                    */
@@ -151,6 +205,12 @@ export interface Membro {
   municipioId: ID;
   nucleoId: ID | null;
   cargoId: ID;
+  /** Est. Art. 14 — vinculo juridico, distinto do grau. */
+  categoriaAssociativa: CategoriaAssociativa;
+  /** Codice C10:24 — progressao ascetica, distinta do cargo. */
+  grauId: ID;
+  /** C10:49, C10:50 — titulos fora da progressao linear. */
+  titulos: TituloLateral[];
   situacao: SituacaoMembresia;
   dataIngresso: ISODate;
   biografia?: string;
@@ -315,11 +375,30 @@ export type CategoriaDocumento =
   | 'administrativo'
   | 'financeiro';
 
+/**
+ * Hierarquia normativa interna — Est. Art. 24. O Art. 25 declara nula a parte
+ * da norma inferior que contrarie norma superior, por isso o nivel e dado
+ * obrigatorio de todo documento normativo.
+ */
+export type NivelNormativo =
+  | 'estatuto'              // 1
+  | 'regimento_interno'     // 2
+  | 'resolucao_geral'       // 3
+  | 'ato_normativo_supremo' // 4
+  | 'regulamento_geral_local' // 5
+  | 'resolucao_local'       // 6
+  | 'ato_mestral_local'     // 7
+  | 'nao_normativo';        // material de apoio, sem forca normativa
+
 export interface Documento {
   id: ID;
   titulo: string;
   descricao: string;
   categoria: CategoriaDocumento;
+  /** Est. Art. 24 — posicao na hierarquia normativa. */
+  nivelNormativo: NivelNormativo;
+  /** Est. Art. 21, VI — informacao reservada exige sigilo. */
+  reservado: boolean;
   responsavelId: ID;
   /** Cargo minimo (precedencia) exigido para leitura. */
   nivelAcesso: CodigoCargo[];
@@ -532,9 +611,37 @@ export interface CategoriaFinanceira {
   cor: string;
 }
 
+/**
+ * Modalidades de contribuicao — Codice C106:11 a C106:19.
+ *
+ * `pistis`  — Pistis Eisphora, contribuicao de fidelidade: valor mensal
+ *             fixado livremente pelo membro, recorrente.
+ * `hekousia`— Hekousia Eisphora, contribuicao livre: aporte avulso, sem
+ *             faixas nem tetos.
+ *
+ * C106:20 veda expressamente cobranca coercitiva, humilhacao publica ou
+ * exposicao vexatoria em qualquer das modalidades — nao existe, portanto,
+ * lista publica de inadimplentes nem classificacao por valor contribuido.
+ */
+export type ModalidadeContribuicao = 'pistis' | 'hekousia';
+
+/** Compromisso de contribuicao recorrente (Pistis Eisphora). */
+export interface Compromisso {
+  id: ID;
+  membroId: ID;
+  valorMensal: number;
+  inicioVigencia: ISODate;
+  fimVigencia: ISODate | null;
+  ativo: boolean;
+}
+
 export interface Lancamento {
   id: ID;
   tipo: TipoLancamento;
+  /** Presente apenas quando o lancamento e contribuicao de membro. */
+  modalidade?: ModalidadeContribuicao;
+  /** Membro contribuinte, quando aplicavel. */
+  contribuinteId?: ID | null;
   data: ISODate;
   descricao: string;
   categoriaId: ID;
@@ -582,6 +689,7 @@ export interface BaseDados {
   estados: Estado[];
   municipios: Municipio[];
   cargos: Cargo[];
+  graus: Grau[];
   membros: Membro[];
   nucleos: Nucleo[];
   publicacoes: Publicacao[];
@@ -604,6 +712,7 @@ export interface BaseDados {
   mensagens: Mensagem[];
   notificacoes: Notificacao[];
   contas: ContaFinanceira[];
+  compromissos: Compromisso[];
   categoriasFinanceiras: CategoriaFinanceira[];
   lancamentos: Lancamento[];
   atividades: Atividade[];

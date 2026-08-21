@@ -1,0 +1,21 @@
+# Subir a plataforma em qualquer servidor com Docker:
+#
+#   docker compose -f implantacao/docker-compose.yml up -d
+#
+# Para publicar na internet com HTTPS, ponha um proxy reverso à frente
+# (Caddy, Traefik ou o Nginx do próprio servidor) apontando para a porta 8080.
+services:
+  plataforma:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: omcl-plataforma:latest
+    container_name: omcl-plataforma
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3

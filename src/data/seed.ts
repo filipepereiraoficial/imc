@@ -1,5 +1,6 @@
 import type { BaseDados } from '@/types';
 import { CARGOS } from './cargos';
+import { GRAUS } from './graus';
 
 /**
  * Massa de dados institucional de demonstracao.
@@ -8,7 +9,7 @@ import { CARGOS } from './cargos';
  * ponta a ponta sem backend. Ao conectar uma API real, basta substituir
  * `criarBaseInicial` pela carga remota — as telas consomem apenas os tipos.
  */
-const DADOS: Omit<BaseDados, 'cargos'> = {
+const DADOS: Omit<BaseDados, 'cargos' | 'graus'> = {
   "paises": [
     {
       "id": "pa-br",
@@ -198,6 +199,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-jaboatao",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2023-05-28T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -260,6 +264,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-recife",
       "cargoId": "cargo-admin",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2023-06-22T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -318,8 +325,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-sp",
       "municipioId": "mu-sp",
       "nucleoId": "nu-sp",
-      "cargoId": "cargo-presidente",
+      "cargoId": "cargo-grao-mestre",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-grao-mestre",
+      "titulos": [],
       "dataIngresso": "2023-07-17T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -378,8 +388,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-sp",
       "municipioId": "mu-campinas",
       "nucleoId": "nu-campinas",
-      "cargoId": "cargo-secretario",
+      "cargoId": "cargo-secretario-geral",
       "situacao": "ativo",
+      "categoriaAssociativa": "honorario",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2023-08-11T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -438,8 +451,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-rj",
       "municipioId": "mu-rj",
       "nucleoId": "nu-rj",
-      "cargoId": "cargo-tesoureiro",
+      "cargoId": "cargo-tesoureiro-geral",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2023-09-05T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -499,8 +515,13 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-mg",
       "municipioId": "mu-bh",
       "nucleoId": "nu-bh",
-      "cargoId": "cargo-vice",
+      "cargoId": "cargo-chanceler",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [
+        "regalis"
+      ],
       "dataIngresso": "2023-09-30T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -559,8 +580,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-ba",
       "municipioId": "mu-salvador",
       "nucleoId": "nu-salvador",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-moderador",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-moderador",
+      "titulos": [],
       "dataIngresso": "2023-10-25T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -619,8 +643,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-df",
       "municipioId": "mu-brasilia",
       "nucleoId": "nu-brasilia",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-auguere",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-auguere",
+      "titulos": [],
       "dataIngresso": "2023-11-19T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -680,8 +707,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-lis",
       "municipioId": "mu-lisboa",
       "nucleoId": "nu-lisboa",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-epopte",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-epopte",
+      "titulos": [],
       "dataIngresso": "2023-12-14T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -741,8 +771,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-pe",
       "municipioId": "mu-jaboatao",
       "nucleoId": "nu-jaboatao",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-embaixador",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2024-01-08T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -802,8 +835,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-pe",
       "municipioId": "mu-recife",
       "nucleoId": "nu-recife",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-02-02T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -862,8 +898,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-sp",
       "municipioId": "mu-sp",
       "nucleoId": "nu-sp",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-02-27T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -922,8 +961,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-sp",
       "municipioId": "mu-campinas",
       "nucleoId": "nu-campinas",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-03-23T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -983,8 +1025,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-rj",
       "municipioId": "mu-rj",
       "nucleoId": "nu-rj",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-04-17T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1043,8 +1088,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-mg",
       "municipioId": "mu-bh",
       "nucleoId": "nu-bh",
-      "cargoId": "cargo-dirigente",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-05-12T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1104,8 +1152,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-ba",
       "municipioId": "mu-salvador",
       "nucleoId": "nu-salvador",
-      "cargoId": "cargo-coordenador",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-06-06T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -1164,8 +1215,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-df",
       "municipioId": "mu-brasilia",
       "nucleoId": "nu-brasilia",
-      "cargoId": "cargo-coordenador",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-07-01T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1225,8 +1279,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-lis",
       "municipioId": "mu-lisboa",
       "nucleoId": "nu-lisboa",
-      "cargoId": "cargo-coordenador",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-07-26T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1284,8 +1341,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-pe",
       "municipioId": "mu-jaboatao",
       "nucleoId": "nu-jaboatao",
-      "cargoId": "cargo-coordenador",
+      "cargoId": "cargo-afentis",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-afentis",
+      "titulos": [],
       "dataIngresso": "2024-08-20T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -1344,8 +1404,13 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-pe",
       "municipioId": "mu-recife",
       "nucleoId": "nu-recife",
-      "cargoId": "cargo-membro",
+      "cargoId": "cargo-thesi",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-thesi",
+      "titulos": [
+        "kyrios"
+      ],
       "dataIngresso": "2024-09-14T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1403,8 +1468,13 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-sp",
       "municipioId": "mu-sp",
       "nucleoId": "nu-sp",
-      "cargoId": "cargo-membro",
+      "cargoId": "cargo-thesi",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-thesi",
+      "titulos": [
+        "kyrios"
+      ],
       "dataIngresso": "2024-10-09T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1463,8 +1533,13 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-sp",
       "municipioId": "mu-campinas",
       "nucleoId": "nu-campinas",
-      "cargoId": "cargo-membro",
+      "cargoId": "cargo-thesi",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-thesi",
+      "titulos": [
+        "kyrios"
+      ],
       "dataIngresso": "2024-11-03T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -1523,8 +1598,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-rj",
       "municipioId": "mu-rj",
       "nucleoId": "nu-rj",
-      "cargoId": "cargo-membro",
+      "cargoId": "cargo-syntrofo",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-syntrofo",
+      "titulos": [],
       "dataIngresso": "2024-11-28T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1582,8 +1660,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-mg",
       "municipioId": "mu-bh",
       "nucleoId": "nu-bh",
-      "cargoId": "cargo-membro",
+      "cargoId": "cargo-syntrofo",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-syntrofo",
+      "titulos": [],
       "dataIngresso": "2024-12-23T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1641,8 +1722,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "estadoId": "es-ba",
       "municipioId": "mu-salvador",
       "nucleoId": "nu-salvador",
-      "cargoId": "cargo-membro",
+      "cargoId": "cargo-syntrofo",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-syntrofo",
+      "titulos": [],
       "dataIngresso": "2025-01-17T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -1703,6 +1787,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-brasilia",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2025-02-11T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1762,6 +1849,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-lisboa",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [
+        "kyrios"
+      ],
       "dataIngresso": "2025-03-08T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1821,6 +1913,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-jaboatao",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2025-04-02T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -1881,6 +1976,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-recife",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2025-04-27T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1942,6 +2040,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-sp",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2025-05-22T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -1999,6 +2100,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-campinas",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2025-06-16T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -2057,6 +2161,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-rj",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [
+        "kyrios"
+      ],
       "dataIngresso": "2025-07-11T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2114,6 +2223,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-bh",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2025-08-05T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2173,6 +2285,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-salvador",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-empeiros",
+      "titulos": [],
       "dataIngresso": "2025-08-30T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -2230,6 +2345,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-brasilia",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-aretaios",
+      "titulos": [],
       "dataIngresso": "2025-09-24T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2287,6 +2405,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-lisboa",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-aretaios",
+      "titulos": [],
       "dataIngresso": "2025-10-19T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2346,6 +2467,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-jaboatao",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-aretaios",
+      "titulos": [],
       "dataIngresso": "2025-11-13T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -2405,6 +2529,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-recife",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-aretaios",
+      "titulos": [],
       "dataIngresso": "2025-12-08T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2462,6 +2589,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-sp",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "juvenil",
+      "grauId": "grau-aretaios",
+      "titulos": [],
       "dataIngresso": "2026-01-02T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2519,6 +2649,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-campinas",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "benemerito",
+      "grauId": "grau-prokopos",
+      "titulos": [],
       "dataIngresso": "2026-01-27T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -2576,6 +2709,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-rj",
       "cargoId": "cargo-candidato",
       "situacao": "pendente",
+      "categoriaAssociativa": "transicao",
+      "grauId": "grau-recruta",
+      "titulos": [],
       "dataIngresso": "2026-08-07T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2635,6 +2771,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-bh",
       "cargoId": "cargo-candidato",
       "situacao": "pendente",
+      "categoriaAssociativa": "transicao",
+      "grauId": "grau-recruta",
+      "titulos": [],
       "dataIngresso": "2026-07-27T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2692,6 +2831,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-salvador",
       "cargoId": "cargo-candidato",
       "situacao": "pendente",
+      "categoriaAssociativa": "transicao",
+      "grauId": "grau-recruta",
+      "titulos": [],
       "dataIngresso": "2026-08-14T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -2751,6 +2893,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-brasilia",
       "cargoId": "cargo-membro",
       "situacao": "suspenso",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-mathetes",
+      "titulos": [],
       "dataIngresso": "2026-05-07T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2808,6 +2953,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-lisboa",
       "cargoId": "cargo-membro",
       "situacao": "inativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-anchario",
+      "titulos": [],
       "dataIngresso": "2026-06-01T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
@@ -2867,6 +3015,9 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "nucleoId": "nu-jaboatao",
       "cargoId": "cargo-membro",
       "situacao": "ativo",
+      "categoriaAssociativa": "efetivo",
+      "grauId": "grau-anchario",
+      "titulos": [],
       "dataIngresso": "2026-06-26T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
@@ -4348,11 +4499,13 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
   "documentos": [
     {
       "id": "do-001",
-      "titulo": "Estatuto da Ordem",
-      "descricao": "Norma fundamental que define natureza, finalidade, estrutura e regime de membresia.",
+      "titulo": "Estatuto Social da Ordem",
+      "descricao": "Norma fundamental que define denominação, natureza, finalidades, patrimônio, quadro associativo e órgãos da Ordem.",
       "categoria": "estatuto",
       "responsavelId": "me-003",
       "nivelAcesso": [],
+      "nivelNormativo": "estatuto",
+      "reservado": false,
       "versaoAtual": "4.0",
       "atualizadoEm": "2026-08-08T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-001.pdf",
@@ -4361,10 +4514,12 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "do-002",
       "titulo": "Regimento Interno",
-      "descricao": "Disciplina o funcionamento dos órgãos, dos Núcleos e das assembleias.",
+      "descricao": "Disciplina o funcionamento dos órgãos, a admissão, a progressão, as eleições, a disciplina e os Núcleos (Est. Art. 73).",
       "categoria": "regimento",
       "responsavelId": "me-004",
       "nivelAcesso": [],
+      "nivelNormativo": "regimento_interno",
+      "reservado": false,
       "versaoAtual": "2.3",
       "atualizadoEm": "2026-07-21T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-002.pdf",
@@ -4372,11 +4527,13 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     },
     {
       "id": "do-003",
-      "titulo": "Código de Conduta",
-      "descricao": "Deveres éticos do membro e regime disciplinar.",
+      "titulo": "Código de Disciplina e de Ética Geral (CDEG)",
+      "descricao": "Deveres éticos do associado, penalidades e rito do processo disciplinar (Est. Art. 64).",
       "categoria": "codigo",
       "responsavelId": "me-004",
       "nivelAcesso": [],
+      "nivelNormativo": "resolucao_geral",
+      "reservado": false,
       "versaoAtual": "1.5",
       "atualizadoEm": "2026-06-21T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-003.pdf",
@@ -4384,12 +4541,14 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     },
     {
       "id": "do-004",
-      "titulo": "Códice de Formação",
-      "descricao": "Compêndio doutrinário das trilhas de formação filosófica e política.",
+      "titulo": "Códice Verde — Base Ideológica-Filosófica",
+      "descricao": "Compêndio doutrinário em 117 capítulos: pilares, metafísica, ordem política, doutrina social, crônicas e ritos.",
       "categoria": "codice",
       "responsavelId": "me-007",
       "nivelAcesso": [],
-      "versaoAtual": "3.0",
+      "nivelNormativo": "nao_normativo",
+      "reservado": false,
+      "versaoAtual": "6.0",
       "atualizadoEm": "2026-07-30T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-004.pdf",
       "tamanho": "6,2 MB"
@@ -4397,15 +4556,17 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "do-005",
       "titulo": "Regulamento de Tesouraria",
-      "descricao": "Regras de arrecadação, custeio, prestação de contas e auditoria.",
+      "descricao": "Regras de arrecadação, custeio, prestação de contas e fiscalização pelo Conselho Superior de Contas.",
       "categoria": "regulamento",
       "responsavelId": "me-005",
       "nivelAcesso": [
         "administrador",
-        "presidente",
-        "tesoureiro",
-        "dirigente_nucleo"
+        "grao_mestre",
+        "tesoureiro_geral",
+        "afentis"
       ],
+      "nivelNormativo": "resolucao_geral",
+      "reservado": false,
       "versaoAtual": "1.2",
       "atualizadoEm": "2026-07-06T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-005.pdf",
@@ -4413,17 +4574,19 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     },
     {
       "id": "do-006",
-      "titulo": "Manual do Dirigente de Núcleo",
-      "descricao": "Procedimentos de condução, registro e representação do Núcleo.",
+      "titulo": "Manual do Afentis",
+      "descricao": "Procedimentos de condução, registro e representação do Núcleo pelo Mestre Titular (Est. Art. 60).",
       "categoria": "manual",
       "responsavelId": "me-004",
       "nivelAcesso": [
         "administrador",
-        "presidente",
-        "secretario",
-        "dirigente_nucleo",
-        "coordenador"
+        "grao_mestre",
+        "secretario_geral",
+        "afentis",
+        "thesi"
       ],
+      "nivelNormativo": "nao_normativo",
+      "reservado": false,
       "versaoAtual": "2.0",
       "atualizadoEm": "2026-08-02T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-006.pdf",
@@ -4436,6 +4599,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "categoria": "administrativo",
       "responsavelId": "me-004",
       "nivelAcesso": [],
+      "nivelNormativo": "resolucao_geral",
+      "reservado": false,
       "versaoAtual": "4.0",
       "atualizadoEm": "2026-08-18T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-007.pdf",
@@ -4444,15 +4609,17 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "do-008",
       "titulo": "Balancete Consolidado — Agosto",
-      "descricao": "Demonstrativo mensal de receitas e despesas.",
+      "descricao": "Demonstrativo mensal de receitas e despesas submetido ao Conselho Superior de Contas.",
       "categoria": "financeiro",
       "responsavelId": "me-005",
       "nivelAcesso": [
         "administrador",
-        "presidente",
-        "vice_presidente",
-        "tesoureiro"
+        "grao_mestre",
+        "chanceler",
+        "tesoureiro_geral"
       ],
+      "nivelNormativo": "nao_normativo",
+      "reservado": true,
       "versaoAtual": "1.0",
       "atualizadoEm": "2026-08-18T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-008.pdf",
@@ -4460,15 +4627,50 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     },
     {
       "id": "do-009",
-      "titulo": "Cartilha do Novo Membro",
-      "descricao": "Orientações iniciais sobre direitos, deveres e primeiros passos.",
+      "titulo": "Cartilha do Eunomita",
+      "descricao": "Orientações iniciais sobre direitos, deveres, ritos e primeiros passos na Ordem.",
       "categoria": "manual",
       "responsavelId": "me-004",
       "nivelAcesso": [],
+      "nivelNormativo": "nao_normativo",
+      "reservado": false,
       "versaoAtual": "1.4",
       "atualizadoEm": "2026-05-22T13:00:00.000Z",
       "arquivoUrl": "/documentos/do-009.pdf",
       "tamanho": "780 KB"
+    },
+    {
+      "id": "do-010",
+      "titulo": "Ato Normativo Supremo n.º 3 — Linha de Sucessão",
+      "descricao": "Fixa a ordem de precedência na ausência do Moderador Presidente (Est. Art. 39, § 1.º).",
+      "categoria": "administrativo",
+      "responsavelId": "me-003",
+      "nivelAcesso": [
+        "administrador",
+        "grao_mestre",
+        "chanceler",
+        "moderador"
+      ],
+      "nivelNormativo": "ato_normativo_supremo",
+      "reservado": true,
+      "versaoAtual": "1.0",
+      "atualizadoEm": "2026-04-22T13:00:00.000Z",
+      "arquivoUrl": "/documentos/do-010.pdf",
+      "tamanho": "210 KB"
+    },
+    {
+      "id": "do-011",
+      "titulo": "Regulamento Geral Local — Núcleo Jaboatão",
+      "descricao": "Regras operacionais e tetos de remuneração local, nos termos do Est. Art. 12, § 3.º.",
+      "categoria": "regulamento",
+      "responsavelId": "me-001",
+      "nivelAcesso": [],
+      "nivelNormativo": "regulamento_geral_local",
+      "reservado": false,
+      "versaoAtual": "1.1",
+      "atualizadoEm": "2026-06-11T13:00:00.000Z",
+      "arquivoUrl": "/documentos/do-011.pdf",
+      "tamanho": "330 KB"
     }
   ],
   "versoesDocumento": [
@@ -4529,11 +4731,35 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "publicadoPor": "me-004"
     },
     {
+      "id": "do-004-v6",
+      "documentoId": "do-004",
+      "versao": "6.0",
+      "notas": "Revisão aprovada em assembleia.",
+      "publicadoEm": "2026-07-30T13:00:00.000Z",
+      "publicadoPor": "me-007"
+    },
+    {
+      "id": "do-004-v5",
+      "documentoId": "do-004",
+      "versao": "5.0",
+      "notas": "Versão anterior arquivada.",
+      "publicadoEm": "2026-01-31T13:00:00.000Z",
+      "publicadoPor": "me-007"
+    },
+    {
+      "id": "do-004-v4",
+      "documentoId": "do-004",
+      "versao": "4.0",
+      "notas": "Versão anterior arquivada.",
+      "publicadoEm": "2025-08-04T13:00:00.000Z",
+      "publicadoPor": "me-007"
+    },
+    {
       "id": "do-004-v3",
       "documentoId": "do-004",
       "versao": "3.0",
-      "notas": "Revisão aprovada em assembleia.",
-      "publicadoEm": "2026-07-30T13:00:00.000Z",
+      "notas": "Versão anterior arquivada.",
+      "publicadoEm": "2025-02-05T13:00:00.000Z",
       "publicadoPor": "me-007"
     },
     {
@@ -4541,7 +4767,7 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "documentoId": "do-004",
       "versao": "2.0",
       "notas": "Versão anterior arquivada.",
-      "publicadoEm": "2026-01-31T13:00:00.000Z",
+      "publicadoEm": "2024-08-09T13:00:00.000Z",
       "publicadoPor": "me-007"
     },
     {
@@ -4549,7 +4775,7 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "documentoId": "do-004",
       "versao": "1.0",
       "notas": "Versão anterior arquivada.",
-      "publicadoEm": "2025-08-04T13:00:00.000Z",
+      "publicadoEm": "2024-02-11T13:00:00.000Z",
       "publicadoPor": "me-007"
     },
     {
@@ -4623,6 +4849,22 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "notas": "Revisão aprovada em assembleia.",
       "publicadoEm": "2026-05-22T13:00:00.000Z",
       "publicadoPor": "me-004"
+    },
+    {
+      "id": "do-010-v1",
+      "documentoId": "do-010",
+      "versao": "1.0",
+      "notas": "Revisão aprovada em assembleia.",
+      "publicadoEm": "2026-04-22T13:00:00.000Z",
+      "publicadoPor": "me-003"
+    },
+    {
+      "id": "do-011-v1",
+      "documentoId": "do-011",
+      "versao": "1.0",
+      "notas": "Revisão aprovada em assembleia.",
+      "publicadoEm": "2026-06-11T13:00:00.000Z",
+      "publicadoPor": "me-001"
     }
   ],
   "cursos": [
@@ -7292,13 +7534,13 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
   "categoriasFinanceiras": [
     {
       "id": "cf-001",
-      "nome": "Contribuição ordinária",
+      "nome": "Pistis Eisphora — Contribuição de Fidelidade",
       "tipo": "receita",
       "cor": "#2a78d6"
     },
     {
       "id": "cf-002",
-      "nome": "Doação",
+      "nome": "Hekousia Eisphora — Contribuição Livre",
       "tipo": "receita",
       "cor": "#eb6834"
     },
@@ -7343,8 +7585,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0001",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-06T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 18688.0,
@@ -7357,8 +7601,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0002",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2025-09-07T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 4288.0,
@@ -7371,6 +7617,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0003",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-08T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -7385,6 +7633,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0004",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-09T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -7399,8 +7649,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0005",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-10T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1396.0,
@@ -7413,8 +7665,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0006",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-11T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1458.0,
@@ -7427,8 +7681,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0007",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-12T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1124.0,
@@ -7441,8 +7697,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0008",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-13T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 841.0,
@@ -7455,8 +7713,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0009",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-14T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1085.0,
@@ -7469,8 +7729,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0010",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-15T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1077.0,
@@ -7483,8 +7745,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0011",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-16T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 730.0,
@@ -7497,8 +7761,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0012",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-17T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 767.0,
@@ -7511,8 +7777,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0013",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-09-18T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 383.0,
@@ -7525,6 +7793,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0014",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-19T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -7539,6 +7809,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0015",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-20T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -7553,6 +7825,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0016",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-21T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -7567,6 +7841,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0017",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-22T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -7581,6 +7857,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0018",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-23T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -7595,6 +7873,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0019",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-24T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -7609,6 +7889,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0020",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-09-25T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -7623,8 +7905,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0021",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-26T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 19444.0,
@@ -7637,8 +7921,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0022",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2025-10-27T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 4159.0,
@@ -7651,6 +7937,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0023",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-28T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -7665,6 +7953,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0024",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-05T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -7679,8 +7969,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0025",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-06T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1485.0,
@@ -7693,8 +7985,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0026",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-07T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1515.6,
@@ -7707,8 +8001,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0027",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-08T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1437.2,
@@ -7721,8 +8017,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0028",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-09T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1082.8,
@@ -7735,8 +8033,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0029",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-10T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 807.4,
@@ -7749,8 +8049,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0030",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-11T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 700.0,
@@ -7763,8 +8065,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0031",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-12T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 697.6,
@@ -7777,8 +8081,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0032",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-13T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 776.2,
@@ -7791,8 +8097,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0033",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-10-14T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 751.8,
@@ -7805,6 +8113,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0034",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-15T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -7819,6 +8129,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0035",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-16T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -7833,6 +8145,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0036",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-17T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -7847,6 +8161,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0037",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-18T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -7861,6 +8177,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0038",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-19T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -7875,6 +8193,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0039",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-20T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -7889,6 +8209,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0040",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-10-21T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -7903,8 +8225,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0041",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-21T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 20061.0,
@@ -7917,8 +8241,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0042",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2025-11-22T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 4785.0,
@@ -7931,6 +8257,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0043",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-23T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -7945,6 +8273,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0044",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-24T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -7959,8 +8289,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0045",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-25T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1431.0,
@@ -7973,8 +8305,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0046",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-26T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1604.2,
@@ -7987,8 +8321,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0047",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-27T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1150.4,
@@ -8001,8 +8337,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0048",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-04T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1176.6,
@@ -8015,8 +8353,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0049",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-05T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1262.8,
@@ -8029,8 +8369,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0050",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-06T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 970.0,
@@ -8043,8 +8385,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0051",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-07T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 587.2,
@@ -8057,8 +8401,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0052",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-08T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 577.4,
@@ -8071,8 +8417,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0053",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-11-09T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 357.6,
@@ -8085,6 +8433,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0054",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-10T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -8099,6 +8449,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0055",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-11T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -8113,6 +8465,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0056",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-12T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -8127,6 +8481,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0057",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-13T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -8141,6 +8497,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0058",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-14T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -8155,6 +8513,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0059",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-15T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -8169,6 +8529,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0060",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-11-16T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -8183,8 +8545,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0061",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-17T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 20594.0,
@@ -8197,8 +8561,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0062",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2025-12-18T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 4468.0,
@@ -8211,6 +8577,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0063",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-19T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -8225,6 +8593,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0064",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-20T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -8239,8 +8609,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0065",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-21T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1376.0,
@@ -8253,8 +8625,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0066",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-22T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1318.8,
@@ -8267,8 +8641,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0067",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-23T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1294.6,
@@ -8281,8 +8657,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0068",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-24T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1254.4,
@@ -8295,8 +8673,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0069",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-25T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1227.2,
@@ -8309,8 +8689,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0070",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-26T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1179.0,
@@ -8323,8 +8705,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0071",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-27T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 926.8,
@@ -8337,8 +8721,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0072",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-04T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 626.6,
@@ -8351,8 +8737,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0073",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2025-12-05T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 681.4,
@@ -8365,6 +8753,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0074",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-06T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -8379,6 +8769,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0075",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-07T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -8393,6 +8785,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0076",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-08T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -8407,6 +8801,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0077",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-09T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -8421,6 +8817,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0078",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-10T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -8435,6 +8833,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0079",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-11T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -8449,6 +8849,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0080",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2025-12-12T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -8463,8 +8865,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0081",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-12T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 21512.0,
@@ -8477,8 +8881,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0082",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2026-01-13T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 4890.0,
@@ -8491,6 +8897,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0083",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-14T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -8505,6 +8913,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0084",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-15T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -8519,8 +8929,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0085",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-16T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1567.0,
@@ -8533,8 +8945,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0086",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-17T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1440.4,
@@ -8547,8 +8961,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0087",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-18T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1225.8,
@@ -8561,8 +8977,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0088",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-19T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1212.2,
@@ -8575,8 +8993,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0089",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-20T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1250.6,
@@ -8589,8 +9009,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0090",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-21T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1014.0,
@@ -8603,8 +9025,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0091",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-22T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1050.4,
@@ -8617,8 +9041,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0092",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-23T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 584.8,
@@ -8631,8 +9057,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0093",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-01-24T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 738.2,
@@ -8645,6 +9073,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0094",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-25T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -8659,6 +9089,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0095",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-26T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -8673,6 +9105,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0096",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-03T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -8687,6 +9121,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0097",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-04T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -8701,6 +9137,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0098",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-05T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -8715,6 +9153,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0099",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-06T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -8729,6 +9169,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0100",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-01-07T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -8743,8 +9185,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0101",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-07T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 22139.0,
@@ -8757,8 +9201,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0102",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2026-02-08T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 4862.0,
@@ -8771,6 +9217,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0103",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-09T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -8785,6 +9233,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0104",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-10T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -8799,8 +9249,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0105",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-11T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1908.0,
@@ -8813,8 +9265,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0106",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-12T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1409.0,
@@ -8827,8 +9281,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0107",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-13T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1238.0,
@@ -8841,8 +9297,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0108",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-14T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1116.0,
@@ -8855,8 +9313,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0109",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-15T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1128.0,
@@ -8869,8 +9329,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0110",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-16T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 991.0,
@@ -8883,8 +9345,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0111",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-17T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 736.0,
@@ -8897,8 +9361,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0112",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-18T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 632.0,
@@ -8911,8 +9377,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0113",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-02-19T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 848.0,
@@ -8925,6 +9393,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0114",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-20T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -8939,6 +9409,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0115",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-21T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -8953,6 +9425,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0116",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-22T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -8967,6 +9441,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0117",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-23T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -8981,6 +9457,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0118",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-24T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -8995,6 +9473,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0119",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-25T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -9009,6 +9489,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0120",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-02-02T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -9023,8 +9505,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0121",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-05T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 23026.0,
@@ -9037,8 +9521,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0122",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2026-03-06T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 5227.0,
@@ -9051,6 +9537,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0123",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-07T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -9065,6 +9553,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0124",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-08T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -9079,8 +9569,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0125",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-09T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1971.0,
@@ -9093,8 +9585,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0126",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-10T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1440.6,
@@ -9107,8 +9601,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0127",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-11T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1565.2,
@@ -9121,8 +9617,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0128",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-12T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1106.8,
@@ -9135,8 +9633,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0129",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-13T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1392.4,
@@ -9149,8 +9649,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0130",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-14T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1119.0,
@@ -9163,8 +9665,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0131",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-15T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 672.6,
@@ -9177,8 +9681,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0132",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-16T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 584.2,
@@ -9191,8 +9697,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0133",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-03-17T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 769.8,
@@ -9205,6 +9713,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0134",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-18T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -9219,6 +9729,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0135",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-19T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -9233,6 +9745,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0136",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-20T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -9247,6 +9761,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0137",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-21T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -9261,6 +9777,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0138",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-22T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -9275,6 +9793,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0139",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-23T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -9289,6 +9809,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0140",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-03-24T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -9303,8 +9825,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0141",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-24T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 23471.0,
@@ -9317,8 +9841,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0142",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2026-04-25T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 5298.0,
@@ -9331,6 +9857,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0143",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-26T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -9345,6 +9873,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0144",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-03T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -9359,8 +9889,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0145",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-04T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1883.0,
@@ -9373,8 +9905,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0146",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-05T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1884.2,
@@ -9387,8 +9921,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0147",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-06T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1443.4,
@@ -9401,8 +9937,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0148",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-07T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1555.6,
@@ -9415,8 +9953,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0149",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-08T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1124.8,
@@ -9429,8 +9969,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0150",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-09T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1259.0,
@@ -9443,8 +9985,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0151",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-10T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 995.2,
@@ -9457,8 +10001,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0152",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-11T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 795.4,
@@ -9471,8 +10017,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0153",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-04-12T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 708.6,
@@ -9485,6 +10033,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0154",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-13T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -9499,6 +10049,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0155",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-14T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -9513,6 +10065,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0156",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-15T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -9527,6 +10081,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0157",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-16T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -9541,6 +10097,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0158",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-17T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -9555,6 +10113,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0159",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-18T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -9569,6 +10129,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0160",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-04-19T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -9583,8 +10145,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0161",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-20T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 24306.0,
@@ -9597,8 +10161,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0162",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2026-05-21T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 5502.0,
@@ -9611,6 +10177,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0163",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-22T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -9625,6 +10193,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0164",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-23T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -9639,8 +10209,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0165",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-24T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1703.0,
@@ -9653,8 +10225,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0166",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-25T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1681.8,
@@ -9667,8 +10241,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0167",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-26T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1531.6,
@@ -9681,8 +10257,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0168",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-03T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1162.4,
@@ -9695,8 +10273,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0169",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-04T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1208.2,
@@ -9709,8 +10289,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0170",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-05T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1179.0,
@@ -9723,8 +10305,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0171",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-06T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 751.8,
@@ -9737,8 +10321,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0172",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-07T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 853.6,
@@ -9751,8 +10337,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0173",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-05-08T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 672.4,
@@ -9765,6 +10353,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0174",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-09T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -9779,6 +10369,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0175",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-10T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -9793,6 +10385,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0176",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-11T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -9807,6 +10401,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0177",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-12T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -9821,6 +10417,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0178",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-13T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -9835,6 +10433,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0179",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-14T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -9849,6 +10449,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0180",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-05-15T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -9863,8 +10465,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0181",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-15T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 24902.0,
@@ -9877,8 +10481,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0182",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2026-06-16T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 5882.0,
@@ -9891,6 +10497,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0183",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-17T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -9905,6 +10513,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0184",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-18T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -9919,8 +10529,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0185",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-19T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 2143.0,
@@ -9933,8 +10545,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0186",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-20T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1956.4,
@@ -9947,8 +10561,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0187",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-21T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1591.8,
@@ -9961,8 +10577,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0188",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-22T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1245.2,
@@ -9975,8 +10593,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0189",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-23T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1551.6,
@@ -9989,8 +10609,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0190",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-24T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1050.0,
@@ -10003,8 +10625,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0191",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-25T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1211.4,
@@ -10017,8 +10641,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0192",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-02T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 811.8,
@@ -10031,8 +10657,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0193",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-06-03T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 713.2,
@@ -10045,6 +10673,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0194",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-04T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -10059,6 +10689,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0195",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-05T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -10073,6 +10705,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0196",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-06T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -10087,6 +10721,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0197",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-07T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -10101,6 +10737,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0198",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-08T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -10115,6 +10753,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0199",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-09T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -10129,6 +10769,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0200",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-06-10T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -10143,8 +10785,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0201",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-11T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 26129.0,
@@ -10157,8 +10801,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0202",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2026-07-12T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 5952.0,
@@ -10171,6 +10817,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0203",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-13T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -10185,6 +10833,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0204",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-14T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -10199,8 +10849,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0205",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-15T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1997.0,
@@ -10213,8 +10865,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0206",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-16T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1876.0,
@@ -10227,8 +10881,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0207",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-17T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1463.0,
@@ -10241,8 +10897,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0208",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-18T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1252.0,
@@ -10255,8 +10913,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0209",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-19T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1435.0,
@@ -10269,8 +10929,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0210",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-20T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 995.0,
@@ -10283,8 +10945,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0211",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-21T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1028.0,
@@ -10297,8 +10961,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0212",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-22T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 787.0,
@@ -10311,8 +10977,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0213",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-07-23T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 661.0,
@@ -10325,6 +10993,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0214",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-24T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -10339,6 +11009,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0215",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-25T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -10353,6 +11025,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0216",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-02T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -10367,6 +11041,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0217",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-03T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -10381,6 +11057,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0218",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-04T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -10395,6 +11073,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0219",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-05T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -10409,6 +11089,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0220",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-07-06T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -10423,8 +11105,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0221",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-06T10:00:00.000Z",
-      "descricao": "Contribuições ordinárias do mês",
+      "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 26788.0,
@@ -10437,8 +11121,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0222",
       "tipo": "receita",
+      "modalidade": "hekousia",
+      "contribuinteId": null,
       "data": "2026-08-07T10:00:00.000Z",
-      "descricao": "Doações de apoiadores",
+      "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
       "valor": 6030.0,
@@ -10451,6 +11137,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0223",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-08T10:00:00.000Z",
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
@@ -10465,6 +11153,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0224",
       "tipo": "receita",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-09T10:00:00.000Z",
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
@@ -10479,8 +11169,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0225",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-10T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Jaboatão dos Guararapes",
+      "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
       "valor": 1851.0,
@@ -10493,8 +11185,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0226",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-11T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Recife Central",
+      "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1809.6,
@@ -10507,8 +11201,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0227",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-12T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo São Paulo Central",
+      "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
       "valor": 1931.2,
@@ -10521,8 +11217,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0228",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-13T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Campinas",
+      "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1711.8,
@@ -10535,8 +11233,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0229",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-14T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Rio de Janeiro",
+      "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1587.4,
@@ -10549,8 +11249,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0230",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-15T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Belo Horizonte",
+      "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1302.0,
@@ -10563,8 +11265,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0231",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-16T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Salvador",
+      "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1173.6,
@@ -10577,8 +11281,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0232",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-17T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Brasília",
+      "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 1038.2,
@@ -10591,8 +11297,10 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0233",
       "tipo": "receita",
+      "modalidade": "pistis",
+      "contribuinteId": null,
       "data": "2026-08-18T10:00:00.000Z",
-      "descricao": "Contribuições do Núcleo Lisboa",
+      "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
       "valor": 972.8,
@@ -10605,6 +11313,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0234",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-19T10:00:00.000Z",
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
@@ -10619,6 +11329,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0235",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-20T10:00:00.000Z",
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
@@ -10633,6 +11345,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0236",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-21T10:00:00.000Z",
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
@@ -10647,6 +11361,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0237",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-22T10:00:00.000Z",
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
@@ -10661,6 +11377,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0238",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-23T10:00:00.000Z",
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
@@ -10675,6 +11393,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0239",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-24T10:00:00.000Z",
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
@@ -10689,6 +11409,8 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
     {
       "id": "la-0240",
       "tipo": "despesa",
+      "modalidade": null,
+      "contribuinteId": null,
       "data": "2026-08-01T10:00:00.000Z",
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
@@ -10699,6 +11421,232 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "situacao": "liquidado",
       "observacao": null,
       "comprovanteUrl": "/comprovantes/la-0240.pdf"
+    }
+  ],
+  "compromissos": [
+    {
+      "id": "co-001",
+      "membroId": "me-001",
+      "valorMensal": 30.0,
+      "inicioVigencia": "2023-05-28T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-002",
+      "membroId": "me-002",
+      "valorMensal": 50.0,
+      "inicioVigencia": "2023-06-22T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-004",
+      "membroId": "me-004",
+      "valorMensal": 120.0,
+      "inicioVigencia": "2023-08-11T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-005",
+      "membroId": "me-005",
+      "valorMensal": 200.0,
+      "inicioVigencia": "2023-09-05T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-007",
+      "membroId": "me-007",
+      "valorMensal": 50.0,
+      "inicioVigencia": "2023-10-25T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-008",
+      "membroId": "me-008",
+      "valorMensal": 80.0,
+      "inicioVigencia": "2023-11-19T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-010",
+      "membroId": "me-010",
+      "valorMensal": 200.0,
+      "inicioVigencia": "2024-01-08T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-011",
+      "membroId": "me-011",
+      "valorMensal": 30.0,
+      "inicioVigencia": "2024-02-02T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-013",
+      "membroId": "me-013",
+      "valorMensal": 80.0,
+      "inicioVigencia": "2024-03-23T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-014",
+      "membroId": "me-014",
+      "valorMensal": 120.0,
+      "inicioVigencia": "2024-04-17T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-016",
+      "membroId": "me-016",
+      "valorMensal": 30.0,
+      "inicioVigencia": "2024-06-06T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-017",
+      "membroId": "me-017",
+      "valorMensal": 50.0,
+      "inicioVigencia": "2024-07-01T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-019",
+      "membroId": "me-019",
+      "valorMensal": 120.0,
+      "inicioVigencia": "2024-08-20T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-020",
+      "membroId": "me-020",
+      "valorMensal": 200.0,
+      "inicioVigencia": "2024-09-14T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-022",
+      "membroId": "me-022",
+      "valorMensal": 50.0,
+      "inicioVigencia": "2024-11-03T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-023",
+      "membroId": "me-023",
+      "valorMensal": 80.0,
+      "inicioVigencia": "2024-11-28T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-025",
+      "membroId": "me-025",
+      "valorMensal": 200.0,
+      "inicioVigencia": "2025-01-17T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-026",
+      "membroId": "me-026",
+      "valorMensal": 30.0,
+      "inicioVigencia": "2025-02-11T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-028",
+      "membroId": "me-028",
+      "valorMensal": 80.0,
+      "inicioVigencia": "2025-04-02T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-029",
+      "membroId": "me-029",
+      "valorMensal": 120.0,
+      "inicioVigencia": "2025-04-27T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-031",
+      "membroId": "me-031",
+      "valorMensal": 30.0,
+      "inicioVigencia": "2025-06-16T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-032",
+      "membroId": "me-032",
+      "valorMensal": 50.0,
+      "inicioVigencia": "2025-07-11T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-034",
+      "membroId": "me-034",
+      "valorMensal": 120.0,
+      "inicioVigencia": "2025-08-30T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-035",
+      "membroId": "me-035",
+      "valorMensal": 200.0,
+      "inicioVigencia": "2025-09-24T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-037",
+      "membroId": "me-037",
+      "valorMensal": 50.0,
+      "inicioVigencia": "2025-11-13T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-038",
+      "membroId": "me-038",
+      "valorMensal": 80.0,
+      "inicioVigencia": "2025-12-08T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-040",
+      "membroId": "me-040",
+      "valorMensal": 200.0,
+      "inicioVigencia": "2026-01-27T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
+    },
+    {
+      "id": "co-046",
+      "membroId": "me-046",
+      "valorMensal": 30.0,
+      "inicioVigencia": "2026-06-26T13:00:00.000Z",
+      "fimVigencia": null,
+      "ativo": true
     }
   ],
   "atividades": [
@@ -10894,8 +11842,11 @@ const DADOS: Omit<BaseDados, 'cargos'> = {
       "atual": false
     }
   ]
-} as unknown as Omit<BaseDados, 'cargos'>;
+} as unknown as Omit<
+  BaseDados,
+  'cargos' | 'graus'
+>;
 
 export function criarBaseInicial(): BaseDados {
-  return structuredClone({ ...DADOS, cargos: CARGOS }) as BaseDados;
+  return structuredClone({ ...DADOS, cargos: CARGOS, graus: GRAUS }) as BaseDados;
 }

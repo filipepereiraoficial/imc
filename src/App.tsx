@@ -18,6 +18,7 @@ import { Documentos } from '@/pages/app/Documentos';
 import { CursoDetalhe, Formacao } from '@/pages/app/Formacao';
 import { Propostas, PropostaDetalhe } from '@/pages/app/Propostas';
 import { Configuracoes } from '@/pages/app/Configuracoes';
+import { Transparencia } from '@/pages/app/Transparencia';
 
 import { Secretaria } from '@/pages/admin/Secretaria';
 import { Tesouraria } from '@/pages/admin/Tesouraria';
@@ -72,6 +73,7 @@ export function App() {
         <Route path="/formacao" element={<Formacao />} />
         <Route path="/formacao/:id" element={<CursoDetalhe />} />
         <Route path="/meu-nucleo" element={<NucleoDetalhe proprio />} />
+        <Route path="/transparencia" element={<Transparencia />} />
         <Route path="/configuracoes" element={<Configuracoes />} />
 
         {/* Administrativas — cada pagina aplica sua propria verificacao de permissao */}

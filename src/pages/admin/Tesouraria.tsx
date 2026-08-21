@@ -4,7 +4,9 @@ import { useDados } from '@/context/DadosContext';
 import { useAviso } from '@/context/AvisoContext';
 import {
   fluxoMensal,
+  membroPorId,
   nucleoPorId,
+  resumoContribuicoes,
   porCategoria,
   resumoFinanceiro,
 } from '@/lib/consultas';
@@ -44,7 +46,7 @@ export function Tesouraria() {
   const { membro, tem, pode } = useAuth();
   const { avisar } = useAviso();
 
-  const [aba, setAba] = useState<'painel' | 'lancamentos' | 'contas'>('painel');
+  const [aba, setAba] = useState<'painel' | 'lancamentos' | 'contas' | 'contribuicoes'>('painel');
   const [termo, setTermo] = useState('');
   const [tipoFiltro, setTipoFiltro] = useState<TipoLancamento | 'todos'>('todos');
   const [nucleoFiltro, setNucleoFiltro] = useState<string>('todos');
@@ -70,6 +72,7 @@ export function Tesouraria() {
 
   const fluxo = useMemo(() => fluxoMensal(base, 6, filtroEscopo), [base, nucleoFiltro, restritoAoNucleo]);
   const receitasPorCategoria = useMemo(() => porCategoria(base, 'receita'), [base]);
+  const contribuicoes = useMemo(() => resumoContribuicoes(base), [base]);
   const despesasPorCategoria = useMemo(() => porCategoria(base, 'despesa'), [base]);
 
   const porNucleo = useMemo(
@@ -206,6 +209,12 @@ export function Tesouraria() {
           itens={[
             { id: 'painel', rotulo: 'Painel', icone: 'monitoring' },
             { id: 'lancamentos', rotulo: 'Lançamentos', icone: 'receipt_long', contagem: lancamentos.length },
+            {
+              id: 'contribuicoes',
+              rotulo: 'Contribuições',
+              icone: 'volunteer_activism',
+              contagem: contribuicoes.compromissosAtivos,
+            },
             { id: 'contas', rotulo: 'Contas e categorias', icone: 'account_balance' },
           ]}
           ativo={aba}
@@ -449,6 +458,110 @@ export function Tesouraria() {
                 </li>
               ))}
             </ul>
+          </Cartao>
+        </div>
+      )}
+
+      {aba === 'contribuicoes' && (
+        <div className="space-y-4">
+          <div className="grid gap-3 sm:grid-cols-2 [&>*]:min-w-0 xl:grid-cols-4">
+            <CartaoEstatistica
+              rotulo="Pistis Eisphora no mês"
+              valor={moeda(contribuicoes.pistis)}
+              icone="handshake"
+              detalhe="Contribuição de fidelidade"
+              destaque
+            />
+            <CartaoEstatistica
+              rotulo="Hekousia Eisphora no mês"
+              valor={moeda(contribuicoes.hekousia)}
+              icone="volunteer_activism"
+              detalhe="Contribuição livre"
+            />
+            <CartaoEstatistica
+              rotulo="Compromissos ativos"
+              valor={String(contribuicoes.compromissosAtivos)}
+              icone="event_repeat"
+              detalhe="Valores fixados livremente"
+            />
+            <CartaoEstatistica
+              rotulo="Valor mensal comprometido"
+              valor={moeda(contribuicoes.valorComprometido)}
+              icone="savings"
+              detalhe="Soma das Pistis Eisphora"
+            />
+          </div>
+
+          <Cartao>
+            <CabecalhoCartao
+              titulo="As duas modalidades"
+              descricao="Códice Verde, capítulo 106."
+              icone="menu_book"
+            />
+            <dl className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-line bg-surface-muted/50 p-4">
+                <dt className="font-bold text-ink">Pistis Eisphora</dt>
+                <dd className="mt-1 text-sm leading-relaxed text-ink-soft">
+                  Contribuição de Fidelidade. Valor mensal fixado livremente pelo Eunomita, que
+                  assegura a continuidade das atividades formativas e caritativas. Não é taxa
+                  associativa compulsória (C106:8, C106:12).
+                </dd>
+              </div>
+              <div className="rounded-2xl border border-line bg-surface-muted/50 p-4">
+                <dt className="font-bold text-ink">Hekousia Eisphora</dt>
+                <dd className="mt-1 text-sm leading-relaxed text-ink-soft">
+                  Contribuição Livre. Aporte avulso e extraordinário, sem faixas, tetos ou
+                  exigências prévias de valor (C106:14, C106:16).
+                </dd>
+              </div>
+            </dl>
+            <p className="mt-4 flex items-start gap-2.5 rounded-2xl border border-atencao/30 bg-atencao/10 p-3.5">
+              <Icone nome="shield" className="mt-px shrink-0 text-[17px] text-atencao" />
+              <span className="text-xs leading-relaxed text-ink-soft">
+                <strong className="text-ink">Vedação expressa (C106:20).</strong> Nenhuma das
+                modalidades pode ser objeto de cobrança coercitiva, humilhação pública ou exposição
+                vexatória. Por isso esta área apresenta apenas agregados: não há, nem pode haver,
+                relação pública de quem deixou de contribuir, nem classificação por valor aportado.
+              </span>
+            </p>
+          </Cartao>
+
+          <Cartao semPadding>
+            <div className="p-5">
+              <CabecalhoCartao
+                titulo="Compromissos de fidelidade"
+                descricao="Visível apenas à Tesouraria e à Direção, para planejamento orçamentário."
+                icone="event_repeat"
+              />
+            </div>
+            <ul className="divide-y divide-line">
+              {base.compromissos
+                .filter((c) => c.ativo)
+                .slice(0, 12)
+                .map((c) => {
+                  const m = membroPorId(base, c.membroId);
+                  return (
+                    <li key={c.id} className="flex items-center gap-3 px-5 py-3.5">
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-surface-muted text-ink-soft">
+                        <Icone nome="handshake" className="text-[18px]" />
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate font-semibold text-ink">{m?.nomeCompleto ?? '—'}</p>
+                        <p className="truncate text-xs text-ink-faint">
+                          Desde {formatarData(c.inicioVigencia)}
+                        </p>
+                      </div>
+                      <span className="shrink-0 font-bold tabular-nums text-ink">
+                        {moeda(c.valorMensal)}
+                        <span className="ml-1 text-xs font-medium text-ink-faint">/mês</span>
+                      </span>
+                    </li>
+                  );
+                })}
+            </ul>
+            <p className="border-t border-line px-5 py-3 text-xs text-ink-faint">
+              {base.compromissos.filter((c) => c.ativo).length} compromissos ativos.
+            </p>
           </Cartao>
         </div>
       )}

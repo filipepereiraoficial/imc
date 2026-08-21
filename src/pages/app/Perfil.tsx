@@ -3,7 +3,14 @@ import { Link, useParams } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { useDados } from '@/context/DadosContext';
 import { useAviso } from '@/context/AvisoContext';
-import { cargoDe, localidade, nucleoPorId, publicacoesOrdenadas } from '@/lib/consultas';
+import { cargoDe, grauDe, localidade, nucleoPorId, publicacoesOrdenadas } from '@/lib/consultas';
+import {
+  DESCRICAO_TITULO,
+  ROTULO_CATEGORIA_ASSOCIATIVA,
+  ROTULO_CATEGORIA_GRAU,
+  ROTULO_TITULO,
+  apto,
+} from '@/data/graus';
 import { data as formatarData, numero, tempoRelativo } from '@/lib/formato';
 import { posicaoNoRanking, progressoNivel } from '@/lib/xp';
 import type { Membro, NivelVisibilidade } from '@/types';
@@ -45,6 +52,7 @@ export function Perfil() {
     const ativos = base.membros.filter((m) => m.situacao === 'ativo');
     return {
       cargo: cargoDe(base, alvo),
+      grau: grauDe(base, alvo),
       nucleo: nucleoPorId(base, alvo.nucleoId),
       progresso: progressoNivel(base.niveis, alvo.xp),
       posicao: posicaoNoRanking(ativos, alvo.id),
@@ -141,6 +149,18 @@ export function Perfil() {
                 <CabecalhoCartao titulo="Dados institucionais" icone="badge" />
                 <dl className="mt-4 grid gap-x-6 gap-y-4 sm:grid-cols-2">
                   <Dado rotulo="Número de membro" valor={alvo.numeroMembro} mono />
+                  <Dado
+                    rotulo="Categoria associativa"
+                    valor={ROTULO_CATEGORIA_ASSOCIATIVA[alvo.categoriaAssociativa]}
+                  />
+                  <Dado
+                    rotulo="Grau"
+                    valor={
+                      info.grau
+                        ? `${info.grau.nome} · ${ROTULO_CATEGORIA_GRAU[info.grau.categoria]}`
+                        : '—'
+                    }
+                  />
                   <Dado rotulo="Cargo" valor={info.cargo?.nome ?? '—'} />
                   <Dado rotulo="Núcleo" valor={info.nucleo?.nome ?? 'Sem vínculo'} />
                   <Dado rotulo="Ingresso" valor={formatarData(alvo.dataIngresso)} />
@@ -152,6 +172,24 @@ export function Perfil() {
                     </dd>
                   </div>
                 </dl>
+
+                {alvo.titulos.length > 0 && (
+                  <div className="mt-5 border-t border-line pt-4">
+                    <p className="rotulo mb-2">Títulos</p>
+                    <ul className="space-y-2">
+                      {alvo.titulos.map((t) => (
+                        <li key={t} className="flex items-start gap-2.5">
+                          <Selo tom="ouro" icone="workspace_premium">
+                            {ROTULO_TITULO[t]}
+                          </Selo>
+                          <span className="text-xs leading-relaxed text-ink-soft">
+                            {DESCRICAO_TITULO[t]}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </Cartao>
 
               <Cartao>
@@ -292,8 +330,28 @@ export function Perfil() {
         </div>
 
         <aside className="min-w-0 space-y-4">
+          {info.grau && (
+            <Cartao>
+              <p className="rotulo">Grau</p>
+              <p className="mt-2 text-titulo leading-none text-ink">{info.grau.nome}</p>
+              <p className="mt-1 text-sm font-semibold text-ink-soft">
+                Categoria {ROTULO_CATEGORIA_GRAU[info.grau.categoria]} · {info.grau.ordem}.º grau
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">{info.grau.descricao}</p>
+              {apto(base.graus, info.grau, alvo.xp) && (
+                <p className="mt-3 flex items-start gap-2 rounded-2xl bg-ouro-wash p-3 text-xs text-[rgb(var(--c-gold-deep))] dark:text-ouro">
+                  <Icone nome="stairs" className="mt-px shrink-0 text-[16px]" />
+                  <span>
+                    Reúne participação para ser considerado à elevação. A decisão cabe à Mestria,
+                    pelo rito da Prokopē.
+                  </span>
+                </p>
+              )}
+            </Cartao>
+          )}
+
           <Cartao>
-            <p className="rotulo">Progresso de nível</p>
+            <p className="rotulo">Progresso de participação</p>
             <p className="mt-2 text-titulo leading-none text-ink">
               {info.progresso.nivel.numero}
               <span className="ml-2 text-base font-semibold text-ink-soft">{info.progresso.nivel.titulo}</span>

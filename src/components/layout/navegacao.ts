@@ -26,6 +26,8 @@ export const NAV_PRINCIPAL: ItemNav[] = [
   { rotulo: 'Documentos', para: '/documentos', icone: 'folder_open' },
   { rotulo: 'Mensagens', para: '/mensagens', icone: 'forum', contador: 'mensagens' },
   { rotulo: 'Meu Núcleo', para: '/meu-nucleo', icone: 'groups' },
+  // Est. Art. 12, § 4.º — portal aberto a todo Eunomita, não área administrativa.
+  { rotulo: 'Transparência', para: '/transparencia', icone: 'query_stats' },
   { rotulo: 'Perfil', para: '/perfil', icone: 'account_circle' },
 ];
 

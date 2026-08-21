@@ -3,11 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { useDados } from '@/context/DadosContext';
 import { useAviso } from '@/context/AvisoContext';
-import { localidade, nucleoPorId } from '@/lib/consultas';
+import { grauDe, localidade, nucleoPorId } from '@/lib/consultas';
+import {
+  DESCRICAO_TITULO,
+  ROTULO_CATEGORIA_ASSOCIATIVA,
+  ROTULO_CATEGORIA_GRAU,
+  ROTULO_TITULO,
+} from '@/data/graus';
 import { podeAtribuirCargo } from '@/lib/rbac';
 import { contem, data as formatarData, numero } from '@/lib/formato';
 import { baixarTexto, montarCSV } from '@/lib/baixar';
-import type { Membro, SituacaoMembresia } from '@/types';
+import type { CategoriaAssociativa, Membro, SituacaoMembresia, TituloLateral } from '@/types';
 import { ROTULO_SITUACAO, TOM_SITUACAO } from '@/components/domain/Itens';
 import {
   AreaTexto,
@@ -37,6 +43,8 @@ interface Filtros {
   municipioId: string;
   nucleoId: string;
   cargoId: string;
+  grauId: string;
+  categoriaAssociativa: string;
   situacao: string;
   nivelMinimo: string;
 }
@@ -47,6 +55,8 @@ const FILTROS_VAZIOS: Filtros = {
   municipioId: '',
   nucleoId: '',
   cargoId: '',
+  grauId: '',
+  categoriaAssociativa: '',
   situacao: '',
   nivelMinimo: '',
 };
@@ -81,6 +91,9 @@ export function Membros() {
     if (filtros.municipioId) itens = itens.filter((m) => m.municipioId === filtros.municipioId);
     if (filtros.nucleoId) itens = itens.filter((m) => m.nucleoId === filtros.nucleoId);
     if (filtros.cargoId) itens = itens.filter((m) => m.cargoId === filtros.cargoId);
+    if (filtros.grauId) itens = itens.filter((m) => m.grauId === filtros.grauId);
+    if (filtros.categoriaAssociativa)
+      itens = itens.filter((m) => m.categoriaAssociativa === filtros.categoriaAssociativa);
     if (filtros.situacao) itens = itens.filter((m) => m.situacao === filtros.situacao);
     if (filtros.nivelMinimo) itens = itens.filter((m) => m.nivel >= Number(filtros.nivelMinimo));
     return itens.sort((a, b) => a.nomeCompleto.localeCompare(b.nomeCompleto, 'pt-BR'));
@@ -112,13 +125,15 @@ export function Membros() {
   const exportar = async () => {
     if (!autor) return;
     const csv = montarCSV(
-      ['Registro', 'Nome', 'Núcleo', 'Situação', 'Nível', 'XP', 'Ingresso'],
+      ['Registro', 'Nome', 'Núcleo', 'Categoria', 'Grau', 'Cargo', 'Situação', 'XP', 'Ingresso'],
       lista.map((m) => [
         m.numeroMembro,
         m.nomeCompleto,
         nucleoPorId(base, m.nucleoId)?.nome ?? '',
+        ROTULO_CATEGORIA_ASSOCIATIVA[m.categoriaAssociativa],
+        grauDe(base, m)?.nome ?? '',
+        base.cargos.find((c) => c.id === m.cargoId)?.nome ?? '',
         ROTULO_SITUACAO[m.situacao],
-        m.nivel,
         m.xp,
         formatarData(m.dataIngresso),
       ]),
@@ -169,10 +184,25 @@ export function Membros() {
       renderizar: (m) => <span className="text-ink-soft">{localidade(base, m).split(' · ').slice(0, 2).join(' · ')}</span>,
     },
     {
+      chave: 'grau',
+      titulo: 'Grau',
+      renderizar: (m) => <span className="text-ink-soft">{grauDe(base, m)?.nome ?? '—'}</span>,
+    },
+    {
       chave: 'cargo',
       titulo: 'Cargo',
       secundaria: true,
       renderizar: (m) => <span className="text-ink-soft">{base.cargos.find((c) => c.id === m.cargoId)?.nome}</span>,
+    },
+    {
+      chave: 'categoria',
+      titulo: 'Categoria',
+      secundaria: true,
+      renderizar: (m) => (
+        <span className="text-ink-soft">
+          {ROTULO_CATEGORIA_ASSOCIATIVA[m.categoriaAssociativa].replace('Membro ', '')}
+        </span>
+      ),
     },
     {
       chave: 'xp',
@@ -347,6 +377,34 @@ export function Membros() {
               ))}
             </Selecao>
             <Selecao
+              rotulo="Grau"
+              value={filtros.grauId}
+              onChange={(e) => setFiltros({ ...filtros, grauId: e.target.value })}
+            >
+              <option value="">Todos</option>
+              {[...base.graus]
+                .sort((a, b) => a.ordem - b.ordem)
+                .map((g) => (
+                  <option key={g.id} value={g.id}>
+                    {g.ordem}. {g.nome}
+                  </option>
+                ))}
+            </Selecao>
+            <Selecao
+              rotulo="Categoria associativa"
+              value={filtros.categoriaAssociativa}
+              onChange={(e) => setFiltros({ ...filtros, categoriaAssociativa: e.target.value })}
+            >
+              <option value="">Todas</option>
+              {(
+                Object.keys(ROTULO_CATEGORIA_ASSOCIATIVA) as (keyof typeof ROTULO_CATEGORIA_ASSOCIATIVA)[]
+              ).map((c) => (
+                <option key={c} value={c}>
+                  {ROTULO_CATEGORIA_ASSOCIATIVA[c]}
+                </option>
+              ))}
+            </Selecao>
+            <Selecao
               rotulo="Situação"
               value={filtros.situacao}
               onChange={(e) => setFiltros({ ...filtros, situacao: e.target.value })}
@@ -453,6 +511,9 @@ function ModalEdicao({ membro, aoFechar }: { membro: Membro; aoFechar: () => voi
 
   const [nucleoId, setNucleoId] = useState(membro.nucleoId ?? '');
   const [cargoId, setCargoId] = useState(membro.cargoId);
+  const [grauId, setGrauId] = useState(membro.grauId);
+  const [categoria, setCategoria] = useState(membro.categoriaAssociativa);
+  const [titulos, setTitulos] = useState<TituloLateral[]>(membro.titulos);
   const [situacao, setSituacao] = useState<SituacaoMembresia>(membro.situacao);
   const [observacoes, setObservacoes] = useState(membro.observacoesAdministrativas ?? '');
 
@@ -463,6 +524,9 @@ function ModalEdicao({ membro, aoFechar }: { membro: Membro; aoFechar: () => voi
     const mudancas: string[] = [];
     if (nucleoId !== (membro.nucleoId ?? '')) mudancas.push('Núcleo');
     if (cargoId !== membro.cargoId) mudancas.push('cargo');
+    if (grauId !== membro.grauId) mudancas.push('grau');
+    if (categoria !== membro.categoriaAssociativa) mudancas.push('categoria associativa');
+    if (titulos.join() !== membro.titulos.join()) mudancas.push('títulos');
     if (situacao !== membro.situacao) mudancas.push('situação');
 
     atualizar((b) => ({
@@ -473,6 +537,9 @@ function ModalEdicao({ membro, aoFechar }: { membro: Membro; aoFechar: () => voi
               ...m,
               nucleoId: nucleoId || null,
               cargoId,
+              grauId,
+              categoriaAssociativa: categoria,
+              titulos,
               situacao,
               observacoesAdministrativas: observacoes.trim() || undefined,
             }
@@ -527,6 +594,61 @@ function ModalEdicao({ membro, aoFechar }: { membro: Membro; aoFechar: () => voi
             </option>
           ))}
         </Selecao>
+        <Selecao
+          rotulo="Categoria associativa"
+          value={categoria}
+          onChange={(e) => setCategoria(e.target.value as CategoriaAssociativa)}
+          dica="Est. Art. 14 — vínculo jurídico, independente do grau."
+        >
+          {(
+            Object.keys(ROTULO_CATEGORIA_ASSOCIATIVA) as (keyof typeof ROTULO_CATEGORIA_ASSOCIATIVA)[]
+          ).map((c) => (
+            <option key={c} value={c}>
+              {ROTULO_CATEGORIA_ASSOCIATIVA[c]}
+            </option>
+          ))}
+        </Selecao>
+        <Selecao
+          rotulo="Grau de formação"
+          value={grauId}
+          onChange={(e) => setGrauId(e.target.value)}
+          dica="A elevação de grau é ato da Mestria, selado pelo rito da Prokopē (C10:19)."
+        >
+          {[...base.graus]
+            .sort((a, b) => a.ordem - b.ordem)
+            .map((g) => (
+              <option key={g.id} value={g.id}>
+                {g.ordem}. {g.nome} — {ROTULO_CATEGORIA_GRAU[g.categoria]}
+              </option>
+            ))}
+        </Selecao>
+        <div>
+          <p className="mb-2 text-sm font-semibold text-ink">Títulos</p>
+          <div className="space-y-2">
+            {(['regalis', 'kyrios'] as TituloLateral[]).map((t) => (
+              <label key={t} className="flex cursor-pointer items-start gap-2.5">
+                <input
+                  type="checkbox"
+                  checked={titulos.includes(t)}
+                  onChange={(e) =>
+                    setTitulos(
+                      e.target.checked ? [...titulos, t] : titulos.filter((x) => x !== t),
+                    )
+                  }
+                  className="mt-0.5 h-4 w-4 rounded border-line-strong text-ouro focus:ring-ouro/40"
+                />
+                <span>
+                  <span className="block text-sm font-semibold text-ink">{ROTULO_TITULO[t]}</span>
+                  <span className="block text-xs text-ink-soft">{DESCRICAO_TITULO[t]}</span>
+                </span>
+              </label>
+            ))}
+          </div>
+          <p className="mt-2 text-xs text-ink-faint">
+            Títulos fora da progressão linear; a outorga depende de aprovação do Grão-Mestre
+            (C10:49).
+          </p>
+        </div>
         <Selecao
           rotulo="Situação da membresia"
           value={situacao}
@@ -596,6 +718,9 @@ function ModalNovoMembro({ aoFechar }: { aoFechar: () => void }) {
       municipioId: nucleo?.municipioId ?? '',
       nucleoId: nucleoId || null,
       cargoId: 'cargo-membro',
+      categoriaAssociativa: 'efetivo',
+      grauId: 'grau-recruta',
+      titulos: [],
       situacao: 'ativo',
       dataIngresso: new Date().toISOString(),
       interessesFilosoficos: [],

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useDados } from '@/context/DadosContext';
-import { localidade, nucleoPorId } from '@/lib/consultas';
+import { grauDe, localidade, nucleoPorId } from '@/lib/consultas';
 import { cn } from '@/lib/cn';
 import { data as formatarData, numero } from '@/lib/formato';
 import { progressoNivel } from '@/lib/xp';
@@ -25,6 +25,9 @@ export function CarteiraMembro({
 }) {
   const { base } = useDados();
   const nucleo = nucleoPorId(base, membro.nucleoId);
+  // A carteira é documento institucional: o que a Ordem reconhece é o grau
+  // (Códice C10:24), não a pontuação de participação.
+  const grau = grauDe(base, membro);
   const progresso = useMemo(() => progressoNivel(base.niveis, membro.xp), [base.niveis, membro.xp]);
 
   return (
@@ -78,12 +81,16 @@ export function CarteiraMembro({
               <span className="truncate">{localidade(base, membro)}</span>
             </p>
           </div>
-          <div className="shrink-0 text-right">
-            <p className="text-[0.6rem] uppercase tracking-[0.12em] text-white/45">Nível</p>
-            <p className="text-3xl font-extrabold leading-none text-[rgb(245_197_24)]">
-              {progresso.nivel.numero}
+          <div className="max-w-[7.5rem] shrink-0 text-right">
+            <p className="text-[0.6rem] uppercase tracking-[0.12em] text-white/45">Grau</p>
+            <p className="text-lg font-extrabold leading-tight text-[rgb(245_197_24)]">
+              {grau?.nome ?? '—'}
             </p>
-            <p className="text-[0.65rem] font-semibold text-white/60">{progresso.nivel.titulo}</p>
+            {grau && (
+              <p className="text-[0.65rem] font-semibold text-white/60">
+                {grau.ordem}.º · {grau.categoria === 'mestria' ? 'Mestria' : grau.categoria === 'mediadora' ? 'Mediadora' : 'Formação'}
+              </p>
+            )}
           </div>
         </div>
 
@@ -101,7 +108,7 @@ export function CarteiraMembro({
         {!compacta && (
           <div className="mt-4">
             <div className="mb-1.5 flex items-baseline justify-between text-xs">
-              <span className="font-semibold text-white/70">Progresso</span>
+              <span className="font-semibold text-white/70">Participação · nível {progresso.nivel.numero}</span>
               <span className="font-bold tabular-nums text-white">
                 {numero(membro.xp)}
                 {progresso.proximo && (

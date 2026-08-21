@@ -7,11 +7,11 @@ import { LayoutAuth } from './LayoutAuth';
 
 /** Contas de vitrine — permitem avaliar cada nivel de permissao. */
 const PERFIS_DEMO = [
-  { email: 'filipeedito@gmail.com', papel: 'Membro' },
-  { email: 'helenacastro@aordem.org', papel: 'Administrador' },
-  { email: 'beatrizalves@aordem.org', papel: 'Secretaria' },
-  { email: 'marcosteixeira@aordem.org', papel: 'Tesouraria' },
-  { email: 'rafaellins@aordem.org', papel: 'Presidência' },
+  { email: 'filipeedito@gmail.com', papel: 'Eunomita · Membro' },
+  { email: 'rafaellins@aordem.org', papel: 'Grão-Mestre' },
+  { email: 'beatrizalves@aordem.org', papel: 'Secretário-Geral' },
+  { email: 'marcosteixeira@aordem.org', papel: 'Tesoureiro-Geral' },
+  { email: 'helenacastro@aordem.org', papel: 'Administrador da plataforma' },
 ];
 
 export function Entrar() {
@@ -61,8 +61,8 @@ export function Entrar() {
 
   return (
     <LayoutAuth
-      titulo="Acesso do membro"
-      descricao="Use o e-mail registrado na Secretaria da Ordem."
+      titulo="Acesso do Eunomita"
+      descricao="Use o e-mail registrado na Secretaria-Geral da Ordem."
       rodape={
         <div className="rounded-card border border-line bg-surface-card p-4">
           <p className="rotulo mb-3">Perfis de demonstração</p>

@@ -1,6 +1,7 @@
 import type {
   BaseDados,
   Cargo,
+  Grau,
   ID,
   Lancamento,
   Membro,
@@ -20,6 +21,11 @@ export function membroPorId(base: BaseDados, id: ID | null | undefined): Membro 
 export function cargoDe(base: BaseDados, membro: Membro | null | undefined): Cargo | undefined {
   if (!membro) return undefined;
   return base.cargos.find((c) => c.id === membro.cargoId);
+}
+
+export function grauDe(base: BaseDados, membro: Membro | null | undefined): Grau | undefined {
+  if (!membro) return undefined;
+  return base.graus.find((g) => g.id === membro.grauId);
 }
 
 export function nucleoPorId(base: BaseDados, id: ID | null | undefined): Nucleo | undefined {
@@ -270,6 +276,39 @@ export function membrosPorNucleo(base: BaseDados) {
       valor: base.membros.filter((m) => m.nucleoId === n.id).length,
     }))
     .sort((a, b) => b.valor - a.valor);
+}
+
+/* ---------------------------------------------------------------- */
+/* Contribuicoes — Codice C106                                       */
+/* ---------------------------------------------------------------- */
+
+export interface ResumoContribuicoes {
+  pistis: number;
+  hekousia: number;
+  compromissosAtivos: number;
+  valorComprometido: number;
+}
+
+/**
+ * Consolida as duas modalidades de contribuicao no mes de referencia.
+ *
+ * C106:20 veda cobranca coercitiva e exposicao vexatoria: por isso esta
+ * consulta devolve agregados, nunca uma relacao de quem deixou de contribuir.
+ */
+export function resumoContribuicoes(
+  base: BaseDados,
+  referencia = new Date(),
+): ResumoContribuicoes {
+  const doMes = base.lancamentos.filter(
+    (l) => l.tipo === 'receita' && l.situacao !== 'cancelado' && noMes(l.data, referencia),
+  );
+  const ativos = base.compromissos.filter((c) => c.ativo);
+  return {
+    pistis: doMes.filter((l) => l.modalidade === 'pistis').reduce((s, l) => s + l.valor, 0),
+    hekousia: doMes.filter((l) => l.modalidade === 'hekousia').reduce((s, l) => s + l.valor, 0),
+    compromissosAtivos: ativos.length,
+    valorComprometido: ativos.reduce((s, c) => s + c.valorMensal, 0),
+  };
 }
 
 export function naoLidas(base: BaseDados, membroId: ID): number {

@@ -44,6 +44,7 @@ error
 event
 event_available
 event_busy
+event_repeat
 expand_more
 explore_off
 feed
@@ -58,6 +59,7 @@ forum
 foundation
 gavel
 groups
+handshake
 history
 home
 how_to_reg
@@ -81,6 +83,7 @@ manage_accounts
 map
 mark_email_read
 menu
+menu_book
 military_tech
 mode_comment
 monitoring
@@ -141,4 +144,5 @@ verified_user
 videocam
 visibility
 visibility_off
+volunteer_activism
 workspace_premium

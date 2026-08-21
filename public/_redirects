@@ -1,0 +1,3 @@
+# Netlify e Cloudflare Pages: aplicação de página única.
+# Todo caminho desconhecido devolve o index, para que recarregar /feed funcione.
+/*    /index.html   200

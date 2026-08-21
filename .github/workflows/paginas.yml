@@ -1,0 +1,55 @@
+# Publica a plataforma no GitHub Pages a cada envio para a branch principal.
+#
+# Em Settings → Pages, escolha "GitHub Actions" como origem.
+name: Publicar no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # O Pages serve a partir de /<repositorio>/, não da raiz do domínio.
+      - name: Compilar
+        run: npm run build -- --base="/${GITHUB_REPOSITORY#*/}/"
+
+      # O Pages não tem regra de reescrita: um 404.html idêntico ao index faz
+      # com que recarregar /feed devolva a aplicação em vez de erro.
+      - name: Preparar rota da aplicação de página única
+        run: cp dist/index.html dist/404.html
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  publicar:
+    needs: compilar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
