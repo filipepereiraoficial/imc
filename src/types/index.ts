@@ -655,6 +655,172 @@ export interface Lancamento {
 }
 
 /* ------------------------------------------------------------------ */
+/* Orgaos colegiados — Est. Arts. 23, 41, 43, 50, 54, 59               */
+/* ------------------------------------------------------------------ */
+
+export type CodigoOrgao =
+  | 'assembleia_geral'          // Est. Art. 27 — orgao soberano
+  | 'grao_mestre'               // Est. Art. 33 — unipessoal
+  | 'diretoria_executiva'       // Est. Art. 41
+  | 'conselho_alto'             // Est. Art. 44 — camara do Eclesia Supremo
+  | 'conselho_baixo'            // Est. Art. 45 — camara do Eclesia Supremo
+  | 'conselho_superior_etica'   // Est. Art. 50
+  | 'conselho_superior_contas'  // Est. Art. 54
+  | 'coordenadoria_local'       // Est. Art. 59, I
+  | 'conselho_local_etica'      // Est. Art. 59, II
+  | 'conselho_local_contas';    // Est. Art. 59, III
+
+export type AmbitoOrgao = 'central' | 'local';
+
+export interface Orgao {
+  id: ID;
+  codigo: CodigoOrgao;
+  nome: string;
+  descricao: string;
+  ambito: AmbitoOrgao;
+  /** Preenchido apenas em orgaos locais (Est. Art. 59). */
+  nucleoId: ID | null;
+  /** Est. Arts. 51 e 55 — os Conselhos Superiores tem de 3 a 7 membros. */
+  minimoMembros: number | null;
+  maximoMembros: number | null;
+  /** Duracao do mandato em anos. 9 para o Grao-Mestre (Art. 34), 4 para os Conselhos. */
+  mandatoAnos: number | null;
+  competencias: string[];
+  fundamento: string;
+}
+
+export interface Assento {
+  id: ID;
+  orgaoId: ID;
+  membroId: ID;
+  funcao: string;
+  inicioMandato: ISODate;
+  fimMandato: ISODate | null;
+  ativo: boolean;
+}
+
+/* ------------------------------------------------------------------ */
+/* Assembleias e deliberacoes — Est. Arts. 27 a 32, 62                 */
+/* ------------------------------------------------------------------ */
+
+export type SituacaoAssembleia =
+  | 'convocada'
+  | 'instalada'
+  | 'encerrada'
+  | 'cancelada';
+
+/** Est. Art. 31 — o quorum de instalacao depende da convocacao aplicada. */
+export type Convocacao = 'primeira' | 'segunda';
+
+/**
+ * Quorum de deliberacao.
+ * `simples`      — maioria simples dos votos validos dos presentes (Art. 32).
+ * `qualificado`  — 2/3, exigido nos Arts. 40, 48, 57, 67 e 68.
+ */
+export type QuorumDeliberacao = 'simples' | 'qualificado';
+
+export type OpcaoVoto = 'favor' | 'contra' | 'abstencao';
+
+export interface Assembleia {
+  id: ID;
+  titulo: string;
+  descricao: string;
+  orgaoId: ID;
+  /** Est. Art. 29 — ordinaria ao menos uma vez por ano. */
+  ordinaria: boolean;
+  /** Est. Art. 30 — antecedencia minima de 15 dias. */
+  convocadaEm: ISODate;
+  inicio: ISODate;
+  local: string;
+  modalidade: ModalidadeEvento;
+  convocacaoAplicada: Convocacao | null;
+  situacao: SituacaoAssembleia;
+  convocadaPorId: ID;
+  /** Est. Art. 62 — registro das deliberacoes. */
+  ata?: string;
+}
+
+export interface Materia {
+  id: ID;
+  assembleiaId: ID;
+  ordem: number;
+  titulo: string;
+  descricao: string;
+  quorum: QuorumDeliberacao;
+  /** Artigo que fundamenta a exigencia de quorum qualificado, quando houver. */
+  fundamento?: string;
+  /** Proposta submetida a deliberacao, quando a materia vier das Propostas. */
+  propostaId?: ID | null;
+  encerrada: boolean;
+}
+
+/** Est. Art. 62 — votacao nominal, com identificacao do participante. */
+export interface Voto {
+  id: ID;
+  materiaId: ID;
+  membroId: ID;
+  opcao: OpcaoVoto;
+  registradoEm: ISODate;
+}
+
+export interface PresencaAssembleia {
+  id: ID;
+  assembleiaId: ID;
+  membroId: ID;
+  registradaEm: ISODate;
+}
+
+/* ------------------------------------------------------------------ */
+/* Processo disciplinar — Est. Arts. 64 a 66 (CDEG)                    */
+/* ------------------------------------------------------------------ */
+
+export type FaseDisciplinar =
+  | 'instaurado'
+  | 'notificado'
+  | 'defesa_apresentada'
+  | 'em_instrucao'
+  | 'relatorio'
+  | 'decidido'
+  | 'em_recurso'
+  | 'arquivado';
+
+export type DecisaoDisciplinar =
+  | 'advertencia'
+  | 'multa'
+  | 'suspensao'
+  | 'exclusao'
+  | 'absolvicao';
+
+export interface TramiteDisciplinar {
+  fase: FaseDisciplinar;
+  em: ISODate;
+  porId: ID;
+  nota?: string;
+}
+
+export interface ProcessoDisciplinar {
+  id: ID;
+  numero: string;
+  acusadoId: ID;
+  /** Est. Art. 66 — primeira instancia e o Nucleo filial. */
+  instanciaOrgaoId: ID;
+  fatos: string;
+  fase: FaseDisciplinar;
+  instauradoEm: ISODate;
+  instauradoPorId: ID;
+  notificadoEm: ISODate | null;
+  /** Est. Art. 65, § 1.º — 3 dias contados da notificacao. */
+  prazoDefesa: ISODate | null;
+  /** Est. Art. 65, § 2.º — periodo de excecao acrescenta 30 dias. */
+  periodoExcecao: boolean;
+  defesa?: string;
+  relatorio?: string;
+  decisao?: DecisaoDisciplinar;
+  valorMulta?: number;
+  tramitacao: TramiteDisciplinar[];
+}
+
+/* ------------------------------------------------------------------ */
 /* Atividades e auditoria                                              */
 /* ------------------------------------------------------------------ */
 
@@ -690,6 +856,13 @@ export interface BaseDados {
   municipios: Municipio[];
   cargos: Cargo[];
   graus: Grau[];
+  orgaos: Orgao[];
+  assentos: Assento[];
+  assembleias: Assembleia[];
+  materias: Materia[];
+  votos: Voto[];
+  presencasAssembleia: PresencaAssembleia[];
+  processos: ProcessoDisciplinar[];
   membros: Membro[];
   nucleos: Nucleo[];
   publicacoes: Publicacao[];

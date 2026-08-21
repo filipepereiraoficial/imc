@@ -13,6 +13,8 @@ assignment_ind
 attach_file
 auto_stories
 badge
+balance
+ballot
 bar_chart
 block
 bolt
@@ -61,8 +63,10 @@ gavel
 groups
 handshake
 history
+history_edu
 home
 how_to_reg
+how_to_vote
 hub
 info
 key
@@ -88,6 +92,7 @@ military_tech
 mode_comment
 monitoring
 more_horiz
+more_time
 notifications
 notifications_active
 notifications_off
@@ -114,6 +119,7 @@ query_stats
 receipt_long
 record_voice_over
 remove
+replay
 restart_alt
 save
 savings
@@ -132,6 +138,7 @@ star
 summarize
 table_rows
 task_alt
+thumb_down
 thumb_up
 timeline
 trending_down
@@ -145,4 +152,5 @@ videocam
 visibility
 visibility_off
 volunteer_activism
+warning
 workspace_premium

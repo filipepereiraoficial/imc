@@ -19,6 +19,7 @@ import { CursoDetalhe, Formacao } from '@/pages/app/Formacao';
 import { Propostas, PropostaDetalhe } from '@/pages/app/Propostas';
 import { Configuracoes } from '@/pages/app/Configuracoes';
 import { Transparencia } from '@/pages/app/Transparencia';
+import { Assembleias, AssembleiaDetalhe } from '@/pages/app/Assembleias';
 
 import { Secretaria } from '@/pages/admin/Secretaria';
 import { Tesouraria } from '@/pages/admin/Tesouraria';
@@ -28,6 +29,8 @@ import { Nucleos, NucleoDetalhe } from '@/pages/admin/Nucleos';
 import { Relatorios } from '@/pages/admin/Relatorios';
 import { Permissoes } from '@/pages/admin/Permissoes';
 import { Auditoria } from '@/pages/admin/Auditoria';
+import { Governanca } from '@/pages/admin/Governanca';
+import { Disciplina } from '@/pages/admin/Disciplina';
 
 import { Vazio } from '@/components/ui';
 import { BotaoLink } from '@/components/ui/Botao';
@@ -73,6 +76,8 @@ export function App() {
         <Route path="/formacao" element={<Formacao />} />
         <Route path="/formacao/:id" element={<CursoDetalhe />} />
         <Route path="/meu-nucleo" element={<NucleoDetalhe proprio />} />
+        <Route path="/assembleias" element={<Assembleias />} />
+        <Route path="/assembleias/:id" element={<AssembleiaDetalhe />} />
         <Route path="/transparencia" element={<Transparencia />} />
         <Route path="/configuracoes" element={<Configuracoes />} />
 
@@ -85,6 +90,8 @@ export function App() {
         <Route path="/nucleos/:id" element={<NucleoDetalhe />} />
         <Route path="/relatorios" element={<Relatorios />} />
         <Route path="/permissoes" element={<Permissoes />} />
+        <Route path="/governanca" element={<Governanca />} />
+        <Route path="/disciplina" element={<Disciplina />} />
         <Route path="/auditoria" element={<Auditoria />} />
 
         <Route

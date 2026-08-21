@@ -20,6 +20,8 @@ export const NAV_PRINCIPAL: ItemNav[] = [
   { rotulo: 'Início', para: '/hoje', icone: 'home' },
   { rotulo: 'Feed', para: '/feed', icone: 'article' },
   { rotulo: 'Propostas', para: '/propostas', icone: 'gavel' },
+  // Est. Art. 27 — a Assembleia é órgão soberano; o acesso é de todo Eunomita.
+  { rotulo: 'Assembleias', para: '/assembleias', icone: 'how_to_vote' },
   { rotulo: 'Ranking', para: '/ranking', icone: 'leaderboard' },
   { rotulo: 'Eventos', para: '/eventos', icone: 'event' },
   { rotulo: 'Formação', para: '/formacao', icone: 'school' },
@@ -54,6 +56,18 @@ export const NAV_ADMINISTRATIVA: GrupoNav = {
       icone: 'account_balance_wallet',
       permissoes: ['tesouraria.visualizar'],
     },
+    {
+      rotulo: 'Governança',
+      para: '/governanca',
+      icone: 'account_balance',
+      permissoes: ['membros.visualizar'],
+    },
+    {
+      rotulo: 'Disciplina',
+      para: '/disciplina',
+      icone: 'balance',
+      permissoes: ['auditoria.visualizar', 'membros.suspender'],
+    },
     { rotulo: 'Membros', para: '/membros', icone: 'badge', permissoes: ['membros.visualizar'] },
     { rotulo: 'Núcleos', para: '/nucleos', icone: 'hub', permissoes: ['nucleos.visualizar'] },
     { rotulo: 'Relatórios', para: '/relatorios', icone: 'monitoring', permissoes: ['relatorios.gerar'] },
@@ -67,6 +81,8 @@ export const NAV_MOBILE: ItemNav[] = [
   { rotulo: 'Hoje', para: '/hoje', icone: 'bolt' },
   { rotulo: 'Feed', para: '/feed', icone: 'article' },
   { rotulo: 'Propostas', para: '/propostas', icone: 'gavel' },
+  // Est. Art. 27 — a Assembleia é órgão soberano; o acesso é de todo Eunomita.
+  { rotulo: 'Assembleias', para: '/assembleias', icone: 'how_to_vote' },
   { rotulo: 'Ranking', para: '/ranking', icone: 'leaderboard' },
   { rotulo: 'Perfil', para: '/perfil', icone: 'account_circle' },
 ];

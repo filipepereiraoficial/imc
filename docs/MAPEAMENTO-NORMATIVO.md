@@ -262,20 +262,20 @@ Nem toda norma vira tela; algumas viram proibição.
 Critério: primeiro o que corrige divergência com a norma vigente; depois o que
 a norma exige e não existe; por último o que enriquece.
 
-**Etapa 1 — Fidelidade normativa** (corrige o que hoje está errado)
-1. Cargos conforme Estatuto e Códice
-2. Categoria associativa separada de grau de formação
-3. Tratamento de Eunomita
-4. Hierarquia normativa nos documentos
-5. Duas modalidades de contribuição na Tesouraria
+**Etapa 1 — Fidelidade normativa** (corrige o que hoje está errado) — *implantada*
+1. ✅ Cargos conforme Estatuto e Códice
+2. ✅ Categoria associativa separada de grau de formação
+3. ✅ Tratamento de Eunomita
+4. ✅ Hierarquia normativa nos documentos
+5. ✅ Duas modalidades de contribuição na Tesouraria
 
-**Etapa 2 — Obrigações estatutárias** (o que a norma exige)
-6. Órgãos colegiados, com validação de composição e mandato
-7. Assembleias com convocação, quórum e votação nominal
-8. Processo disciplinar com prazos
-9. PGTFO
+**Etapa 2 — Obrigações estatutárias** (o que a norma exige) — *implantada*
+6. ✅ Órgãos colegiados, com validação de composição e mandato
+7. ✅ Assembleias com convocação, quórum e votação nominal
+8. ✅ Processo disciplinar com prazos
+9. ✅ PGTFO
 
-**Etapa 3 — Vida institucional** (o que dá densidade)
+**Etapa 3 — Vida institucional** (o que dá densidade) — *pendente*
 10. Ritos registrais no histórico do membro
 11. Spíti e Symphyle dentro do núcleo
 12. Arbitragem de Honra

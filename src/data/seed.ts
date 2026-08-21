@@ -1,6 +1,7 @@
 import type { BaseDados } from '@/types';
 import { CARGOS } from './cargos';
 import { GRAUS } from './graus';
+import { ORGAOS_CENTRAIS } from './orgaos';
 
 /**
  * Massa de dados institucional de demonstracao.
@@ -9,7 +10,12 @@ import { GRAUS } from './graus';
  * ponta a ponta sem backend. Ao conectar uma API real, basta substituir
  * `criarBaseInicial` pela carga remota — as telas consomem apenas os tipos.
  */
-const DADOS: Omit<BaseDados, 'cargos' | 'graus'> = {
+type Carga = Omit<BaseDados, 'cargos' | 'graus' | 'orgaos'> & {
+  /** Orgaos locais gerados por Nucleo; unem-se aos centrais em `criarBaseInicial`. */
+  orgaosLocais: BaseDados['orgaos'];
+};
+
+const DADOS: Carga = {
   "paises": [
     {
       "id": "pa-br",
@@ -11841,12 +11847,1243 @@ const DADOS: Omit<BaseDados, 'cargos' | 'graus'> = {
       "criadaEm": "2026-08-09T13:00:00.000Z",
       "atual": false
     }
+  ],
+  "orgaosLocais": [
+    {
+      "id": "org-jaboatao-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — Jaboatão dos Guararapes",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-jaboatao",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-jaboatao-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — Jaboatão dos Guararapes",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-jaboatao",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-jaboatao-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — Jaboatão dos Guararapes",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-jaboatao",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-recife-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — Recife Central",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-recife",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-recife-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — Recife Central",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-recife",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-recife-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — Recife Central",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-recife",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-sp-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — São Paulo Central",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-sp",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-sp-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — São Paulo Central",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-sp",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-sp-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — São Paulo Central",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-sp",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-campinas-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — Campinas",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-campinas",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-campinas-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — Campinas",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-campinas",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-campinas-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — Campinas",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-campinas",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-rj-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — Rio de Janeiro",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-rj",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-rj-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — Rio de Janeiro",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-rj",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-rj-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — Rio de Janeiro",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-rj",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-bh-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — Belo Horizonte",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-bh",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-bh-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — Belo Horizonte",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-bh",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-bh-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — Belo Horizonte",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-bh",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-salvador-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — Salvador",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-salvador",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-salvador-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — Salvador",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-salvador",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-salvador-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — Salvador",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-salvador",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-brasilia-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — Brasília",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-brasilia",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-brasilia-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — Brasília",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-brasilia",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-brasilia-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — Brasília",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-brasilia",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-lisboa-local",
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local — Lisboa",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-lisboa",
+      "minimoMembros": 1,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-lisboa-etica",
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética — Lisboa",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-lisboa",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    },
+    {
+      "id": "org-lisboa-contas",
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas — Lisboa",
+      "descricao": "Órgão local obrigatório, nos termos do Est. Art. 59.",
+      "ambito": "local",
+      "nucleoId": "nu-lisboa",
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [],
+      "fundamento": "Est. Art. 59"
+    }
+  ],
+  "assentos": [
+    {
+      "id": "as-001",
+      "orgaoId": "org-grao-mestre",
+      "membroId": "me-003",
+      "funcao": "Moderador Presidente",
+      "inicioMandato": "2024-08-20T13:00:00.000Z",
+      "fimMandato": "2033-08-18T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-002",
+      "orgaoId": "org-diretoria",
+      "membroId": "me-006",
+      "funcao": "Chanceler",
+      "inicioMandato": "2024-08-20T13:00:00.000Z",
+      "fimMandato": "2028-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-003",
+      "orgaoId": "org-diretoria",
+      "membroId": "me-004",
+      "funcao": "Secretário-Geral",
+      "inicioMandato": "2024-08-20T13:00:00.000Z",
+      "fimMandato": "2028-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-004",
+      "orgaoId": "org-diretoria",
+      "membroId": "me-005",
+      "funcao": "Tesoureiro-Geral",
+      "inicioMandato": "2024-08-20T13:00:00.000Z",
+      "fimMandato": "2028-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-005",
+      "orgaoId": "org-conselho-alto",
+      "membroId": "me-007",
+      "funcao": "Conselheiro",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-006",
+      "orgaoId": "org-conselho-alto",
+      "membroId": "me-008",
+      "funcao": "Conselheiro",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-007",
+      "orgaoId": "org-conselho-alto",
+      "membroId": "me-009",
+      "funcao": "Conselheiro",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-008",
+      "orgaoId": "org-conselho-alto",
+      "membroId": "me-011",
+      "funcao": "Conselheiro",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-009",
+      "orgaoId": "org-conselho-baixo",
+      "membroId": "me-020",
+      "funcao": "Kyrios",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-010",
+      "orgaoId": "org-conselho-baixo",
+      "membroId": "me-021",
+      "funcao": "Kyrios",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-011",
+      "orgaoId": "org-conselho-baixo",
+      "membroId": "me-022",
+      "funcao": "Kyrios",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-012",
+      "orgaoId": "org-conselho-baixo",
+      "membroId": "me-027",
+      "funcao": "Kyrios",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-013",
+      "orgaoId": "org-conselho-baixo",
+      "membroId": "me-032",
+      "funcao": "Kyrios",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-014",
+      "orgaoId": "org-etica",
+      "membroId": "me-013",
+      "funcao": "Conselheiro de Ética",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-015",
+      "orgaoId": "org-etica",
+      "membroId": "me-015",
+      "funcao": "Conselheiro de Ética",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-016",
+      "orgaoId": "org-etica",
+      "membroId": "me-017",
+      "funcao": "Conselheiro de Ética",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-017",
+      "orgaoId": "org-contas",
+      "membroId": "me-014",
+      "funcao": "Conselheiro de Contas",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-018",
+      "orgaoId": "org-contas",
+      "membroId": "me-016",
+      "funcao": "Conselheiro de Contas",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-019",
+      "orgaoId": "org-contas",
+      "membroId": "me-018",
+      "funcao": "Conselheiro de Contas",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-020",
+      "orgaoId": "org-contas",
+      "membroId": "me-019",
+      "funcao": "Conselheiro de Contas",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-021",
+      "orgaoId": "org-jaboatao-local",
+      "membroId": "me-001",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-022",
+      "orgaoId": "org-recife-local",
+      "membroId": "me-002",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-023",
+      "orgaoId": "org-sp-local",
+      "membroId": "me-003",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-024",
+      "orgaoId": "org-campinas-local",
+      "membroId": "me-004",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-025",
+      "orgaoId": "org-rj-local",
+      "membroId": "me-005",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-026",
+      "orgaoId": "org-bh-local",
+      "membroId": "me-006",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-027",
+      "orgaoId": "org-salvador-local",
+      "membroId": "me-007",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-028",
+      "orgaoId": "org-brasilia-local",
+      "membroId": "me-008",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "as-029",
+      "orgaoId": "org-lisboa-local",
+      "membroId": "me-009",
+      "funcao": "Coordenador",
+      "inicioMandato": "2025-08-20T13:00:00.000Z",
+      "fimMandato": "2029-08-19T13:00:00.000Z",
+      "ativo": true
+    }
+  ],
+  "assembleias": [
+    {
+      "id": "ag-001",
+      "titulo": "Assembleia Geral Ordinária de 2026",
+      "descricao": "Apreciação do relatório da administração, deliberação sobre as contas da Diretoria Executiva e aprovação do orçamento anual (Est. Art. 28, II e III).",
+      "orgaoId": "org-assembleia",
+      "ordinaria": true,
+      "convocadaEm": "2026-07-11T13:00:00.000Z",
+      "inicio": "2026-09-11T13:00:00.000Z",
+      "local": "Sede Nacional e transmissão",
+      "modalidade": "hibrido",
+      "convocacaoAplicada": null,
+      "situacao": "convocada",
+      "convocadaPorId": "me-003",
+      "ata": null
+    },
+    {
+      "id": "ag-002",
+      "titulo": "Assembleia Geral Extraordinária — Reforma do Regimento Interno",
+      "descricao": "Deliberação sobre a proposta de reforma do Regimento Interno, aprovada em ambas as câmaras do Conselho Eclesia Supremo.",
+      "orgaoId": "org-assembleia",
+      "ordinaria": false,
+      "convocadaEm": "2026-05-16T13:00:00.000Z",
+      "inicio": "2026-06-21T13:00:00.000Z",
+      "local": "Transmissão on-line",
+      "modalidade": "online",
+      "convocacaoAplicada": "primeira",
+      "situacao": "encerrada",
+      "convocadaPorId": "me-003",
+      "ata": "Aberta a sessão em segunda convocação, o Moderador Presidente submeteu a matéria à deliberação. Registrada a votação nominal, na forma do Art. 62."
+    }
+  ],
+  "materias": [
+    {
+      "id": "ma-001",
+      "assembleiaId": "ag-001",
+      "titulo": "Prestação de contas do exercício",
+      "descricao": "Deliberação sobre as contas da Diretoria Executiva, instruídas com parecer do Conselho Superior de Contas.",
+      "ordem": 1,
+      "quorum": "simples",
+      "fundamento": null,
+      "propostaId": null,
+      "encerrada": false
+    },
+    {
+      "id": "ma-002",
+      "assembleiaId": "ag-001",
+      "titulo": "Orçamento anual e plano de trabalho",
+      "descricao": "Aprovação da peça orçamentária e do plano de trabalho para o exercício seguinte (Est. Art. 28, III).",
+      "ordem": 2,
+      "quorum": "simples",
+      "fundamento": null,
+      "propostaId": null,
+      "encerrada": false
+    },
+    {
+      "id": "ma-003",
+      "assembleiaId": "ag-001",
+      "titulo": "Criação do Núcleo Caruaru",
+      "descricao": "Instalação de Núcleo no Agreste pernambucano, conforme proposta protocolada.",
+      "ordem": 3,
+      "quorum": "simples",
+      "fundamento": null,
+      "propostaId": null,
+      "encerrada": false
+    },
+    {
+      "id": "ma-004",
+      "assembleiaId": "ag-002",
+      "titulo": "Reforma do Regimento Interno",
+      "descricao": "Ratificação da reforma aprovada por 2/3 em ambas as câmaras do Conselho Eclesia Supremo.",
+      "ordem": 1,
+      "quorum": "qualificado",
+      "fundamento": "Est. Art. 67",
+      "propostaId": null,
+      "encerrada": true
+    }
+  ],
+  "votos": [
+    {
+      "id": "vo-001",
+      "materiaId": "ma-004",
+      "membroId": "me-001",
+      "opcao": "contra",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-002",
+      "materiaId": "ma-004",
+      "membroId": "me-002",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-003",
+      "materiaId": "ma-004",
+      "membroId": "me-003",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-004",
+      "materiaId": "ma-004",
+      "membroId": "me-004",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-005",
+      "materiaId": "ma-004",
+      "membroId": "me-005",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-006",
+      "materiaId": "ma-004",
+      "membroId": "me-006",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-007",
+      "materiaId": "ma-004",
+      "membroId": "me-007",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-008",
+      "materiaId": "ma-004",
+      "membroId": "me-008",
+      "opcao": "abstencao",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-009",
+      "materiaId": "ma-004",
+      "membroId": "me-009",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-010",
+      "materiaId": "ma-004",
+      "membroId": "me-010",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-011",
+      "materiaId": "ma-004",
+      "membroId": "me-011",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-012",
+      "materiaId": "ma-004",
+      "membroId": "me-012",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-013",
+      "materiaId": "ma-004",
+      "membroId": "me-013",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-014",
+      "materiaId": "ma-004",
+      "membroId": "me-014",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-015",
+      "materiaId": "ma-004",
+      "membroId": "me-015",
+      "opcao": "contra",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-016",
+      "materiaId": "ma-004",
+      "membroId": "me-016",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-017",
+      "materiaId": "ma-004",
+      "membroId": "me-017",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-018",
+      "materiaId": "ma-004",
+      "membroId": "me-018",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-019",
+      "materiaId": "ma-004",
+      "membroId": "me-019",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-020",
+      "materiaId": "ma-004",
+      "membroId": "me-020",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-021",
+      "materiaId": "ma-004",
+      "membroId": "me-021",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-022",
+      "materiaId": "ma-004",
+      "membroId": "me-022",
+      "opcao": "abstencao",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-023",
+      "materiaId": "ma-004",
+      "membroId": "me-023",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-024",
+      "materiaId": "ma-004",
+      "membroId": "me-024",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-025",
+      "materiaId": "ma-004",
+      "membroId": "me-025",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-026",
+      "materiaId": "ma-004",
+      "membroId": "me-026",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-027",
+      "materiaId": "ma-004",
+      "membroId": "me-027",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-028",
+      "materiaId": "ma-004",
+      "membroId": "me-028",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-029",
+      "materiaId": "ma-004",
+      "membroId": "me-029",
+      "opcao": "contra",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-030",
+      "materiaId": "ma-004",
+      "membroId": "me-030",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-031",
+      "materiaId": "ma-004",
+      "membroId": "me-031",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-032",
+      "materiaId": "ma-004",
+      "membroId": "me-032",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-033",
+      "materiaId": "ma-004",
+      "membroId": "me-033",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "vo-034",
+      "materiaId": "ma-004",
+      "membroId": "me-034",
+      "opcao": "favor",
+      "registradoEm": "2026-06-21T13:00:00.000Z"
+    }
+  ],
+  "presencasAssembleia": [
+    {
+      "id": "pa-001",
+      "assembleiaId": "ag-002",
+      "membroId": "me-001",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-002",
+      "assembleiaId": "ag-002",
+      "membroId": "me-002",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-003",
+      "assembleiaId": "ag-002",
+      "membroId": "me-003",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-004",
+      "assembleiaId": "ag-002",
+      "membroId": "me-004",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-005",
+      "assembleiaId": "ag-002",
+      "membroId": "me-005",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-006",
+      "assembleiaId": "ag-002",
+      "membroId": "me-006",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-007",
+      "assembleiaId": "ag-002",
+      "membroId": "me-007",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-008",
+      "assembleiaId": "ag-002",
+      "membroId": "me-008",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-009",
+      "assembleiaId": "ag-002",
+      "membroId": "me-009",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-010",
+      "assembleiaId": "ag-002",
+      "membroId": "me-010",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-011",
+      "assembleiaId": "ag-002",
+      "membroId": "me-011",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-012",
+      "assembleiaId": "ag-002",
+      "membroId": "me-012",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-013",
+      "assembleiaId": "ag-002",
+      "membroId": "me-013",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-014",
+      "assembleiaId": "ag-002",
+      "membroId": "me-014",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-015",
+      "assembleiaId": "ag-002",
+      "membroId": "me-015",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-016",
+      "assembleiaId": "ag-002",
+      "membroId": "me-016",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-017",
+      "assembleiaId": "ag-002",
+      "membroId": "me-017",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-018",
+      "assembleiaId": "ag-002",
+      "membroId": "me-018",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-019",
+      "assembleiaId": "ag-002",
+      "membroId": "me-019",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-020",
+      "assembleiaId": "ag-002",
+      "membroId": "me-020",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-021",
+      "assembleiaId": "ag-002",
+      "membroId": "me-021",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-022",
+      "assembleiaId": "ag-002",
+      "membroId": "me-022",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-023",
+      "assembleiaId": "ag-002",
+      "membroId": "me-023",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-024",
+      "assembleiaId": "ag-002",
+      "membroId": "me-024",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-025",
+      "assembleiaId": "ag-002",
+      "membroId": "me-025",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-026",
+      "assembleiaId": "ag-002",
+      "membroId": "me-026",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-027",
+      "assembleiaId": "ag-002",
+      "membroId": "me-027",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-028",
+      "assembleiaId": "ag-002",
+      "membroId": "me-028",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-029",
+      "assembleiaId": "ag-002",
+      "membroId": "me-029",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-030",
+      "assembleiaId": "ag-002",
+      "membroId": "me-030",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-031",
+      "assembleiaId": "ag-002",
+      "membroId": "me-031",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-032",
+      "assembleiaId": "ag-002",
+      "membroId": "me-032",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-033",
+      "assembleiaId": "ag-002",
+      "membroId": "me-033",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    },
+    {
+      "id": "pa-034",
+      "assembleiaId": "ag-002",
+      "membroId": "me-034",
+      "registradaEm": "2026-06-21T13:00:00.000Z"
+    }
+  ],
+  "processos": [
+    {
+      "id": "pd-001",
+      "numero": "CDEG 001/2026",
+      "acusadoId": "me-044",
+      "instanciaOrgaoId": "org-jaboatao-etica",
+      "fatos": "Descumprimento reiterado das deliberações do Núcleo e conduta incompatível com o Art. 21, II e IV do Estatuto.",
+      "fase": "decidido",
+      "instauradoEm": "2026-06-29T13:00:00.000Z",
+      "instauradoPorId": "me-004",
+      "notificadoEm": "2026-07-01T13:00:00.000Z",
+      "prazoDefesa": "2026-07-04T13:00:00.000Z",
+      "periodoExcecao": false,
+      "defesa": "O associado apresentou defesa escrita no prazo do Art. 65, § 1.º, alegando ausência justificada.",
+      "relatorio": "Relatório conclusivo do Conselho Local de Ética, com recomendação de suspensão.",
+      "decisao": "suspensao",
+      "valorMulta": null,
+      "tramitacao": [
+        {
+          "fase": "instaurado",
+          "em": "2026-06-29T13:00:00.000Z",
+          "porId": "me-004",
+          "nota": "Instauração formal, com ciência dos fatos imputados."
+        },
+        {
+          "fase": "notificado",
+          "em": "2026-07-01T13:00:00.000Z",
+          "porId": "me-004",
+          "nota": "Notificação recebida; prazo de 3 dias para defesa."
+        },
+        {
+          "fase": "defesa_apresentada",
+          "em": "2026-07-03T13:00:00.000Z",
+          "porId": "me-044",
+          "nota": "Defesa apresentada tempestivamente."
+        },
+        {
+          "fase": "em_instrucao",
+          "em": "2026-07-05T13:00:00.000Z",
+          "porId": "me-013",
+          "nota": "Produção de provas."
+        },
+        {
+          "fase": "relatorio",
+          "em": "2026-07-09T13:00:00.000Z",
+          "porId": "me-013",
+          "nota": "Relatório conclusivo emitido."
+        },
+        {
+          "fase": "decidido",
+          "em": "2026-07-11T13:00:00.000Z",
+          "porId": "me-013",
+          "nota": "Decisão motivada: suspensão. Cabe recurso aos órgãos gerais (Art. 66)."
+        }
+      ]
+    },
+    {
+      "id": "pd-002",
+      "numero": "CDEG 002/2026",
+      "acusadoId": "me-034",
+      "instanciaOrgaoId": "org-sp-etica",
+      "fatos": "Divulgação de informação reservada em desacordo com o dever de sigilo do Art. 21, VI.",
+      "fase": "notificado",
+      "instauradoEm": "2026-08-17T13:00:00.000Z",
+      "instauradoPorId": "me-004",
+      "notificadoEm": "2026-08-19T13:00:00.000Z",
+      "prazoDefesa": "2026-08-22T13:00:00.000Z",
+      "periodoExcecao": false,
+      "defesa": null,
+      "relatorio": null,
+      "decisao": null,
+      "valorMulta": null,
+      "tramitacao": [
+        {
+          "fase": "instaurado",
+          "em": "2026-08-17T13:00:00.000Z",
+          "porId": "me-004",
+          "nota": "Instauração formal."
+        },
+        {
+          "fase": "notificado",
+          "em": "2026-08-19T13:00:00.000Z",
+          "porId": "me-004",
+          "nota": "Notificação recebida; prazo de 3 dias para defesa (Art. 65, § 1.º)."
+        }
+      ]
+    }
   ]
-} as unknown as Omit<
-  BaseDados,
-  'cargos' | 'graus'
->;
+} as unknown as Carga;
 
 export function criarBaseInicial(): BaseDados {
-  return structuredClone({ ...DADOS, cargos: CARGOS, graus: GRAUS }) as BaseDados;
+  const { orgaosLocais, ...resto } = structuredClone(DADOS);
+  return {
+    ...resto,
+    cargos: CARGOS,
+    graus: GRAUS,
+    orgaos: [...ORGAOS_CENTRAIS, ...orgaosLocais],
+  } as BaseDados;
 }
