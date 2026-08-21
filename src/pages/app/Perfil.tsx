@@ -11,6 +11,7 @@ import {
   ROTULO_TITULO,
   apto,
 } from '@/data/graus';
+import { definicaoRito } from '@/data/ritos';
 import { data as formatarData, numero, tempoRelativo } from '@/lib/formato';
 import { posicaoNoRanking, progressoNivel } from '@/lib/xp';
 import type { Membro, NivelVisibilidade } from '@/types';
@@ -30,7 +31,7 @@ import {
 import { CabecalhoPagina } from '@/components/layout/CabecalhoPagina';
 import { NOME_ORDEM } from '@/config';
 
-type Secao = 'visao' | 'publicacoes' | 'conquistas' | 'atividade';
+type Secao = 'visao' | 'ritos' | 'publicacoes' | 'conquistas' | 'atividade';
 
 /** Perfil proprio (/perfil) e de terceiros (/membros/:id). */
 export function Perfil() {
@@ -58,6 +59,9 @@ export function Perfil() {
       posicao: posicaoNoRanking(ativos, alvo.id),
       publicacoes: publicacoesOrdenadas(base).filter((p) => p.autorId === alvo.id),
       conquistas: base.conquistas.filter((c) => alvo.conquistas.includes(c.id)),
+      ritos: base.ritos
+        .filter((r) => r.membroId === alvo.id)
+        .sort((a, b) => new Date(b.celebradoEm).getTime() - new Date(a.celebradoEm).getTime()),
       transacoes: base.transacoesXP
         .filter((t) => t.membroId === alvo.id)
         .sort((a, b) => new Date(b.criadoEm).getTime() - new Date(a.criadoEm).getTime())
@@ -134,6 +138,7 @@ export function Perfil() {
             variante="linha"
             itens={[
               { id: 'visao', rotulo: 'Visão geral', icone: 'person' },
+              { id: 'ritos', rotulo: 'Ritos', icone: 'church', contagem: info.ritos.length },
               { id: 'publicacoes', rotulo: 'Publicações', contagem: info.publicacoes.length },
               { id: 'conquistas', rotulo: 'Conquistas', contagem: info.conquistas.length },
               { id: 'atividade', rotulo: 'Atividade' },
@@ -257,6 +262,67 @@ export function Perfil() {
                     </div>
                   )}
                 </Cartao>
+              )}
+            </div>
+          )}
+
+          {secao === 'ritos' && (
+            <div className="space-y-3">
+              {info.ritos.length === 0 ? (
+                <Cartao>
+                  <Vazio
+                    icone="church"
+                    titulo="Nenhum rito registrado"
+                    descricao="Os ritos celebrados aparecem aqui, do ingresso à graduação."
+                  />
+                </Cartao>
+              ) : (
+                info.ritos.map((r) => {
+                  const def = definicaoRito(r.tipo);
+                  const presidente = base.membros.find((m) => m.id === r.presididoPorId);
+                  const grau = base.graus.find((g) => g.id === r.grauAlcancadoId);
+                  return (
+                    <Cartao key={r.id}>
+                      <div className="flex items-start gap-3">
+                        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-ouro-wash text-[rgb(var(--c-gold-deep))]">
+                          <Icone nome={def.icone} className="text-[21px]" />
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <div className="flex flex-wrap items-baseline gap-x-2">
+                            <h3 className="font-bold text-ink">{def.nome}</h3>
+                            <span className="text-xs text-ink-faint">{formatarData(r.celebradoEm)}</span>
+                          </div>
+                          <p className="mt-1 text-sm leading-relaxed text-ink-soft">{def.descricao}</p>
+                          {r.nota && (
+                            <p className="mt-2 rounded-xl bg-surface-muted/60 p-3 text-sm text-ink-soft">
+                              {r.nota}
+                            </p>
+                          )}
+                          {grau && (
+                            <div className="mt-2">
+                              <Selo tom="ouro" icone="stairs">
+                                Grau alcançado: {grau.nome}
+                              </Selo>
+                            </div>
+                          )}
+                          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t border-line pt-3 text-xs text-ink-faint">
+                            <span className="flex items-center gap-1">
+                              <Icone nome="location_on" className="text-[14px]" />
+                              {r.local}
+                            </span>
+                            {presidente && (
+                              <span className="flex items-center gap-1">
+                                <Icone nome="person" className="text-[14px]" />
+                                Presidido por {presidente.nomeExibicao}
+                              </span>
+                            )}
+                            <span className="ml-auto">{def.fundamento}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Cartao>
+                  );
+                })
               )}
             </div>
           )}

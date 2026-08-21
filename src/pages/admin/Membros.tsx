@@ -725,6 +725,7 @@ function ModalNovoMembro({ aoFechar }: { aoFechar: () => void }) {
       dataIngresso: new Date().toISOString(),
       interessesFilosoficos: [],
       areasAtuacao: [],
+      competencias: [],
       xp: 0,
       nivel: 1,
       sequenciaDias: 0,

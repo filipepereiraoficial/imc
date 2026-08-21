@@ -275,16 +275,29 @@ a norma exige e não existe; por último o que enriquece.
 8. ✅ Processo disciplinar com prazos
 9. ✅ PGTFO
 
-**Etapa 3 — Vida institucional** (o que dá densidade) — *pendente*
-10. Ritos registrais no histórico do membro
-11. Spíti e Symphyle dentro do núcleo
-12. Arbitragem de Honra
-13. Linha de sucessão
-14. LEITOURGIA e cadastro de competências
+**Etapa 3 — Vida institucional** (o que dá densidade) — *implantada*
+10. ✅ Ritos registrais no histórico do membro
+11. ✅ Spíti e Symphyle dentro do Núcleo, com o bestiário heráldico
+12. ✅ Arbitragem de Honra, sigilosa por padrão
+13. ✅ Linha de sucessão, com o regime de Regência
+14. ✅ Leitourgia e cadastro de competências
 
 ---
 
-## 6. Fontes
+## 7. Estado da implantação
+
+As três etapas estão implantadas. O que o Estatuto e o Códice determinam sobre
+estrutura, acesso, deliberação, disciplina, contribuição e ritos está no
+sistema, com o artigo de fundamento visível na própria interface.
+
+O que permanece fora do alcance desta fase são as exigências que dependem de
+servidor — hash de senha, dois fatores, upload de documentos e a repetição das
+verificações de acesso do lado do servidor. Estão detalhadas em
+[`SEGURANCA.md`](./SEGURANCA.md).
+
+---
+
+## 8. Fontes
 
 - **Estatuto Social da Ordem dos Monarquistas Conservadores-Liberais — OMCL**,
   75 artigos, 13 capítulos. Sede em Jaboatão dos Guararapes/PE.

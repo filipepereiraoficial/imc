@@ -20,6 +20,8 @@ import { Propostas, PropostaDetalhe } from '@/pages/app/Propostas';
 import { Configuracoes } from '@/pages/app/Configuracoes';
 import { Transparencia } from '@/pages/app/Transparencia';
 import { Assembleias, AssembleiaDetalhe } from '@/pages/app/Assembleias';
+import { ServicoHonorifico } from '@/pages/app/Servico';
+import { Arbitragem } from '@/pages/app/Arbitragem';
 
 import { Secretaria } from '@/pages/admin/Secretaria';
 import { Tesouraria } from '@/pages/admin/Tesouraria';
@@ -78,6 +80,8 @@ export function App() {
         <Route path="/meu-nucleo" element={<NucleoDetalhe proprio />} />
         <Route path="/assembleias" element={<Assembleias />} />
         <Route path="/assembleias/:id" element={<AssembleiaDetalhe />} />
+        <Route path="/leitourgia" element={<ServicoHonorifico />} />
+        <Route path="/arbitragem" element={<Arbitragem />} />
         <Route path="/transparencia" element={<Transparencia />} />
         <Route path="/configuracoes" element={<Configuracoes />} />
 

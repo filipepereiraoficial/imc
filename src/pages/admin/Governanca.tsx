@@ -6,7 +6,22 @@ import { membroPorId, nucleoPorId } from '@/lib/consultas';
 import { conferirComposicao, ORGAOS_INCOMPATIVEIS_COM_ETICA } from '@/data/orgaos';
 import { cn } from '@/lib/cn';
 import { data as formatarData } from '@/lib/formato';
-import type { Orgao } from '@/types';
+import type { FiguraSucessoria, Orgao } from '@/types';
+
+/** Est. Arts. 37 a 39 — figuras da linha sucessória. */
+const ROTULO_FIGURA: Record<FiguraSucessoria, string> = {
+  epigonos_honorario: 'Epígonos Honorário',
+  epigonos_permanente: 'Epígonos Permanente',
+  arquidama: 'Arquidama',
+  chanceler: 'Chanceler',
+};
+
+const FUNDAMENTO_FIGURA: Record<FiguraSucessoria, string> = {
+  epigonos_honorario: 'Est. Art. 37, § 1.º — sucessor em idade de incapacidade civil',
+  epigonos_permanente: 'Est. Art. 37, § 3.º e § 4.º — após sabatina do Conselho Alto',
+  arquidama: 'Est. Art. 38 — assume a Regência na menoridade do Epígonos',
+  chanceler: 'Est. Arts. 36 e 39, I — substituto ordinário',
+};
 import {
   Abas,
   Avatar,
@@ -24,7 +39,7 @@ const DIA_MS = 24 * 60 * 60 * 1000;
 export function Governanca() {
   const { base } = useDados();
   const { temAlguma } = useAuth();
-  const [ambito, setAmbito] = useState<'central' | 'local'>('central');
+  const [ambito, setAmbito] = useState<'central' | 'local' | 'sucessao'>('central');
 
   const orgaos = useMemo(
     () => base.orgaos.filter((o) => o.ambito === ambito),
@@ -96,9 +111,15 @@ export function Governanca() {
             icone: 'hub',
             contagem: base.orgaos.filter((o) => o.ambito === 'local').length,
           },
+          {
+            id: 'sucessao',
+            rotulo: 'Sucessão',
+            icone: 'workspace_premium',
+            contagem: base.sucessao.length,
+          },
         ]}
         ativo={ambito}
-        aoMudar={(v) => setAmbito(v as 'central' | 'local')}
+        aoMudar={(v) => setAmbito(v as 'central' | 'local' | 'sucessao')}
         rotuloGrupo="Âmbito dos órgãos"
       />
 
@@ -113,11 +134,106 @@ export function Governanca() {
         </p>
       )}
 
-      <div className="grid gap-4 [&>*]:min-w-0 lg:grid-cols-2">
-        {orgaos.map((orgao) => (
-          <CartaoOrgao key={orgao.id} orgao={orgao} />
-        ))}
-      </div>
+      {ambito === 'sucessao' ? (
+        <LinhaSucessao />
+      ) : (
+        <div className="grid gap-4 [&>*]:min-w-0 lg:grid-cols-2">
+          {orgaos.map((orgao) => (
+            <CartaoOrgao key={orgao.id} orgao={orgao} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
+ * Linha de sucessão — Est. Arts. 36 a 39.
+ *
+ * A ordem de precedência é fixada por Ato Normativo Supremo (Art. 39, § 1.º), e
+ * esse ato só se anula contra a vontade do subscritor por deliberação de 2/3 da
+ * Assembleia Geral (§ 2.º) — daí a hierarquia normativa aparecer aqui.
+ */
+function LinhaSucessao() {
+  const { base } = useDados();
+  const linha = [...base.sucessao].sort((a, b) => a.ordem - b.ordem);
+
+  return (
+    <div className="space-y-4">
+      <Cartao destaque>
+        <div className="flex items-start gap-3">
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-ouro/20 text-[rgb(var(--c-gold-deep))]">
+            <Icone nome="workspace_premium" className="text-[20px]" />
+          </span>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            <strong className="text-ink">Perenidade da Ordem.</strong> O Moderador Presidente pode
+            escolher e indicar o seu primeiro sucessor, ao qual se outorga o título de Epígonos,
+            formalizado exclusivamente por Ato Normativo Supremo. A ordem de precedência é modulável
+            pelo próprio Grão-Mestre e o ato só se anula por 2/3 da Assembleia Geral (Art. 39, §§ 1.º
+            e 2.º).
+          </p>
+        </div>
+      </Cartao>
+
+      <ol className="space-y-3">
+        {linha.map((posto) => {
+          const m = membroPorId(base, posto.membroId);
+          const ato = base.documentos.find((d) => d.id === posto.atoNormativoId);
+          return (
+            <li key={posto.id}>
+              <Cartao>
+                <div className="flex items-start gap-4">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-ink text-lg font-extrabold text-[rgb(245_197_24)]">
+                    {posto.ordem}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="font-bold text-ink">{ROTULO_FIGURA[posto.figura]}</h3>
+                      {posto.autorizadoParaAusencias && (
+                        <Selo tom="positivo" icone="check">
+                          Autorizado para ausências
+                        </Selo>
+                      )}
+                    </div>
+                    <div className="mt-2 flex items-center gap-2.5">
+                      <Avatar nome={m?.nomeCompleto ?? 'Membro'} tamanho="sm" />
+                      <Link
+                        to={`/membros/${posto.membroId}`}
+                        className="truncate text-sm font-semibold text-ink hover:underline"
+                      >
+                        {m?.nomeCompleto ?? '—'}
+                      </Link>
+                    </div>
+                    {posto.observacao && (
+                      <p className="mt-2 text-sm leading-relaxed text-ink-soft">{posto.observacao}</p>
+                    )}
+                    <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t border-line pt-3 text-xs text-ink-faint">
+                      <span>{FUNDAMENTO_FIGURA[posto.figura]}</span>
+                      {ato && (
+                        <span className="ml-auto flex items-center gap-1">
+                          <Icone nome="gavel" className="text-[14px]" />
+                          {ato.titulo}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </Cartao>
+            </li>
+          );
+        })}
+      </ol>
+
+      <Cartao>
+        <p className="rotulo mb-3">Regime de Regência</p>
+        <p className="text-sm leading-relaxed text-ink-soft">
+          Havendo Epígonos Honorário em idade de incapacidade civil, a vacância do Moderador
+          Presidente não transfere poderes executivos ao sucessor menor: a administração instala-se
+          de imediato em regime de Regência, cabendo à Arquidama responder interinamente pela Ordem
+          até que o sucessor alcance a idade para assumir.
+        </p>
+        <p className="mt-2 text-xs text-ink-faint">Est. Art. 37, § 2.º e Art. 38, § 1.º</p>
+      </Cartao>
     </div>
   );
 }

@@ -14,6 +14,8 @@ import { contem, data as formatarData, numero } from '@/lib/formato';
 import { ordenarRanking } from '@/lib/xp';
 import type { Nucleo, SituacaoNucleo } from '@/types';
 import { CartaoMembro } from '@/components/domain/Itens';
+import { BESTIARIO, DESCRICAO_ESFERA } from '@/data/ritos';
+import type { EsferaCelula } from '@/types';
 import {
   AreaTexto,
   Avatar,
@@ -263,6 +265,68 @@ export function NucleoDetalhe({ proprio }: { proprio?: boolean }) {
               <Info rotulo="Contato" valor={`${nucleo.contatoEmail} · ${nucleo.contatoTelefone}`} />
             </dl>
           </Cartao>
+
+          {/*
+            Codice C1:2 e C11:1 — a vida do Nucleo divide-se em duas esferas: o
+            Spiti, casa de recolhimento e estudo, e a Symphyle, falange de acao
+            e caridade, esta com autonomia administrativa (C10:66).
+          */}
+          <div className="grid gap-4 [&>*]:min-w-0 sm:grid-cols-2">
+            {(['spiti', 'symphyle'] as EsferaCelula[]).map((esfera) => {
+              const celula = base.celulas.find(
+                (c) => c.nucleoId === nucleo.id && c.esfera === esfera && c.ativa,
+              );
+              const info = DESCRICAO_ESFERA[esfera];
+              const alegoria = BESTIARIO[esfera].find((b) => b.nome === celula?.emblema);
+              const responsavel = membroPorId(base, celula?.responsavelId);
+              return (
+                <Cartao key={esfera} className={esfera === 'spiti' ? 'border-line' : 'border-ouro/30'}>
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="rotulo">{info.nome}</p>
+                      <h3 className="mt-1 font-bold leading-snug text-ink">
+                        {celula?.nome ?? `${info.nome} não constituído`}
+                      </h3>
+                    </div>
+                    <Selo tom={esfera === 'spiti' ? 'neutro' : 'ouro'} rotulo>
+                      {celula?.membros.length ?? 0}
+                    </Selo>
+                  </div>
+
+                  <p className="mt-3 text-sm leading-relaxed text-ink-soft">{info.vocacao}</p>
+
+                  {celula && (
+                    <>
+                      <div className="mt-4 flex items-start gap-3 rounded-2xl border border-line bg-surface-muted/50 p-3.5">
+                        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-surface-card text-lg">
+                          {esfera === 'spiti' ? '🦁' : '🦅'}
+                        </span>
+                        <div className="min-w-0">
+                          <p className="text-sm font-bold text-ink">{celula.emblema}</p>
+                          <p className="text-xs leading-relaxed text-ink-soft">
+                            {alegoria?.simboliza ?? 'Emblema heráldico da célula.'}
+                          </p>
+                        </div>
+                      </div>
+
+                      {responsavel && (
+                        <div className="mt-3 flex items-center gap-2.5">
+                          <Avatar nome={responsavel.nomeCompleto} tamanho="xs" />
+                          <span className="min-w-0 flex-1 truncate text-xs text-ink-soft">
+                            Responsável: {responsavel.nomeExibicao}
+                          </span>
+                        </div>
+                      )}
+                    </>
+                  )}
+
+                  <p className="mt-3 border-t border-line pt-3 text-xs text-ink-faint">
+                    {info.fundamento}
+                  </p>
+                </Cartao>
+              );
+            })}
+          </div>
 
           <Cartao semPadding>
             <div className="p-5">

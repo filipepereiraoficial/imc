@@ -163,6 +163,7 @@ export function ProvedorAuth({ children }: { children: ReactNode }) {
         dataIngresso: new Date().toISOString(),
         interessesFilosoficos: [],
         areasAtuacao: [],
+        competencias: [],
         xp: 0,
         nivel: 1,
         sequenciaDias: 0,

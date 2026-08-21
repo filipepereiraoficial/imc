@@ -86,6 +86,7 @@ em funcionamento: o menu, as páginas e as ações mudam conforme o cargo.
 
 **Do membro** — Painel inicial com carteira digital, indicadores e pendências ·
 Assembleias com quórum, votação nominal e apuração · Portal de Transparência ·
+Leitourgia (serviço honorífico) · Arbitragem de Honra ·
 Feed com categorias, comentários, enquetes e comunicados oficiais · Propostas com
 apoio e tramitação · Ranking global, por país, estado, município e Núcleo ·
 Perfil com carteira, conquistas e histórico de XP · Formação em trilhas com
@@ -93,7 +94,8 @@ progresso e certificado · Documentos com versões e acesso por cargo · Mensage
 diretas, de grupo e de Núcleo · Eventos com inscrição e presença · Notificações ·
 Painel do usuário com privacidade e segurança.
 
-**Administrativo** — Governança com órgãos, assentos e mandatos · Processos
+**Administrativo** — Governança com órgãos, assentos, mandatos e linha de
+sucessão · Processos
 disciplinares com o rito do CDEG · Painel da Secretaria com aprovação de cadastros e
 indicadores · Cadastro de membros com filtros territoriais, edição, suspensão,
 transferência e exportação · Cadastro de Núcleos com direção e quadro · Painel da

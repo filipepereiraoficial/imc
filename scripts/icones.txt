@@ -29,6 +29,7 @@ check
 check_circle
 chevron_left
 chevron_right
+church
 close
 computer
 contact_mail
@@ -38,6 +39,7 @@ dark_mode
 dashboard
 description
 devices
+diversity_1
 done_all
 download
 edit
@@ -121,6 +123,7 @@ record_voice_over
 remove
 replay
 restart_alt
+restaurant
 save
 savings
 schedule
@@ -136,6 +139,7 @@ smartphone
 stairs
 star
 summarize
+swap_horiz
 table_rows
 task_alt
 thumb_down
@@ -153,4 +157,5 @@ visibility
 visibility_off
 volunteer_activism
 warning
+waving_hand
 workspace_premium

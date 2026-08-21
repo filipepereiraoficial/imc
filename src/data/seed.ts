@@ -219,6 +219,10 @@ const DADOS: Carga = {
         "Estudos",
         "Eventos"
       ],
+      "competencias": [
+        "Assistência social",
+        "Educação"
+      ],
       "xp": 8940,
       "nivel": 11,
       "sequenciaDias": 46,
@@ -276,15 +280,19 @@ const DADOS: Carga = {
       "dataIngresso": "2023-06-22T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "História das ideias",
         "Lógica",
-        "Ética"
+        "Ética",
+        "Economia política"
       ],
       "areasAtuacao": [
-        "Tecnologia",
-        "Eventos"
+        "Eventos",
+        "Tecnologia"
       ],
-      "xp": 12517,
+      "competencias": [
+        "Psicologia",
+        "Tecnologia"
+      ],
+      "xp": 12063,
       "nivel": 12,
       "sequenciaDias": 45,
       "aliados": [
@@ -339,15 +347,19 @@ const DADOS: Carga = {
       "dataIngresso": "2023-07-17T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Estética",
-        "Antropologia filosófica",
-        "Lógica"
+        "Ética",
+        "História das ideias",
+        "Filosofia do direito"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Eventos"
+        "Documentação",
+        "Mobilização"
       ],
-      "xp": 11987,
+      "competencias": [
+        "Educação",
+        "Comunicação"
+      ],
+      "xp": 11913,
       "nivel": 12,
       "sequenciaDias": 44,
       "aliados": [
@@ -402,15 +414,19 @@ const DADOS: Carga = {
       "dataIngresso": "2023-08-11T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Epistemologia",
-        "Lógica",
-        "História das ideias"
+        "Estética",
+        "Retórica",
+        "Metafísica"
       ],
       "areasAtuacao": [
-        "Documentação",
+        "Organização territorial",
         "Finanças"
       ],
-      "xp": 11483,
+      "competencias": [
+        "Psicologia",
+        "Assistência social"
+      ],
+      "xp": 11902,
       "nivel": 12,
       "sequenciaDias": 43,
       "aliados": [
@@ -466,14 +482,18 @@ const DADOS: Carga = {
       "biografia": "",
       "interessesFilosoficos": [
         "Metafísica",
-        "Retórica",
-        "História das ideias"
+        "Filosofia política",
+        "Ética"
       ],
       "areasAtuacao": [
-        "Organização territorial",
-        "Formação"
+        "Comunicação",
+        "Documentação"
       ],
-      "xp": 11153,
+      "competencias": [
+        "Direito",
+        "Saúde"
+      ],
+      "xp": 11281,
       "nivel": 12,
       "sequenciaDias": 42,
       "aliados": [
@@ -531,15 +551,19 @@ const DADOS: Carga = {
       "dataIngresso": "2023-09-30T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Ética",
-        "Lógica",
-        "Doutrina social"
+        "Filosofia do direito",
+        "Antropologia filosófica",
+        "Estética"
       ],
       "areasAtuacao": [
-        "Documentação",
-        "Formação"
+        "Mobilização",
+        "Tecnologia"
       ],
-      "xp": 11412,
+      "competencias": [
+        "Tradução",
+        "Saúde"
+      ],
+      "xp": 11025,
       "nivel": 12,
       "sequenciaDias": 41,
       "aliados": [
@@ -594,16 +618,20 @@ const DADOS: Carga = {
       "dataIngresso": "2023-10-25T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "História das ideias",
-        "Filosofia do direito",
-        "Antropologia filosófica"
+        "Estética",
+        "Ética",
+        "Doutrina social"
       ],
       "areasAtuacao": [
-        "Relações institucionais",
-        "Tecnologia"
+        "Mobilização",
+        "Documentação"
       ],
-      "xp": 10575,
-      "nivel": 11,
+      "competencias": [
+        "Engenharia",
+        "Saúde"
+      ],
+      "xp": 11146,
+      "nivel": 12,
       "sequenciaDias": 40,
       "aliados": [
         "me-016",
@@ -657,15 +685,19 @@ const DADOS: Carga = {
       "dataIngresso": "2023-11-19T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Ética",
+        "Retórica",
         "Estética",
-        "Lógica"
+        "Filosofia do direito"
       ],
       "areasAtuacao": [
-        "Mobilização",
-        "Documentação"
+        "Eventos",
+        "Tecnologia"
       ],
-      "xp": 10857,
+      "competencias": [
+        "Tradução",
+        "Contabilidade"
+      ],
+      "xp": 10733,
       "nivel": 11,
       "sequenciaDias": 39,
       "aliados": [
@@ -721,15 +753,19 @@ const DADOS: Carga = {
       "dataIngresso": "2023-12-14T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Ética",
-        "Economia política",
-        "Retórica"
+        "História das ideias",
+        "Retórica",
+        "Lógica"
       ],
       "areasAtuacao": [
-        "Estudos",
-        "Eventos"
+        "Comunicação",
+        "Mobilização"
       ],
-      "xp": 10165,
+      "competencias": [
+        "Saúde",
+        "Educação"
+      ],
+      "xp": 10476,
       "nivel": 11,
       "sequenciaDias": 38,
       "aliados": [
@@ -785,15 +821,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-01-08T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Doutrina social",
-        "Filosofia do direito",
-        "Economia política"
+        "Ética",
+        "Filosofia política",
+        "Metafísica"
       ],
       "areasAtuacao": [
-        "Eventos",
-        "Finanças"
+        "Relações institucionais",
+        "Comunicação"
       ],
-      "xp": 10188,
+      "competencias": [
+        "Psicologia",
+        "Construção civil"
+      ],
+      "xp": 10012,
       "nivel": 11,
       "sequenciaDias": 37,
       "aliados": [
@@ -850,14 +890,18 @@ const DADOS: Carga = {
       "biografia": "",
       "interessesFilosoficos": [
         "Ética",
-        "Lógica",
-        "Estética"
+        "Antropologia filosófica",
+        "Economia política"
       ],
       "areasAtuacao": [
-        "Eventos",
-        "Mobilização"
+        "Organização territorial",
+        "Finanças"
       ],
-      "xp": 9730,
+      "competencias": [
+        "Tecnologia",
+        "Logística"
+      ],
+      "xp": 10070,
       "nivel": 11,
       "sequenciaDias": 36,
       "aliados": [
@@ -912,15 +956,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-02-27T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Filosofia política",
-        "Metafísica",
+        "Economia política",
+        "Lógica",
         "Antropologia filosófica"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Finanças"
+        "Relações institucionais",
+        "Comunicação"
       ],
-      "xp": 9336,
+      "competencias": [
+        "Educação",
+        "Logística"
+      ],
+      "xp": 9531,
       "nivel": 11,
       "sequenciaDias": 35,
       "aliados": [
@@ -975,15 +1023,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-03-23T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Ética",
-        "Antropologia filosófica",
-        "Economia política"
+        "Filosofia do direito",
+        "Economia política",
+        "Doutrina social"
       ],
       "areasAtuacao": [
-        "Organização territorial",
-        "Finanças"
+        "Tecnologia",
+        "Comunicação"
       ],
-      "xp": 9560,
+      "competencias": [
+        "Tradução",
+        "Engenharia"
+      ],
+      "xp": 9363,
       "nivel": 11,
       "sequenciaDias": 34,
       "aliados": [
@@ -1039,15 +1091,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-04-17T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Economia política",
+        "Lógica",
         "História das ideias",
-        "Lógica"
+        "Doutrina social"
       ],
       "areasAtuacao": [
         "Tecnologia",
-        "Relações institucionais"
+        "Formação"
       ],
-      "xp": 9100,
+      "competencias": [
+        "Assistência social",
+        "Tecnologia"
+      ],
+      "xp": 9205,
       "nivel": 11,
       "sequenciaDias": 33,
       "aliados": [
@@ -1102,15 +1158,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-05-12T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Doutrina social",
-        "Ética",
-        "História das ideias"
+        "Filosofia política",
+        "Epistemologia",
+        "Doutrina social"
       ],
       "areasAtuacao": [
-        "Tecnologia",
-        "Relações institucionais"
+        "Documentação",
+        "Tecnologia"
       ],
-      "xp": 8877,
+      "competencias": [
+        "Educação",
+        "Comunicação"
+      ],
+      "xp": 8883,
       "nivel": 11,
       "sequenciaDias": 32,
       "aliados": [
@@ -1166,16 +1226,20 @@ const DADOS: Carga = {
       "dataIngresso": "2024-06-06T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Economia política",
-        "Doutrina social",
-        "Lógica"
+        "Retórica",
+        "Filosofia do direito",
+        "Filosofia política"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Organização territorial"
+        "Finanças",
+        "Tecnologia"
       ],
-      "xp": 8436,
-      "nivel": 10,
+      "competencias": [
+        "Educação",
+        "Saúde"
+      ],
+      "xp": 8504,
+      "nivel": 11,
       "sequenciaDias": 31,
       "aliados": [
         "me-007",
@@ -1229,15 +1293,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-07-01T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Lógica",
-        "História das ideias",
-        "Doutrina social"
+        "Ética",
+        "Filosofia política",
+        "Filosofia do direito"
       ],
       "areasAtuacao": [
-        "Tecnologia",
+        "Eventos",
         "Formação"
       ],
-      "xp": 8440,
+      "competencias": [
+        "Direito",
+        "Tradução"
+      ],
+      "xp": 8337,
       "nivel": 10,
       "sequenciaDias": 30,
       "aliados": [
@@ -1293,15 +1361,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-07-26T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Antropologia filosófica",
-        "Lógica",
-        "Filosofia política"
+        "História das ideias",
+        "Retórica",
+        "Epistemologia"
       ],
       "areasAtuacao": [
-        "Documentação",
-        "Mobilização"
+        "Eventos",
+        "Comunicação"
       ],
-      "xp": 8406,
+      "competencias": [
+        "Direito",
+        "Engenharia"
+      ],
+      "xp": 8203,
       "nivel": 10,
       "sequenciaDias": 29,
       "aliados": [
@@ -1355,15 +1427,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-08-20T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "História das ideias",
-        "Epistemologia",
-        "Lógica"
+        "Filosofia política",
+        "Filosofia do direito",
+        "História das ideias"
       ],
       "areasAtuacao": [
         "Finanças",
-        "Estudos"
+        "Eventos"
       ],
-      "xp": 7912,
+      "competencias": [
+        "Engenharia",
+        "Contabilidade"
+      ],
+      "xp": 7633,
       "nivel": 10,
       "sequenciaDias": 28,
       "aliados": [
@@ -1420,15 +1496,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-09-14T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
+        "Doutrina social",
         "Estética",
-        "Retórica",
-        "Economia política"
+        "Epistemologia"
       ],
       "areasAtuacao": [
         "Eventos",
-        "Comunicação"
+        "Documentação"
       ],
-      "xp": 7218,
+      "competencias": [
+        "Direito",
+        "Construção civil"
+      ],
+      "xp": 7387,
       "nivel": 10,
       "sequenciaDias": 27,
       "aliados": [
@@ -1484,15 +1564,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-10-09T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Ética",
-        "Filosofia política",
-        "Filosofia do direito"
+        "Lógica",
+        "Metafísica",
+        "Retórica"
       ],
       "areasAtuacao": [
-        "Eventos",
-        "Formação"
+        "Estudos",
+        "Documentação"
       ],
-      "xp": 7317,
+      "competencias": [
+        "Logística",
+        "Tecnologia"
+      ],
+      "xp": 7530,
       "nivel": 10,
       "sequenciaDias": 26,
       "aliados": [
@@ -1549,15 +1633,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-11-03T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Doutrina social",
+        "Antropologia filosófica",
         "Retórica",
-        "História das ideias"
+        "Estética"
       ],
       "areasAtuacao": [
-        "Finanças",
-        "Documentação"
+        "Documentação",
+        "Tecnologia"
       ],
-      "xp": 6665,
+      "competencias": [
+        "Tradução",
+        "Direito"
+      ],
+      "xp": 6915,
       "nivel": 10,
       "sequenciaDias": 25,
       "aliados": [
@@ -1612,15 +1700,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-11-28T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Ética",
-        "Filosofia política",
-        "Metafísica"
+        "Estética",
+        "Antropologia filosófica",
+        "Economia política"
       ],
       "areasAtuacao": [
-        "Estudos",
-        "Formação"
+        "Documentação",
+        "Comunicação"
       ],
-      "xp": 6667,
+      "competencias": [
+        "Educação",
+        "Saúde"
+      ],
+      "xp": 6663,
       "nivel": 10,
       "sequenciaDias": 24,
       "aliados": [
@@ -1674,15 +1766,19 @@ const DADOS: Carga = {
       "dataIngresso": "2024-12-23T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "História das ideias",
-        "Retórica",
-        "Lógica"
+        "Filosofia do direito",
+        "Filosofia política",
+        "Metafísica"
       ],
       "areasAtuacao": [
-        "Organização territorial",
-        "Estudos"
+        "Estudos",
+        "Eventos"
       ],
-      "xp": 6390,
+      "competencias": [
+        "Logística",
+        "Assistência social"
+      ],
+      "xp": 6288,
       "nivel": 9,
       "sequenciaDias": 23,
       "aliados": [
@@ -1736,15 +1832,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-01-17T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Doutrina social",
-        "Estética",
-        "Epistemologia"
+        "Retórica",
+        "Antropologia filosófica",
+        "Filosofia política"
       ],
       "areasAtuacao": [
-        "Eventos",
-        "Documentação"
+        "Comunicação",
+        "Eventos"
       ],
-      "xp": 6112,
+      "competencias": [
+        "Assistência social",
+        "Comunicação"
+      ],
+      "xp": 6028,
       "nivel": 9,
       "sequenciaDias": 22,
       "aliados": [
@@ -1799,15 +1899,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-02-11T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Retórica",
-        "Doutrina social",
+        "Antropologia filosófica",
+        "Lógica",
         "Metafísica"
       ],
       "areasAtuacao": [
-        "Finanças",
+        "Tecnologia",
         "Estudos"
       ],
-      "xp": 5677,
+      "competencias": [
+        "Saúde",
+        "Engenharia"
+      ],
+      "xp": 6199,
       "nivel": 9,
       "sequenciaDias": 21,
       "aliados": [
@@ -1863,15 +1967,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-03-08T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Economia política",
-        "Antropologia filosófica",
-        "Filosofia do direito"
+        "Metafísica",
+        "Lógica",
+        "Filosofia política"
       ],
       "areasAtuacao": [
-        "Relações institucionais",
-        "Finanças"
+        "Estudos",
+        "Documentação"
       ],
-      "xp": 5765,
+      "competencias": [
+        "Tradução",
+        "Psicologia"
+      ],
+      "xp": 6132,
       "nivel": 9,
       "sequenciaDias": 20,
       "aliados": [
@@ -1925,15 +2033,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-04-02T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Epistemologia",
-        "Economia política",
+        "Lógica",
+        "Filosofia política",
         "Doutrina social"
       ],
       "areasAtuacao": [
-        "Formação",
-        "Estudos"
+        "Relações institucionais",
+        "Tecnologia"
       ],
-      "xp": 5701,
+      "competencias": [
+        "Educação",
+        "Logística"
+      ],
+      "xp": 5705,
       "nivel": 9,
       "sequenciaDias": 19,
       "aliados": [
@@ -1988,15 +2100,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-04-27T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Antropologia filosófica",
-        "Economia política",
-        "Epistemologia"
+        "Ética",
+        "Epistemologia",
+        "Filosofia política"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Eventos"
+        "Finanças",
+        "Comunicação"
       ],
-      "xp": 5538,
+      "competencias": [
+        "Saúde",
+        "Tecnologia"
+      ],
+      "xp": 5210,
       "nivel": 9,
       "sequenciaDias": 18,
       "aliados": [
@@ -2052,15 +2168,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-05-22T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Metafísica",
-        "Filosofia do direito",
-        "Filosofia política"
+        "Filosofia política",
+        "Estética",
+        "Metafísica"
       ],
       "areasAtuacao": [
-        "Organização territorial",
-        "Estudos"
+        "Comunicação",
+        "Formação"
       ],
-      "xp": 4730,
+      "competencias": [
+        "Psicologia",
+        "Educação"
+      ],
+      "xp": 4742,
       "nivel": 8,
       "sequenciaDias": 17,
       "aliados": [
@@ -2112,15 +2232,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-06-16T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Economia política",
-        "Lógica",
-        "Metafísica"
+        "Metafísica",
+        "Antropologia filosófica",
+        "Doutrina social"
       ],
       "areasAtuacao": [
-        "Finanças",
-        "Relações institucionais"
+        "Organização territorial",
+        "Formação"
       ],
-      "xp": 4634,
+      "competencias": [
+        "Logística",
+        "Assistência social"
+      ],
+      "xp": 4415,
       "nivel": 8,
       "sequenciaDias": 16,
       "aliados": [
@@ -2175,15 +2299,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-07-11T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Ética",
-        "História das ideias",
-        "Epistemologia"
+        "Lógica",
+        "Retórica",
+        "Filosofia política"
       ],
       "areasAtuacao": [
-        "Finanças",
-        "Relações institucionais"
+        "Eventos",
+        "Comunicação"
       ],
-      "xp": 4167,
+      "competencias": [
+        "Educação",
+        "Contabilidade"
+      ],
+      "xp": 4622,
       "nivel": 8,
       "sequenciaDias": 15,
       "aliados": [
@@ -2235,15 +2363,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-08-05T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Metafísica",
-        "Economia política",
-        "Filosofia do direito"
+        "Estética",
+        "Doutrina social",
+        "Retórica"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Organização territorial"
+        "Formação",
+        "Finanças"
       ],
-      "xp": 4288,
+      "competencias": [
+        "Contabilidade",
+        "Direito"
+      ],
+      "xp": 4148,
       "nivel": 8,
       "sequenciaDias": 14,
       "aliados": [
@@ -2292,20 +2424,24 @@ const DADOS: Carga = {
       "cargoId": "cargo-membro",
       "situacao": "ativo",
       "categoriaAssociativa": "efetivo",
-      "grauId": "grau-empeiros",
+      "grauId": "grau-aretaios",
       "titulos": [],
       "dataIngresso": "2025-08-30T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Metafísica",
+        "Ética",
         "Lógica",
-        "Filosofia política"
+        "Antropologia filosófica"
       ],
       "areasAtuacao": [
-        "Estudos",
-        "Documentação"
+        "Relações institucionais",
+        "Tecnologia"
       ],
-      "xp": 4347,
+      "competencias": [
+        "Educação",
+        "Comunicação"
+      ],
+      "xp": 3971,
       "nivel": 8,
       "sequenciaDias": 13,
       "aliados": [
@@ -2352,20 +2488,24 @@ const DADOS: Carga = {
       "cargoId": "cargo-membro",
       "situacao": "ativo",
       "categoriaAssociativa": "efetivo",
-      "grauId": "grau-aretaios",
+      "grauId": "grau-empeiros",
       "titulos": [],
       "dataIngresso": "2025-09-24T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Estética",
-        "Retórica",
-        "Filosofia política"
+        "Epistemologia",
+        "Filosofia política",
+        "História das ideias"
       ],
       "areasAtuacao": [
-        "Mobilização",
-        "Relações institucionais"
+        "Organização territorial",
+        "Eventos"
       ],
-      "xp": 3959,
+      "competencias": [
+        "Tradução",
+        "Educação"
+      ],
+      "xp": 4091,
       "nivel": 8,
       "sequenciaDias": 12,
       "aliados": [
@@ -2417,15 +2557,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-10-19T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "História das ideias",
-        "Economia política",
-        "Epistemologia"
+        "Retórica",
+        "Doutrina social",
+        "Economia política"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Documentação"
+        "Formação",
+        "Comunicação"
       ],
-      "xp": 3574,
+      "competencias": [
+        "Logística",
+        "Comunicação"
+      ],
+      "xp": 3316,
       "nivel": 7,
       "sequenciaDias": 11,
       "aliados": [
@@ -2479,15 +2623,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-11-13T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Estética",
-        "Lógica",
-        "Retórica"
+        "Antropologia filosófica",
+        "Doutrina social",
+        "Lógica"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Mobilização"
+        "Eventos",
+        "Relações institucionais"
       ],
-      "xp": 2903,
+      "competencias": [
+        "Contabilidade",
+        "Direito"
+      ],
+      "xp": 3430,
       "nivel": 7,
       "sequenciaDias": 10,
       "aliados": [
@@ -2541,15 +2689,19 @@ const DADOS: Carga = {
       "dataIngresso": "2025-12-08T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Ética",
-        "Filosofia política",
-        "Metafísica"
+        "Lógica",
+        "Economia política",
+        "Filosofia do direito"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Formação"
+        "Relações institucionais",
+        "Finanças"
       ],
-      "xp": 3021,
+      "competencias": [
+        "Saúde",
+        "Contabilidade"
+      ],
+      "xp": 2970,
       "nivel": 7,
       "sequenciaDias": 9,
       "aliados": [
@@ -2596,21 +2748,25 @@ const DADOS: Carga = {
       "cargoId": "cargo-membro",
       "situacao": "ativo",
       "categoriaAssociativa": "juvenil",
-      "grauId": "grau-aretaios",
+      "grauId": "grau-prokopos",
       "titulos": [],
       "dataIngresso": "2026-01-02T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
+        "Filosofia do direito",
         "História das ideias",
-        "Filosofia política",
-        "Metafísica"
+        "Ética"
       ],
       "areasAtuacao": [
-        "Relações institucionais",
-        "Organização territorial"
+        "Estudos",
+        "Comunicação"
       ],
-      "xp": 3022,
-      "nivel": 7,
+      "competencias": [
+        "Logística",
+        "Psicologia"
+      ],
+      "xp": 2571,
+      "nivel": 6,
       "sequenciaDias": 8,
       "aliados": [
         "me-003",
@@ -2661,15 +2817,19 @@ const DADOS: Carga = {
       "dataIngresso": "2026-01-27T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
-        "Economia política",
+        "Filosofia política",
         "Lógica",
-        "Estética"
+        "Filosofia do direito"
       ],
       "areasAtuacao": [
-        "Finanças",
-        "Formação"
+        "Mobilização",
+        "Eventos"
       ],
-      "xp": 2079,
+      "competencias": [
+        "Tecnologia",
+        "Logística"
+      ],
+      "xp": 2646,
       "nivel": 6,
       "sequenciaDias": 7,
       "aliados": [
@@ -2721,14 +2881,15 @@ const DADOS: Carga = {
       "dataIngresso": "2026-08-07T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "História das ideias",
+        "Filosofia do direito",
         "Ética",
-        "Lógica"
+        "Estética"
       ],
       "areasAtuacao": [
-        "Estudos",
-        "Eventos"
+        "Organização territorial",
+        "Documentação"
       ],
+      "competencias": [],
       "xp": 0,
       "nivel": 1,
       "sequenciaDias": 0,
@@ -2783,14 +2944,15 @@ const DADOS: Carga = {
       "dataIngresso": "2026-07-27T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Estética",
-        "Doutrina social",
-        "Retórica"
+        "Economia política",
+        "Filosofia do direito",
+        "Antropologia filosófica"
       ],
       "areasAtuacao": [
-        "Formação",
-        "Finanças"
+        "Comunicação",
+        "Documentação"
       ],
+      "competencias": [],
       "xp": 0,
       "nivel": 1,
       "sequenciaDias": 0,
@@ -2843,14 +3005,15 @@ const DADOS: Carga = {
       "dataIngresso": "2026-08-14T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
+        "Economia política",
         "Filosofia do direito",
-        "Filosofia política",
         "Epistemologia"
       ],
       "areasAtuacao": [
-        "Comunicação",
-        "Mobilização"
+        "Documentação",
+        "Tecnologia"
       ],
+      "competencias": [],
       "xp": 0,
       "nivel": 1,
       "sequenciaDias": 0,
@@ -2905,15 +3068,16 @@ const DADOS: Carga = {
       "dataIngresso": "2026-05-07T13:00:00.000Z",
       "biografia": "",
       "interessesFilosoficos": [
-        "Antropologia filosófica",
-        "Economia política",
-        "História das ideias"
+        "História das ideias",
+        "Filosofia política",
+        "Metafísica"
       ],
       "areasAtuacao": [
-        "Documentação",
-        "Mobilização"
+        "Mobilização",
+        "Tecnologia"
       ],
-      "xp": 1462,
+      "competencias": [],
+      "xp": 1602,
       "nivel": 5,
       "sequenciaDias": 0,
       "aliados": [
@@ -2966,15 +3130,16 @@ const DADOS: Carga = {
       "biografia": "",
       "interessesFilosoficos": [
         "História das ideias",
-        "Metafísica",
+        "Economia política",
         "Lógica"
       ],
       "areasAtuacao": [
-        "Mobilização",
-        "Eventos"
+        "Finanças",
+        "Formação"
       ],
-      "xp": 829,
-      "nivel": 3,
+      "competencias": [],
+      "xp": 936,
+      "nivel": 4,
       "sequenciaDias": 0,
       "aliados": [
         "me-009",
@@ -3027,15 +3192,19 @@ const DADOS: Carga = {
       "dataIngresso": "2026-06-26T13:00:00.000Z",
       "biografia": "Membro dedicado à formação filosófica e à organização territorial da Ordem.",
       "interessesFilosoficos": [
+        "Filosofia política",
         "Retórica",
-        "Doutrina social",
-        "Economia política"
+        "Lógica"
       ],
       "areasAtuacao": [
-        "Formação",
-        "Comunicação"
+        "Eventos",
+        "Tecnologia"
       ],
-      "xp": 766,
+      "competencias": [
+        "Comunicação",
+        "Psicologia"
+      ],
+      "xp": 702,
       "nivel": 3,
       "sequenciaDias": 1,
       "aliados": [
@@ -7597,7 +7766,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 18688.0,
+      "valor": 18542.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7613,7 +7782,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 4288.0,
+      "valor": 4317.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7629,7 +7798,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 3933.0,
+      "valor": 3718.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7645,7 +7814,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2122.0,
+      "valor": 1824.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7661,7 +7830,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1396.0,
+      "valor": 1164.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -7677,7 +7846,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1458.0,
+      "valor": 1244.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -7693,7 +7862,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1124.0,
+      "valor": 1439.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -7709,7 +7878,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 841.0,
+      "valor": 878.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -7725,7 +7894,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1085.0,
+      "valor": 834.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -7741,7 +7910,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1077.0,
+      "valor": 823.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -7757,7 +7926,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 730.0,
+      "valor": 796.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -7773,7 +7942,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 767.0,
+      "valor": 782.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -7789,7 +7958,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 383.0,
+      "valor": 747.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -7805,7 +7974,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 5367.0,
+      "valor": 5498.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7821,7 +7990,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 3081.0,
+      "valor": 3021.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7837,7 +8006,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2239.0,
+      "valor": 2399.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7853,7 +8022,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1521.0,
+      "valor": 1512.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7869,7 +8038,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 596.0,
+      "valor": 880.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -7885,7 +8054,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 632.0,
+      "valor": 723.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -7901,7 +8070,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 252.0,
+      "valor": 602.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7917,7 +8086,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 19444.0,
+      "valor": 19093.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7933,7 +8102,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 4159.0,
+      "valor": 4123.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7949,7 +8118,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 3720.0,
+      "valor": 3733.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7965,7 +8134,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 1962.0,
+      "valor": 2080.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -7981,7 +8150,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1485.0,
+      "valor": 1474.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -7997,7 +8166,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1515.6,
+      "valor": 1256.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -8013,7 +8182,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1437.2,
+      "valor": 1274.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -8029,7 +8198,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1082.8,
+      "valor": 1055.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -8045,7 +8214,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 807.4,
+      "valor": 942.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -8061,7 +8230,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 700.0,
+      "valor": 741.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -8077,7 +8246,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 697.6,
+      "valor": 740.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -8093,7 +8262,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 776.2,
+      "valor": 792.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -8109,7 +8278,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 751.8,
+      "valor": 568.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -8125,7 +8294,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 5563.0,
+      "valor": 5808.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8141,7 +8310,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 3357.0,
+      "valor": 3078.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8157,7 +8326,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2241.0,
+      "valor": 2527.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8173,7 +8342,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1692.8,
+      "valor": 1435.8,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8189,7 +8358,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 1035.2,
+      "valor": 999.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -8205,7 +8374,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 628.6,
+      "valor": 483.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -8221,7 +8390,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 532.8,
+      "valor": 423.8,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8237,7 +8406,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 20061.0,
+      "valor": 19780.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8253,7 +8422,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 4785.0,
+      "valor": 4486.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8269,7 +8438,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 4162.0,
+      "valor": 4229.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8285,7 +8454,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 1897.0,
+      "valor": 2045.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8301,7 +8470,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1431.0,
+      "valor": 1334.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -8317,7 +8486,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1604.2,
+      "valor": 1267.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -8333,7 +8502,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1150.4,
+      "valor": 1386.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -8349,7 +8518,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1176.6,
+      "valor": 1383.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -8365,7 +8534,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1262.8,
+      "valor": 897.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -8381,7 +8550,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 970.0,
+      "valor": 740.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -8397,7 +8566,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 587.2,
+      "valor": 631.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -8413,7 +8582,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 577.4,
+      "valor": 656.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -8429,7 +8598,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 357.6,
+      "valor": 532.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -8445,7 +8614,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 5603.0,
+      "valor": 5680.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8461,7 +8630,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 3402.0,
+      "valor": 3224.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8477,7 +8646,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2721.0,
+      "valor": 2708.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8493,7 +8662,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1754.6,
+      "valor": 1863.6,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8509,7 +8678,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 884.4,
+      "valor": 906.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -8525,7 +8694,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 808.2,
+      "valor": 826.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -8541,7 +8710,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 371.6,
+      "valor": 259.6,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8557,7 +8726,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 20594.0,
+      "valor": 20829.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8573,7 +8742,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 4468.0,
+      "valor": 4568.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8589,7 +8758,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 4210.0,
+      "valor": 4513.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8605,7 +8774,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2443.0,
+      "valor": 2270.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8621,7 +8790,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1376.0,
+      "valor": 1587.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -8637,7 +8806,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1318.8,
+      "valor": 1353.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -8653,7 +8822,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1294.6,
+      "valor": 1526.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -8669,7 +8838,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1254.4,
+      "valor": 1433.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -8685,7 +8854,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1227.2,
+      "valor": 916.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -8701,7 +8870,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1179.0,
+      "valor": 1054.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -8717,7 +8886,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 926.8,
+      "valor": 608.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -8733,7 +8902,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 626.6,
+      "valor": 907.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -8749,7 +8918,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 681.4,
+      "valor": 647.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -8765,7 +8934,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 6040.0,
+      "valor": 5803.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8781,7 +8950,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 3572.0,
+      "valor": 3275.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8797,7 +8966,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2659.0,
+      "valor": 2701.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8813,7 +8982,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1884.4,
+      "valor": 1649.4,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8829,7 +8998,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 726.6,
+      "valor": 862.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -8845,7 +9014,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 471.8,
+      "valor": 562.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -8861,7 +9030,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 251.4,
+      "valor": 571.4,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8877,7 +9046,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 21512.0,
+      "valor": 21369.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8893,7 +9062,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 4890.0,
+      "valor": 4899.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8909,7 +9078,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 4323.0,
+      "valor": 4584.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8925,7 +9094,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2309.0,
+      "valor": 2053.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -8941,7 +9110,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1567.0,
+      "valor": 1546.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -8957,7 +9126,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1440.4,
+      "valor": 1304.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -8973,7 +9142,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1225.8,
+      "valor": 1541.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -8989,7 +9158,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1212.2,
+      "valor": 1332.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -9005,7 +9174,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1250.6,
+      "valor": 1346.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -9021,7 +9190,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1014.0,
+      "valor": 919.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -9037,7 +9206,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1050.4,
+      "valor": 1044.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -9053,7 +9222,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 584.8,
+      "valor": 626.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -9069,7 +9238,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 738.2,
+      "valor": 774.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -9085,7 +9254,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 6119.0,
+      "valor": 6312.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9101,7 +9270,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 3784.0,
+      "valor": 3585.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9117,7 +9286,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2486.0,
+      "valor": 2711.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9133,7 +9302,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1750.2,
+      "valor": 1724.2,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9149,7 +9318,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 704.8,
+      "valor": 818.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -9165,7 +9334,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 692.4,
+      "valor": 604.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -9181,7 +9350,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 612.2,
+      "valor": 487.2,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9197,7 +9366,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 22139.0,
+      "valor": 22188.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9213,7 +9382,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 4862.0,
+      "valor": 4841.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9229,7 +9398,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 4434.0,
+      "valor": 4509.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9245,7 +9414,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2452.0,
+      "valor": 2226.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9261,7 +9430,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1908.0,
+      "valor": 1638.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -9277,7 +9446,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1409.0,
+      "valor": 1690.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -9293,7 +9462,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1238.0,
+      "valor": 1415.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -9309,7 +9478,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1116.0,
+      "valor": 1139.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -9325,7 +9494,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1128.0,
+      "valor": 1131.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -9341,7 +9510,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 991.0,
+      "valor": 994.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -9357,7 +9526,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 736.0,
+      "valor": 638.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -9373,7 +9542,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 632.0,
+      "valor": 697.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -9389,7 +9558,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 848.0,
+      "valor": 681.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -9405,7 +9574,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 6702.0,
+      "valor": 6255.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9421,7 +9590,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 3784.0,
+      "valor": 3742.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9437,7 +9606,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2895.0,
+      "valor": 2746.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9453,7 +9622,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1630.0,
+      "valor": 1789.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9469,7 +9638,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 1045.0,
+      "valor": 1017.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -9485,7 +9654,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 632.0,
+      "valor": 646.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -9501,7 +9670,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 761.0,
+      "valor": 479.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9517,7 +9686,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 23026.0,
+      "valor": 22733.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9533,7 +9702,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 5227.0,
+      "valor": 5230.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9549,7 +9718,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 4621.0,
+      "valor": 4637.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9565,7 +9734,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2623.0,
+      "valor": 2160.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9581,7 +9750,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1971.0,
+      "valor": 1906.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -9597,7 +9766,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1440.6,
+      "valor": 1853.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -9613,7 +9782,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1565.2,
+      "valor": 1483.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -9629,7 +9798,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1106.8,
+      "valor": 1565.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -9661,7 +9830,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1119.0,
+      "valor": 1041.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -9677,7 +9846,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 672.6,
+      "valor": 707.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -9693,7 +9862,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 584.2,
+      "valor": 1027.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -9709,7 +9878,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 769.8,
+      "valor": 538.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -9725,7 +9894,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 6643.0,
+      "valor": 6901.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9741,7 +9910,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 3833.0,
+      "valor": 3799.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9757,7 +9926,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2698.0,
+      "valor": 2858.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9773,7 +9942,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1985.8,
+      "valor": 1828.8,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9789,7 +9958,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 876.2,
+      "valor": 1223.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -9805,7 +9974,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 820.6,
+      "valor": 846.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -9821,7 +9990,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 696.8,
+      "valor": 387.8,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9837,7 +10006,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 23471.0,
+      "valor": 23925.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9853,7 +10022,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 5298.0,
+      "valor": 5531.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9869,7 +10038,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 4672.0,
+      "valor": 4633.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9885,7 +10054,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2669.0,
+      "valor": 2725.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -9901,7 +10070,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1883.0,
+      "valor": 1864.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -9917,7 +10086,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1884.2,
+      "valor": 1825.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -9933,7 +10102,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1443.4,
+      "valor": 1576.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -9949,7 +10118,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1555.6,
+      "valor": 1406.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -9965,7 +10134,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1124.8,
+      "valor": 1298.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -9981,7 +10150,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1259.0,
+      "valor": 899.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -9997,7 +10166,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 995.2,
+      "valor": 701.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -10013,7 +10182,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 795.4,
+      "valor": 897.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -10029,7 +10198,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 708.6,
+      "valor": 470.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -10045,7 +10214,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 6873.0,
+      "valor": 6904.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10061,7 +10230,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 3882.0,
+      "valor": 3873.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10077,7 +10246,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2806.0,
+      "valor": 2877.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10093,7 +10262,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1945.6,
+      "valor": 2134.6,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10109,7 +10278,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 986.4,
+      "valor": 995.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -10125,7 +10294,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 620.2,
+      "valor": 1013.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -10141,7 +10310,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 486.6,
+      "valor": 783.6,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10157,7 +10326,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 24306.0,
+      "valor": 24556.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10173,7 +10342,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 5502.0,
+      "valor": 5677.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10189,7 +10358,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 5158.0,
+      "valor": 4759.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10205,7 +10374,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2573.0,
+      "valor": 2722.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10221,7 +10390,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1703.0,
+      "valor": 1830.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -10237,7 +10406,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1681.8,
+      "valor": 1521.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -10253,7 +10422,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1531.6,
+      "valor": 1590.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -10269,7 +10438,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1162.4,
+      "valor": 1247.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -10285,7 +10454,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1208.2,
+      "valor": 1219.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -10301,7 +10470,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1179.0,
+      "valor": 1354.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -10317,7 +10486,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 751.8,
+      "valor": 1147.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -10333,7 +10502,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 853.6,
+      "valor": 1036.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -10349,7 +10518,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 672.4,
+      "valor": 764.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -10365,7 +10534,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 7093.0,
+      "valor": 7236.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10381,7 +10550,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 4173.0,
+      "valor": 4223.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10397,7 +10566,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 2914.0,
+      "valor": 3260.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10413,7 +10582,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1981.4,
+      "valor": 2017.4,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10429,7 +10598,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 822.6,
+      "valor": 1165.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -10445,7 +10614,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 866.8,
+      "valor": 871.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -10461,7 +10630,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 479.4,
+      "valor": 668.4,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10477,7 +10646,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 24902.0,
+      "valor": 25089.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10493,7 +10662,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 5882.0,
+      "valor": 5470.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10509,7 +10678,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 5422.0,
+      "valor": 5037.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10525,7 +10694,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2672.0,
+      "valor": 2688.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10541,7 +10710,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 2143.0,
+      "valor": 1768.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -10557,7 +10726,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1956.4,
+      "valor": 1999.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -10573,7 +10742,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1591.8,
+      "valor": 1842.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -10589,7 +10758,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1245.2,
+      "valor": 1251.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -10605,7 +10774,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1551.6,
+      "valor": 1283.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -10621,7 +10790,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1050.0,
+      "valor": 1378.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -10637,7 +10806,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1211.4,
+      "valor": 769.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -10653,7 +10822,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 811.8,
+      "valor": 651.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -10669,7 +10838,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 713.2,
+      "valor": 588.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -10685,7 +10854,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 7288.0,
+      "valor": 7506.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10701,7 +10870,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 4472.0,
+      "valor": 4134.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10717,7 +10886,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 3181.0,
+      "valor": 3073.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10733,7 +10902,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 1934.2,
+      "valor": 1988.2,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10749,7 +10918,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 1305.8,
+      "valor": 1194.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -10765,7 +10934,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 1025.4,
+      "valor": 650.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -10781,7 +10950,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 340.2,
+      "valor": 526.2,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10797,7 +10966,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 26129.0,
+      "valor": 25943.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10813,7 +10982,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 5952.0,
+      "valor": 5750.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10829,7 +10998,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 5494.0,
+      "valor": 5100.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10845,7 +11014,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2796.0,
+      "valor": 2805.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -10861,7 +11030,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1997.0,
+      "valor": 2033.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -10877,7 +11046,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1876.0,
+      "valor": 1611.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -10893,7 +11062,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1463.0,
+      "valor": 1912.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -10909,7 +11078,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1252.0,
+      "valor": 1448.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -10925,7 +11094,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1435.0,
+      "valor": 1102.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -10941,7 +11110,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 995.0,
+      "valor": 1039.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -10957,7 +11126,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1028.0,
+      "valor": 863.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "liquidado",
@@ -10973,7 +11142,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 787.0,
+      "valor": 634.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -10989,7 +11158,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 661.0,
+      "valor": 695.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -11005,7 +11174,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 7749.0,
+      "valor": 7718.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11021,7 +11190,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 4337.0,
+      "valor": 4232.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11037,7 +11206,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 3414.0,
+      "valor": 3012.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11053,7 +11222,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 2374.0,
+      "valor": 2211.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11069,7 +11238,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 1228.0,
+      "valor": 1174.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -11085,7 +11254,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 1029.0,
+      "valor": 1065.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -11101,7 +11270,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 331.0,
+      "valor": 752.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11117,7 +11286,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — contribuições de fidelidade do mês",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 26788.0,
+      "valor": 26396.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11133,7 +11302,7 @@ const DADOS: Carga = {
       "descricao": "Hekousia Eisphora — aportes livres do mês",
       "categoriaId": "cf-002",
       "contaId": "ct-001",
-      "valor": 6030.0,
+      "valor": 6279.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11149,7 +11318,7 @@ const DADOS: Carga = {
       "descricao": "Inscrições em eventos de formação",
       "categoriaId": "cf-003",
       "contaId": "ct-002",
-      "valor": 5291.0,
+      "valor": 5233.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11165,7 +11334,7 @@ const DADOS: Carga = {
       "descricao": "Venda de material didático",
       "categoriaId": "cf-004",
       "contaId": "ct-002",
-      "valor": 2841.0,
+      "valor": 2601.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "previsto",
@@ -11181,7 +11350,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Jaboatão dos Guararapes",
       "categoriaId": "cf-001",
       "contaId": "ct-003",
-      "valor": 1851.0,
+      "valor": 1781.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "liquidado",
@@ -11197,7 +11366,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Recife Central",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1809.6,
+      "valor": 1693.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-recife",
       "situacao": "liquidado",
@@ -11213,7 +11382,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo São Paulo Central",
       "categoriaId": "cf-001",
       "contaId": "ct-004",
-      "valor": 1931.2,
+      "valor": 1878.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -11229,7 +11398,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Campinas",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1711.8,
+      "valor": 1476.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-campinas",
       "situacao": "liquidado",
@@ -11245,7 +11414,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Rio de Janeiro",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1587.4,
+      "valor": 1136.4,
       "responsavelId": "me-005",
       "nucleoId": "nu-rj",
       "situacao": "liquidado",
@@ -11261,7 +11430,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Belo Horizonte",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1302.0,
+      "valor": 1092.0,
       "responsavelId": "me-005",
       "nucleoId": "nu-bh",
       "situacao": "liquidado",
@@ -11277,7 +11446,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Salvador",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1173.6,
+      "valor": 910.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-salvador",
       "situacao": "previsto",
@@ -11293,7 +11462,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Brasília",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 1038.2,
+      "valor": 955.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-brasilia",
       "situacao": "liquidado",
@@ -11309,7 +11478,7 @@ const DADOS: Carga = {
       "descricao": "Pistis Eisphora — Núcleo Lisboa",
       "categoriaId": "cf-001",
       "contaId": "ct-001",
-      "valor": 972.8,
+      "valor": 819.8,
       "responsavelId": "me-005",
       "nucleoId": "nu-lisboa",
       "situacao": "liquidado",
@@ -11325,7 +11494,7 @@ const DADOS: Carga = {
       "descricao": "Aluguel e manutenção da sede nacional",
       "categoriaId": "cf-005",
       "contaId": "ct-001",
-      "valor": 7787.0,
+      "valor": 7536.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11341,7 +11510,7 @@ const DADOS: Carga = {
       "descricao": "Impressão de material de formação",
       "categoriaId": "cf-006",
       "contaId": "ct-002",
-      "valor": 4600.0,
+      "valor": 4246.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11357,7 +11526,7 @@ const DADOS: Carga = {
       "descricao": "Plataforma de transmissão e comunicação",
       "categoriaId": "cf-007",
       "contaId": "ct-001",
-      "valor": 3339.0,
+      "valor": 3248.0,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11373,7 +11542,7 @@ const DADOS: Carga = {
       "descricao": "Serviços administrativos e contábeis",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 2302.8,
+      "valor": 2406.8,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -11389,7 +11558,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo Jaboatão",
       "categoriaId": "cf-005",
       "contaId": "ct-003",
-      "valor": 1052.2,
+      "valor": 1192.2,
       "responsavelId": "me-005",
       "nucleoId": "nu-jaboatao",
       "situacao": "previsto",
@@ -11405,7 +11574,7 @@ const DADOS: Carga = {
       "descricao": "Custeio do Núcleo São Paulo",
       "categoriaId": "cf-005",
       "contaId": "ct-004",
-      "valor": 679.6,
+      "valor": 850.6,
       "responsavelId": "me-005",
       "nucleoId": "nu-sp",
       "situacao": "liquidado",
@@ -11421,7 +11590,7 @@ const DADOS: Carga = {
       "descricao": "Custeio dos demais Núcleos",
       "categoriaId": "cf-008",
       "contaId": "ct-001",
-      "valor": 473.8,
+      "valor": 599.8,
       "responsavelId": "me-005",
       "nucleoId": null,
       "situacao": "liquidado",
@@ -12462,6 +12631,998 @@ const DADOS: Carga = {
       "inicioMandato": "2025-08-20T13:00:00.000Z",
       "fimMandato": "2029-08-19T13:00:00.000Z",
       "ativo": true
+    }
+  ],
+  "ritos": [
+    {
+      "id": "ri-001",
+      "tipo": "oikeiosis",
+      "membroId": "me-001",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2023-05-28T13:00:00.000Z",
+      "presididoPorId": "me-001",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-002",
+      "tipo": "oikeiosis",
+      "membroId": "me-002",
+      "nucleoId": "nu-recife",
+      "celebradoEm": "2023-06-22T13:00:00.000Z",
+      "presididoPorId": "me-002",
+      "local": "Núcleo Recife Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-003",
+      "tipo": "oikeiosis",
+      "membroId": "me-003",
+      "nucleoId": "nu-sp",
+      "celebradoEm": "2023-07-17T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo São Paulo Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-004",
+      "tipo": "oikeiosis",
+      "membroId": "me-004",
+      "nucleoId": "nu-campinas",
+      "celebradoEm": "2023-08-11T13:00:00.000Z",
+      "presididoPorId": "me-004",
+      "local": "Núcleo Campinas",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-005",
+      "tipo": "oikeiosis",
+      "membroId": "me-005",
+      "nucleoId": "nu-rj",
+      "celebradoEm": "2023-09-05T13:00:00.000Z",
+      "presididoPorId": "me-005",
+      "local": "Núcleo Rio de Janeiro",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-006",
+      "tipo": "oikeiosis",
+      "membroId": "me-006",
+      "nucleoId": "nu-bh",
+      "celebradoEm": "2023-09-30T13:00:00.000Z",
+      "presididoPorId": "me-006",
+      "local": "Núcleo Belo Horizonte",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-007",
+      "tipo": "oikeiosis",
+      "membroId": "me-007",
+      "nucleoId": "nu-salvador",
+      "celebradoEm": "2023-10-25T13:00:00.000Z",
+      "presididoPorId": "me-007",
+      "local": "Núcleo Salvador",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-008",
+      "tipo": "oikeiosis",
+      "membroId": "me-008",
+      "nucleoId": "nu-brasilia",
+      "celebradoEm": "2023-11-19T13:00:00.000Z",
+      "presididoPorId": "me-008",
+      "local": "Núcleo Brasília",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-009",
+      "tipo": "oikeiosis",
+      "membroId": "me-009",
+      "nucleoId": "nu-lisboa",
+      "celebradoEm": "2023-12-14T13:00:00.000Z",
+      "presididoPorId": "me-009",
+      "local": "Núcleo Lisboa",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-010",
+      "tipo": "oikeiosis",
+      "membroId": "me-010",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2024-01-08T13:00:00.000Z",
+      "presididoPorId": "me-001",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-011",
+      "tipo": "oikeiosis",
+      "membroId": "me-011",
+      "nucleoId": "nu-recife",
+      "celebradoEm": "2024-02-02T13:00:00.000Z",
+      "presididoPorId": "me-002",
+      "local": "Núcleo Recife Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-012",
+      "tipo": "oikeiosis",
+      "membroId": "me-012",
+      "nucleoId": "nu-sp",
+      "celebradoEm": "2024-02-27T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo São Paulo Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-013",
+      "tipo": "oikeiosis",
+      "membroId": "me-013",
+      "nucleoId": "nu-campinas",
+      "celebradoEm": "2024-03-23T13:00:00.000Z",
+      "presididoPorId": "me-004",
+      "local": "Núcleo Campinas",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-014",
+      "tipo": "oikeiosis",
+      "membroId": "me-014",
+      "nucleoId": "nu-rj",
+      "celebradoEm": "2024-04-17T13:00:00.000Z",
+      "presididoPorId": "me-005",
+      "local": "Núcleo Rio de Janeiro",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-015",
+      "tipo": "oikeiosis",
+      "membroId": "me-015",
+      "nucleoId": "nu-bh",
+      "celebradoEm": "2024-05-12T13:00:00.000Z",
+      "presididoPorId": "me-006",
+      "local": "Núcleo Belo Horizonte",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-016",
+      "tipo": "oikeiosis",
+      "membroId": "me-016",
+      "nucleoId": "nu-salvador",
+      "celebradoEm": "2024-06-06T13:00:00.000Z",
+      "presididoPorId": "me-007",
+      "local": "Núcleo Salvador",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-017",
+      "tipo": "oikeiosis",
+      "membroId": "me-017",
+      "nucleoId": "nu-brasilia",
+      "celebradoEm": "2024-07-01T13:00:00.000Z",
+      "presididoPorId": "me-008",
+      "local": "Núcleo Brasília",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-018",
+      "tipo": "oikeiosis",
+      "membroId": "me-018",
+      "nucleoId": "nu-lisboa",
+      "celebradoEm": "2024-07-26T13:00:00.000Z",
+      "presididoPorId": "me-009",
+      "local": "Núcleo Lisboa",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-019",
+      "tipo": "oikeiosis",
+      "membroId": "me-019",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2024-08-20T13:00:00.000Z",
+      "presididoPorId": "me-001",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-020",
+      "tipo": "oikeiosis",
+      "membroId": "me-020",
+      "nucleoId": "nu-recife",
+      "celebradoEm": "2024-09-14T13:00:00.000Z",
+      "presididoPorId": "me-002",
+      "local": "Núcleo Recife Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-021",
+      "tipo": "oikeiosis",
+      "membroId": "me-021",
+      "nucleoId": "nu-sp",
+      "celebradoEm": "2024-10-09T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo São Paulo Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-022",
+      "tipo": "oikeiosis",
+      "membroId": "me-022",
+      "nucleoId": "nu-campinas",
+      "celebradoEm": "2024-11-03T13:00:00.000Z",
+      "presididoPorId": "me-004",
+      "local": "Núcleo Campinas",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-023",
+      "tipo": "oikeiosis",
+      "membroId": "me-023",
+      "nucleoId": "nu-rj",
+      "celebradoEm": "2024-11-28T13:00:00.000Z",
+      "presididoPorId": "me-005",
+      "local": "Núcleo Rio de Janeiro",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-024",
+      "tipo": "oikeiosis",
+      "membroId": "me-024",
+      "nucleoId": "nu-bh",
+      "celebradoEm": "2024-12-23T13:00:00.000Z",
+      "presididoPorId": "me-006",
+      "local": "Núcleo Belo Horizonte",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-025",
+      "tipo": "oikeiosis",
+      "membroId": "me-025",
+      "nucleoId": "nu-salvador",
+      "celebradoEm": "2025-01-17T13:00:00.000Z",
+      "presididoPorId": "me-007",
+      "local": "Núcleo Salvador",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-026",
+      "tipo": "oikeiosis",
+      "membroId": "me-026",
+      "nucleoId": "nu-brasilia",
+      "celebradoEm": "2025-02-11T13:00:00.000Z",
+      "presididoPorId": "me-008",
+      "local": "Núcleo Brasília",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-027",
+      "tipo": "oikeiosis",
+      "membroId": "me-027",
+      "nucleoId": "nu-lisboa",
+      "celebradoEm": "2025-03-08T13:00:00.000Z",
+      "presididoPorId": "me-009",
+      "local": "Núcleo Lisboa",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-028",
+      "tipo": "oikeiosis",
+      "membroId": "me-028",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2025-04-02T13:00:00.000Z",
+      "presididoPorId": "me-001",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-029",
+      "tipo": "oikeiosis",
+      "membroId": "me-029",
+      "nucleoId": "nu-recife",
+      "celebradoEm": "2025-04-27T13:00:00.000Z",
+      "presididoPorId": "me-002",
+      "local": "Núcleo Recife Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-030",
+      "tipo": "oikeiosis",
+      "membroId": "me-030",
+      "nucleoId": "nu-sp",
+      "celebradoEm": "2025-05-22T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo São Paulo Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-031",
+      "tipo": "oikeiosis",
+      "membroId": "me-031",
+      "nucleoId": "nu-campinas",
+      "celebradoEm": "2025-06-16T13:00:00.000Z",
+      "presididoPorId": "me-004",
+      "local": "Núcleo Campinas",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-032",
+      "tipo": "oikeiosis",
+      "membroId": "me-032",
+      "nucleoId": "nu-rj",
+      "celebradoEm": "2025-07-11T13:00:00.000Z",
+      "presididoPorId": "me-005",
+      "local": "Núcleo Rio de Janeiro",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-033",
+      "tipo": "oikeiosis",
+      "membroId": "me-033",
+      "nucleoId": "nu-bh",
+      "celebradoEm": "2025-08-05T13:00:00.000Z",
+      "presididoPorId": "me-006",
+      "local": "Núcleo Belo Horizonte",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-034",
+      "tipo": "oikeiosis",
+      "membroId": "me-034",
+      "nucleoId": "nu-salvador",
+      "celebradoEm": "2025-08-30T13:00:00.000Z",
+      "presididoPorId": "me-007",
+      "local": "Núcleo Salvador",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-035",
+      "tipo": "oikeiosis",
+      "membroId": "me-035",
+      "nucleoId": "nu-brasilia",
+      "celebradoEm": "2025-09-24T13:00:00.000Z",
+      "presididoPorId": "me-008",
+      "local": "Núcleo Brasília",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-036",
+      "tipo": "oikeiosis",
+      "membroId": "me-036",
+      "nucleoId": "nu-lisboa",
+      "celebradoEm": "2025-10-19T13:00:00.000Z",
+      "presididoPorId": "me-009",
+      "local": "Núcleo Lisboa",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-037",
+      "tipo": "oikeiosis",
+      "membroId": "me-037",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2025-11-13T13:00:00.000Z",
+      "presididoPorId": "me-001",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-038",
+      "tipo": "oikeiosis",
+      "membroId": "me-038",
+      "nucleoId": "nu-recife",
+      "celebradoEm": "2025-12-08T13:00:00.000Z",
+      "presididoPorId": "me-002",
+      "local": "Núcleo Recife Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-039",
+      "tipo": "oikeiosis",
+      "membroId": "me-039",
+      "nucleoId": "nu-sp",
+      "celebradoEm": "2026-01-02T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo São Paulo Central",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-040",
+      "tipo": "oikeiosis",
+      "membroId": "me-040",
+      "nucleoId": "nu-campinas",
+      "celebradoEm": "2026-01-27T13:00:00.000Z",
+      "presididoPorId": "me-004",
+      "local": "Núcleo Campinas",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-041",
+      "tipo": "oikeiosis",
+      "membroId": "me-044",
+      "nucleoId": "nu-brasilia",
+      "celebradoEm": "2026-05-07T13:00:00.000Z",
+      "presididoPorId": "me-008",
+      "local": "Núcleo Brasília",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-042",
+      "tipo": "oikeiosis",
+      "membroId": "me-045",
+      "nucleoId": "nu-lisboa",
+      "celebradoEm": "2026-06-01T13:00:00.000Z",
+      "presididoPorId": "me-009",
+      "local": "Núcleo Lisboa",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-043",
+      "tipo": "oikeiosis",
+      "membroId": "me-046",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2026-06-26T13:00:00.000Z",
+      "presididoPorId": "me-001",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Acolhimento do postulante; leitura do compromisso perante a irmandade.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-044",
+      "tipo": "prokope",
+      "membroId": "me-001",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2026-01-22T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Rito de Graduação celebrado após parecer favorável da Mestria.",
+      "grauAlcancadoId": "grau-empeiros"
+    },
+    {
+      "id": "ri-045",
+      "tipo": "prokope",
+      "membroId": "me-010",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2025-07-16T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Rito de Graduação celebrado após parecer favorável da Mestria.",
+      "grauAlcancadoId": "grau-afentis"
+    },
+    {
+      "id": "ri-046",
+      "tipo": "prokope",
+      "membroId": "me-020",
+      "nucleoId": "nu-recife",
+      "celebradoEm": "2025-10-24T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo Recife Central",
+      "nota": "Rito de Graduação celebrado após parecer favorável da Mestria.",
+      "grauAlcancadoId": "grau-thesi"
+    },
+    {
+      "id": "ri-047",
+      "tipo": "prokope",
+      "membroId": "me-023",
+      "nucleoId": "nu-rj",
+      "celebradoEm": "2026-02-21T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo Rio de Janeiro",
+      "nota": "Rito de Graduação celebrado após parecer favorável da Mestria.",
+      "grauAlcancadoId": "grau-syntrofo"
+    },
+    {
+      "id": "ri-048",
+      "tipo": "prokope",
+      "membroId": "me-013",
+      "nucleoId": "nu-campinas",
+      "celebradoEm": "2025-12-03T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo Campinas",
+      "nota": "Rito de Graduação celebrado após parecer favorável da Mestria.",
+      "grauAlcancadoId": "grau-empeiros"
+    },
+    {
+      "id": "ri-049",
+      "tipo": "syzygia",
+      "membroId": "me-012",
+      "nucleoId": "nu-sp",
+      "celebradoEm": "2026-03-23T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo São Paulo Central",
+      "nota": "Reconhecimento matrimonial celebrado perante a Alta Mestria.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-050",
+      "tipo": "reconhecimento",
+      "membroId": "me-001",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2026-05-17T13:00:00.000Z",
+      "presididoPorId": "me-003",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Ato civil e confessional, de natureza pedagógica e não sacramental.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-051",
+      "tipo": "syssitia",
+      "membroId": "me-001",
+      "nucleoId": "nu-jaboatao",
+      "celebradoEm": "2026-07-23T13:00:00.000Z",
+      "presididoPorId": "me-010",
+      "local": "Núcleo Jaboatão dos Guararapes",
+      "nota": "Ágape fraterno com as famílias do Núcleo.",
+      "grauAlcancadoId": null
+    },
+    {
+      "id": "ri-052",
+      "tipo": "desobrigacao",
+      "membroId": "me-045",
+      "nucleoId": "nu-recife",
+      "celebradoEm": "2026-06-21T13:00:00.000Z",
+      "presididoPorId": "me-009",
+      "local": "Núcleo Recife Central",
+      "nota": "Recolhimento fraterno pacífico, com devolução de encargos e voto de sigilo.",
+      "grauAlcancadoId": null
+    }
+  ],
+  "celulas": [
+    {
+      "id": "ce-jaboatao-spiti",
+      "nucleoId": "nu-jaboatao",
+      "esfera": "spiti",
+      "nome": "Spíti Jaboatão dos Guararapes",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-001",
+      "emblema": "Leão",
+      "membros": [
+        "me-001",
+        "me-010",
+        "me-019"
+      ],
+      "criadaEm": "2026-02-14T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-jaboatao-symphyle",
+      "nucleoId": "nu-jaboatao",
+      "esfera": "symphyle",
+      "nome": "Symphyle Jaboatão dos Guararapes",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-010",
+      "emblema": "Águia",
+      "membros": [
+        "me-028",
+        "me-037",
+        "me-046"
+      ],
+      "criadaEm": "2026-02-14T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-recife-spiti",
+      "nucleoId": "nu-recife",
+      "esfera": "spiti",
+      "nome": "Spíti Recife Central",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-002",
+      "emblema": "Leopardo",
+      "membros": [
+        "me-002",
+        "me-011"
+      ],
+      "criadaEm": "2025-09-03T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-recife-symphyle",
+      "nucleoId": "nu-recife",
+      "esfera": "symphyle",
+      "nome": "Symphyle Recife Central",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-011",
+      "emblema": "Pelicano",
+      "membros": [
+        "me-020",
+        "me-029",
+        "me-038"
+      ],
+      "criadaEm": "2025-09-03T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-sp-spiti",
+      "nucleoId": "nu-sp",
+      "esfera": "spiti",
+      "nome": "Spíti São Paulo Central",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-003",
+      "emblema": "Lince",
+      "membros": [
+        "me-003",
+        "me-012"
+      ],
+      "criadaEm": "2025-05-20T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-sp-symphyle",
+      "nucleoId": "nu-sp",
+      "esfera": "symphyle",
+      "nome": "Symphyle São Paulo Central",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-012",
+      "emblema": "Cisne",
+      "membros": [
+        "me-021",
+        "me-030",
+        "me-039"
+      ],
+      "criadaEm": "2025-05-20T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-campinas-spiti",
+      "nucleoId": "nu-campinas",
+      "esfera": "spiti",
+      "nome": "Spíti Campinas",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-004",
+      "emblema": "Tigre",
+      "membros": [
+        "me-004",
+        "me-013"
+      ],
+      "criadaEm": "2026-01-11T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-campinas-symphyle",
+      "nucleoId": "nu-campinas",
+      "esfera": "symphyle",
+      "nome": "Symphyle Campinas",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-013",
+      "emblema": "Corvo",
+      "membros": [
+        "me-022",
+        "me-031",
+        "me-040"
+      ],
+      "criadaEm": "2026-01-11T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-rj-spiti",
+      "nucleoId": "nu-rj",
+      "esfera": "spiti",
+      "nome": "Spíti Rio de Janeiro",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-005",
+      "emblema": "Onça-pintada",
+      "membros": [
+        "me-005",
+        "me-014"
+      ],
+      "criadaEm": "2025-07-08T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-rj-symphyle",
+      "nucleoId": "nu-rj",
+      "esfera": "symphyle",
+      "nome": "Symphyle Rio de Janeiro",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-014",
+      "emblema": "Falcão-peregrino",
+      "membros": [
+        "me-023",
+        "me-032"
+      ],
+      "criadaEm": "2025-07-08T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-bh-spiti",
+      "nucleoId": "nu-bh",
+      "esfera": "spiti",
+      "nome": "Spíti Belo Horizonte",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-006",
+      "emblema": "Guepardo",
+      "membros": [
+        "me-006",
+        "me-015"
+      ],
+      "criadaEm": "2026-03-02T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-bh-symphyle",
+      "nucleoId": "nu-bh",
+      "esfera": "symphyle",
+      "nome": "Symphyle Belo Horizonte",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-015",
+      "emblema": "Gavião-real",
+      "membros": [
+        "me-024",
+        "me-033"
+      ],
+      "criadaEm": "2026-03-02T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-salvador-spiti",
+      "nucleoId": "nu-salvador",
+      "esfera": "spiti",
+      "nome": "Spíti Salvador",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-007",
+      "emblema": "Puma",
+      "membros": [
+        "me-007",
+        "me-016"
+      ],
+      "criadaEm": "2026-04-19T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-salvador-symphyle",
+      "nucleoId": "nu-salvador",
+      "esfera": "symphyle",
+      "nome": "Symphyle Salvador",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-016",
+      "emblema": "Grou",
+      "membros": [
+        "me-025",
+        "me-034"
+      ],
+      "criadaEm": "2026-04-19T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-brasilia-spiti",
+      "nucleoId": "nu-brasilia",
+      "esfera": "spiti",
+      "nome": "Spíti Brasília",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-008",
+      "emblema": "Leão",
+      "membros": [
+        "me-008",
+        "me-017"
+      ],
+      "criadaEm": "2025-11-27T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-brasilia-symphyle",
+      "nucleoId": "nu-brasilia",
+      "esfera": "symphyle",
+      "nome": "Symphyle Brasília",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-017",
+      "emblema": "Águia",
+      "membros": [
+        "me-026",
+        "me-035"
+      ],
+      "criadaEm": "2025-11-27T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-lisboa-spiti",
+      "nucleoId": "nu-lisboa",
+      "esfera": "spiti",
+      "nome": "Spíti Lisboa",
+      "descricao": "Casa de recolhimento, estudo dirigido e forja da mente estoica.",
+      "responsavelId": "me-009",
+      "emblema": "Leopardo",
+      "membros": [
+        "me-009",
+        "me-018"
+      ],
+      "criadaEm": "2026-05-30T12:00:00.000Z",
+      "ativa": true
+    },
+    {
+      "id": "ce-lisboa-symphyle",
+      "nucleoId": "nu-lisboa",
+      "esfera": "symphyle",
+      "nome": "Symphyle Lisboa",
+      "descricao": "Falange de ação, caridade estrutural e insurgência cultural local.",
+      "responsavelId": "me-018",
+      "emblema": "Pelicano",
+      "membros": [
+        "me-027",
+        "me-036"
+      ],
+      "criadaEm": "2026-05-30T12:00:00.000Z",
+      "ativa": true
+    }
+  ],
+  "servicos": [
+    {
+      "id": "se-001",
+      "titulo": "Assessoria jurídica para regularização do Núcleo",
+      "descricao": "O Núcleo precisa regularizar o contrato de locação da sede e revisar o termo de cessão.",
+      "competenciaRequerida": "Direito",
+      "solicitanteId": "me-010",
+      "nucleoId": "nu-jaboatao",
+      "celulaId": "ce-jaboatao-symphyle",
+      "atendentesIds": [
+        "me-013"
+      ],
+      "situacao": "atendido",
+      "abertoEm": "2026-08-02T13:00:00.000Z",
+      "concluidoEm": null,
+      "xp": 120
+    },
+    {
+      "id": "se-002",
+      "titulo": "Atendimento de saúde a família assistida",
+      "descricao": "Família acompanhada pela Symphyle necessita de orientação médica e encaminhamento.",
+      "competenciaRequerida": "Saúde",
+      "solicitanteId": "me-023",
+      "nucleoId": "nu-sp",
+      "celulaId": "ce-sp-symphyle",
+      "atendentesIds": [],
+      "situacao": "aberto",
+      "abertoEm": "2026-08-15T13:00:00.000Z",
+      "concluidoEm": null,
+      "xp": 150
+    },
+    {
+      "id": "se-003",
+      "titulo": "Projeto de acessibilidade para a sede",
+      "descricao": "Levantamento e projeto de rampa e sanitário acessível na sede do Núcleo.",
+      "competenciaRequerida": "Engenharia",
+      "solicitanteId": "me-009",
+      "nucleoId": "nu-recife",
+      "celulaId": "ce-recife-symphyle",
+      "atendentesIds": [
+        "me-016",
+        "me-019"
+      ],
+      "situacao": "concluido",
+      "abertoEm": "2026-06-11T13:00:00.000Z",
+      "concluidoEm": "2026-07-11T13:00:00.000Z",
+      "xp": 180
+    },
+    {
+      "id": "se-004",
+      "titulo": "Reforço escolar para filhos de Eunomitas",
+      "descricao": "Organização de reforço em matemática e português para as famílias do Núcleo.",
+      "competenciaRequerida": "Educação",
+      "solicitanteId": "me-021",
+      "nucleoId": "nu-brasilia",
+      "celulaId": "ce-brasilia-symphyle",
+      "atendentesIds": [
+        "me-027"
+      ],
+      "situacao": "atendido",
+      "abertoEm": "2026-07-26T13:00:00.000Z",
+      "concluidoEm": null,
+      "xp": 140
+    },
+    {
+      "id": "se-005",
+      "titulo": "Prestação de contas do exercício local",
+      "descricao": "Apoio contábil para fechamento do balancete local antes da remessa ao Conselho de Contas.",
+      "competenciaRequerida": "Contabilidade",
+      "solicitanteId": "me-011",
+      "nucleoId": "nu-bh",
+      "celulaId": "ce-bh-symphyle",
+      "atendentesIds": [],
+      "situacao": "aberto",
+      "abertoEm": "2026-08-18T13:00:00.000Z",
+      "concluidoEm": null,
+      "xp": 160
+    }
+  ],
+  "mediacoes": [
+    {
+      "id": "me-001-arb",
+      "numero": "AH 001/2026",
+      "requerenteId": "me-024",
+      "requeridoId": "me-029",
+      "objeto": "Desavença quanto à partilha de despesas de projeto conjunto entre confrades.",
+      "nucleoId": "nu-sp",
+      "mediadorId": "me-012",
+      "situacao": "conciliada",
+      "solicitadaEm": "2026-06-06T13:00:00.000Z",
+      "concluidaEm": "2026-06-23T13:00:00.000Z",
+      "termoConciliacao": "As partes ajustaram a divisão proporcional das despesas e declararam encerrada a desavença, restaurada a paz fraterna.",
+      "sigilosa": true
+    },
+    {
+      "id": "me-002-arb",
+      "numero": "AH 002/2026",
+      "requerenteId": "me-030",
+      "requeridoId": "me-036",
+      "objeto": "Divergência sobre a titularidade de material didático produzido em conjunto.",
+      "nucleoId": "nu-bh",
+      "mediadorId": "me-011",
+      "situacao": "em_mediacao",
+      "solicitadaEm": "2026-08-08T13:00:00.000Z",
+      "concluidaEm": null,
+      "termoConciliacao": null,
+      "sigilosa": true
+    }
+  ],
+  "sucessao": [
+    {
+      "id": "su-001",
+      "figura": "epigonos_permanente",
+      "membroId": "me-025",
+      "ordem": 1,
+      "atoNormativoId": "do-010",
+      "autorizadoParaAusencias": true,
+      "designadoEm": "2025-07-16T13:00:00.000Z",
+      "observacao": "Sabatinado e aprovado pelo Conselho Alto; apto a assumir nas ausências do Grão-Mestre (Art. 37, § 4.º)."
+    },
+    {
+      "id": "su-002",
+      "figura": "arquidama",
+      "membroId": "me-028",
+      "ordem": 2,
+      "atoNormativoId": "do-010",
+      "autorizadoParaAusencias": false,
+      "designadoEm": "2025-07-16T13:00:00.000Z",
+      "observacao": "Assume a Regência na hipótese de menoridade do Epígonos Honorário (Art. 38, § 1.º)."
+    },
+    {
+      "id": "su-003",
+      "figura": "chanceler",
+      "membroId": "me-006",
+      "ordem": 3,
+      "atoNormativoId": "do-010",
+      "autorizadoParaAusencias": true,
+      "designadoEm": "2025-07-16T13:00:00.000Z",
+      "observacao": "Terceiro na linha, na existência de Epígonos Permanente (Art. 39, I)."
     }
   ],
   "assembleias": [

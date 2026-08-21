@@ -28,6 +28,10 @@ export const NAV_PRINCIPAL: ItemNav[] = [
   { rotulo: 'Documentos', para: '/documentos', icone: 'folder_open' },
   { rotulo: 'Mensagens', para: '/mensagens', icone: 'forum', contador: 'mensagens' },
   { rotulo: 'Meu Núcleo', para: '/meu-nucleo', icone: 'groups' },
+  // C107:18 — serviço honorífico, aberto a todo Eunomita.
+  { rotulo: 'Leitourgia', para: '/leitourgia', icone: 'volunteer_activism' },
+  // C6:21 — mediação fraterna anterior a qualquer via judicial.
+  { rotulo: 'Arbitragem', para: '/arbitragem', icone: 'handshake' },
   // Est. Art. 12, § 4.º — portal aberto a todo Eunomita, não área administrativa.
   { rotulo: 'Transparência', para: '/transparencia', icone: 'query_stats' },
   { rotulo: 'Perfil', para: '/perfil', icone: 'account_circle' },

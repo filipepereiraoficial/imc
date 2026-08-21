@@ -216,6 +216,8 @@ export interface Membro {
   biografia?: string;
   interessesFilosoficos: string[];
   areasAtuacao: string[];
+  /** C107:18 — competencias ofertadas ao servico honorifico da irmandade. */
+  competencias: string[];
   xp: number;
   nivel: number;
   sequenciaDias: number;
@@ -655,6 +657,157 @@ export interface Lancamento {
 }
 
 /* ------------------------------------------------------------------ */
+/* Ritos institucionais — Codice Verde                                 */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Ritos com efeito registral na vida do membro.
+ *
+ * `oikeiosis`   — Rito de Integracao: ingresso (C10:7, C10:25, C103:2).
+ * `prokope`     — Rito de Graduacao: elevacao de grau (C10:19, C103:4).
+ * `syzygia`     — Reconhecimento Matrimonial (C15:21, C61:3).
+ * `reconhecimento` — Ato de Reconhecimento do Reinado do Rei Divino (C102:1).
+ * `syssitia`    — Agape fraterno, repasto comunitario (C11:1).
+ * `desobrigacao`— Desobrigacao Voluntaria e Recolhimento Fraterno Pacifico
+ *                 (C10:61 a C10:64): saida honrosa, distinta do desligamento e
+ *                 da exclusao disciplinar do Est. Art. 22.
+ */
+export type TipoRito =
+  | 'oikeiosis'
+  | 'prokope'
+  | 'syzygia'
+  | 'reconhecimento'
+  | 'syssitia'
+  | 'desobrigacao';
+
+export interface Rito {
+  id: ID;
+  tipo: TipoRito;
+  membroId: ID;
+  nucleoId: ID | null;
+  celebradoEm: ISODate;
+  /** Autoridade da Mestria que presidiu o rito (C10:35). */
+  presididoPorId: ID;
+  local: string;
+  nota?: string;
+  /** Preenchido na Prokope: grau alcancado. */
+  grauAlcancadoId?: ID | null;
+}
+
+/* ------------------------------------------------------------------ */
+/* Spiti e Symphyle — as duas esferas do Nucleo (C1:2, C11:1)          */
+/* ------------------------------------------------------------------ */
+
+/**
+ * `spiti`    — Casa de recolhimento, estudo e ascese interior.
+ * `symphyle` — Falange de acao, caridade e insurgencia cultural, com
+ *              autonomia administrativa e fundos proprios (C10:66).
+ */
+export type EsferaCelula = 'spiti' | 'symphyle';
+
+export interface Celula {
+  id: ID;
+  nucleoId: ID;
+  esfera: EsferaCelula;
+  nome: string;
+  descricao: string;
+  responsavelId: ID | null;
+  /** Emblema do bestiario heraldico da esfera (C11:8, C11:10). */
+  emblema: string;
+  membros: ID[];
+  criadaEm: ISODate;
+  ativa: boolean;
+}
+
+/* ------------------------------------------------------------------ */
+/* Leitourgia — servico honorifico (C107:18)                           */
+/* ------------------------------------------------------------------ */
+
+export type SituacaoServico = 'aberto' | 'atendido' | 'concluido' | 'cancelado';
+
+/**
+ * Necessidade posta ao corpo da irmandade, atendida por confrade que oferta
+ * competencia profissional — direito, saude, engenharia e afins.
+ */
+export interface Servico {
+  id: ID;
+  titulo: string;
+  descricao: string;
+  competenciaRequerida: string;
+  solicitanteId: ID;
+  nucleoId: ID | null;
+  celulaId: ID | null;
+  atendentesIds: ID[];
+  situacao: SituacaoServico;
+  abertoEm: ISODate;
+  concluidoEm: ISODate | null;
+  xp: number;
+}
+
+/* ------------------------------------------------------------------ */
+/* Arbitragem de Honra — C6:21 a C6:23                                 */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Dever moral de esgotar a mediacao interna perante a Mestria antes de
+ * submeter litigios aos tribunais seculares. E anterior e distinta do processo
+ * disciplinar: aqui nao ha acusado, ha partes.
+ */
+export type SituacaoMediacao =
+  | 'solicitada'
+  | 'em_mediacao'
+  | 'conciliada'
+  | 'sem_acordo'
+  | 'arquivada';
+
+export interface Mediacao {
+  id: ID;
+  numero: string;
+  requerenteId: ID;
+  requeridoId: ID;
+  objeto: string;
+  nucleoId: ID | null;
+  /** Autoridade da Mestria que conduz a mediacao. */
+  mediadorId: ID | null;
+  situacao: SituacaoMediacao;
+  solicitadaEm: ISODate;
+  concluidaEm: ISODate | null;
+  termoConciliacao?: string;
+  sigilosa: boolean;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sucessao — Est. Arts. 37 a 39                                       */
+/* ------------------------------------------------------------------ */
+
+/**
+ * `epigonos_honorario` — sucessor indicado em idade de incapacidade civil.
+ * `epigonos_permanente`— apos sabatina e aprovacao pelo Conselho Alto.
+ * `arquidama`          — esposa ou companheira do Grao-Mestre; assume a
+ *                        Regencia na menoridade do Epigonos (Art. 38, § 1.º).
+ * `chanceler`          — substituto ordinario (Art. 36).
+ */
+export type FiguraSucessoria =
+  | 'epigonos_honorario'
+  | 'epigonos_permanente'
+  | 'arquidama'
+  | 'chanceler';
+
+export interface PostoSucessorio {
+  id: ID;
+  figura: FiguraSucessoria;
+  membroId: ID;
+  /** Posicao na linha de precedencia; 1 assume primeiro. */
+  ordem: number;
+  /** Est. Art. 39, § 1.º — a linha e fixada por Ato Normativo Supremo. */
+  atoNormativoId: ID | null;
+  /** Art. 38, § 2.º — o Grao-Mestre autoriza a Arquidama a assumir ausencias. */
+  autorizadoParaAusencias: boolean;
+  designadoEm: ISODate;
+  observacao?: string;
+}
+
+/* ------------------------------------------------------------------ */
 /* Orgaos colegiados — Est. Arts. 23, 41, 43, 50, 54, 59               */
 /* ------------------------------------------------------------------ */
 
@@ -857,6 +1010,11 @@ export interface BaseDados {
   cargos: Cargo[];
   graus: Grau[];
   orgaos: Orgao[];
+  ritos: Rito[];
+  celulas: Celula[];
+  servicos: Servico[];
+  mediacoes: Mediacao[];
+  sucessao: PostoSucessorio[];
   assentos: Assento[];
   assembleias: Assembleia[];
   materias: Materia[];
