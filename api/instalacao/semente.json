@@ -1,0 +1,803 @@
+{
+  "geradoEm": "2026-08-21",
+  "permissoes": [
+    "membros.visualizar",
+    "membros.criar",
+    "membros.editar",
+    "membros.aprovar",
+    "membros.suspender",
+    "membros.transferir",
+    "membros.exportar",
+    "nucleos.visualizar",
+    "nucleos.criar",
+    "nucleos.editar",
+    "publicacoes.criar",
+    "publicacoes.publicarOficial",
+    "publicacoes.moderar",
+    "documentos.visualizar",
+    "documentos.gerenciar",
+    "formacao.gerenciar",
+    "eventos.visualizar",
+    "eventos.gerenciar",
+    "presenca.registrar",
+    "tesouraria.visualizar",
+    "tesouraria.lancarReceita",
+    "tesouraria.lancarDespesa",
+    "tesouraria.gerenciarContas",
+    "propostas.criar",
+    "propostas.tramitar",
+    "gamificacao.configurar",
+    "relatorios.gerar",
+    "auditoria.visualizar",
+    "permissoes.gerenciar",
+    "configuracoes.gerenciar"
+  ],
+  "gruposPermissao": [
+    {
+      "grupo": "Membros",
+      "permissoes": [
+        {
+          "chave": "membros.visualizar",
+          "rotulo": "Visualizar membros"
+        },
+        {
+          "chave": "membros.criar",
+          "rotulo": "Cadastrar membros"
+        },
+        {
+          "chave": "membros.editar",
+          "rotulo": "Editar membros"
+        },
+        {
+          "chave": "membros.aprovar",
+          "rotulo": "Aprovar cadastros"
+        },
+        {
+          "chave": "membros.suspender",
+          "rotulo": "Suspender e reativar"
+        },
+        {
+          "chave": "membros.transferir",
+          "rotulo": "Transferir de Núcleo"
+        },
+        {
+          "chave": "membros.exportar",
+          "rotulo": "Exportar dados"
+        }
+      ]
+    },
+    {
+      "grupo": "Núcleos",
+      "permissoes": [
+        {
+          "chave": "nucleos.visualizar",
+          "rotulo": "Visualizar Núcleos"
+        },
+        {
+          "chave": "nucleos.criar",
+          "rotulo": "Cadastrar Núcleos"
+        },
+        {
+          "chave": "nucleos.editar",
+          "rotulo": "Editar Núcleos"
+        }
+      ]
+    },
+    {
+      "grupo": "Conteúdo",
+      "permissoes": [
+        {
+          "chave": "publicacoes.criar",
+          "rotulo": "Publicar no feed"
+        },
+        {
+          "chave": "publicacoes.publicarOficial",
+          "rotulo": "Emitir comunicado oficial"
+        },
+        {
+          "chave": "publicacoes.moderar",
+          "rotulo": "Moderar publicações"
+        },
+        {
+          "chave": "documentos.visualizar",
+          "rotulo": "Consultar documentos"
+        },
+        {
+          "chave": "documentos.gerenciar",
+          "rotulo": "Gerenciar documentos"
+        },
+        {
+          "chave": "formacao.gerenciar",
+          "rotulo": "Gerenciar formação"
+        }
+      ]
+    },
+    {
+      "grupo": "Eventos",
+      "permissoes": [
+        {
+          "chave": "eventos.visualizar",
+          "rotulo": "Visualizar eventos"
+        },
+        {
+          "chave": "eventos.gerenciar",
+          "rotulo": "Gerenciar eventos"
+        },
+        {
+          "chave": "presenca.registrar",
+          "rotulo": "Registrar presença"
+        }
+      ]
+    },
+    {
+      "grupo": "Tesouraria",
+      "permissoes": [
+        {
+          "chave": "tesouraria.visualizar",
+          "rotulo": "Visualizar tesouraria"
+        },
+        {
+          "chave": "tesouraria.lancarReceita",
+          "rotulo": "Registrar receitas"
+        },
+        {
+          "chave": "tesouraria.lancarDespesa",
+          "rotulo": "Registrar despesas"
+        },
+        {
+          "chave": "tesouraria.gerenciarContas",
+          "rotulo": "Gerenciar contas e categorias"
+        }
+      ]
+    },
+    {
+      "grupo": "Governança",
+      "permissoes": [
+        {
+          "chave": "propostas.criar",
+          "rotulo": "Apresentar propostas"
+        },
+        {
+          "chave": "propostas.tramitar",
+          "rotulo": "Tramitar propostas"
+        },
+        {
+          "chave": "gamificacao.configurar",
+          "rotulo": "Configurar XP e níveis"
+        },
+        {
+          "chave": "relatorios.gerar",
+          "rotulo": "Gerar relatórios"
+        },
+        {
+          "chave": "auditoria.visualizar",
+          "rotulo": "Consultar auditoria"
+        },
+        {
+          "chave": "permissoes.gerenciar",
+          "rotulo": "Gerenciar cargos e permissões"
+        },
+        {
+          "chave": "configuracoes.gerenciar",
+          "rotulo": "Configurações da plataforma"
+        }
+      ]
+    }
+  ],
+  "cargos": [
+    {
+      "id": "cargo-admin",
+      "codigo": "administrador",
+      "nome": "Administrador",
+      "descricao": "Função técnica de manutenção da plataforma. Não possui previsão estatutária e não exerce autoridade institucional.",
+      "escopo": "global",
+      "precedencia": 1,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "membros.criar",
+        "membros.editar",
+        "membros.aprovar",
+        "membros.suspender",
+        "membros.transferir",
+        "membros.exportar",
+        "nucleos.visualizar",
+        "nucleos.criar",
+        "nucleos.editar",
+        "publicacoes.criar",
+        "publicacoes.publicarOficial",
+        "publicacoes.moderar",
+        "documentos.visualizar",
+        "documentos.gerenciar",
+        "formacao.gerenciar",
+        "eventos.visualizar",
+        "eventos.gerenciar",
+        "presenca.registrar",
+        "tesouraria.visualizar",
+        "tesouraria.lancarReceita",
+        "tesouraria.lancarDespesa",
+        "tesouraria.gerenciarContas",
+        "propostas.criar",
+        "propostas.tramitar",
+        "gamificacao.configurar",
+        "relatorios.gerar",
+        "auditoria.visualizar",
+        "permissoes.gerenciar",
+        "configuracoes.gerenciar"
+      ]
+    },
+    {
+      "id": "cargo-grao-mestre",
+      "codigo": "grao_mestre",
+      "nome": "Grão-Mestre",
+      "descricao": "Moderador Presidente. Dirigente máximo, representante legal e intérprete final da doutrina (Est. Art. 33; C10:44).",
+      "escopo": "global",
+      "precedencia": 2,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "membros.editar",
+        "membros.aprovar",
+        "nucleos.criar",
+        "nucleos.editar",
+        "publicacoes.publicarOficial",
+        "publicacoes.moderar",
+        "documentos.gerenciar",
+        "eventos.gerenciar",
+        "tesouraria.visualizar",
+        "propostas.tramitar",
+        "relatorios.gerar",
+        "auditoria.visualizar",
+        "gamificacao.configurar"
+      ]
+    },
+    {
+      "id": "cargo-chanceler",
+      "codigo": "chanceler",
+      "nome": "Chanceler",
+      "descricao": "Dirigente operacional da gestão administrativa cotidiana; substitui o Grão-Mestre em suas ausências (Est. Arts. 36 e 41).",
+      "escopo": "global",
+      "precedencia": 3,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "membros.editar",
+        "nucleos.editar",
+        "publicacoes.publicarOficial",
+        "eventos.gerenciar",
+        "tesouraria.visualizar",
+        "propostas.tramitar",
+        "relatorios.gerar"
+      ]
+    },
+    {
+      "id": "cargo-moderador",
+      "codigo": "moderador",
+      "nome": "Moderador",
+      "descricao": "Autoridade doutrinária máxima em âmbito estadual ou nacional; última instância interpretativa abaixo da presidência (C10:42).",
+      "escopo": "estado",
+      "precedencia": 3,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "membros.editar",
+        "publicacoes.publicarOficial",
+        "documentos.gerenciar",
+        "eventos.gerenciar",
+        "propostas.tramitar",
+        "relatorios.gerar",
+        "auditoria.visualizar"
+      ]
+    },
+    {
+      "id": "cargo-secretario-geral",
+      "codigo": "secretario_geral",
+      "nome": "Secretário-Geral",
+      "descricao": "Gestão cadastral, documental e de eventos da Ordem. Sem acesso a valores financeiros (Est. Art. 41, II).",
+      "escopo": "global",
+      "precedencia": 4,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "membros.criar",
+        "membros.editar",
+        "membros.aprovar",
+        "membros.suspender",
+        "membros.transferir",
+        "membros.exportar",
+        "nucleos.criar",
+        "nucleos.editar",
+        "publicacoes.publicarOficial",
+        "documentos.gerenciar",
+        "eventos.gerenciar",
+        "presenca.registrar",
+        "relatorios.gerar"
+      ]
+    },
+    {
+      "id": "cargo-tesoureiro-geral",
+      "codigo": "tesoureiro_geral",
+      "nome": "Tesoureiro-Geral",
+      "descricao": "Gestão financeira integral e prestação de contas. Sem acesso à alteração cadastral de membros (Est. Arts. 13 e 41, III).",
+      "escopo": "global",
+      "precedencia": 4,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "tesouraria.visualizar",
+        "tesouraria.lancarReceita",
+        "tesouraria.lancarDespesa",
+        "tesouraria.gerenciarContas",
+        "relatorios.gerar"
+      ]
+    },
+    {
+      "id": "cargo-auguere",
+      "codigo": "auguere",
+      "nome": "Auguere",
+      "descricao": "Mestre de estratégia superior e embaixador da verdade; zela pela ortodoxia doutrinária dos documentos da Ordem (C10:40, C10:41).",
+      "escopo": "global",
+      "precedencia": 5,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "publicacoes.publicarOficial",
+        "publicacoes.moderar",
+        "documentos.gerenciar",
+        "formacao.gerenciar",
+        "propostas.tramitar"
+      ]
+    },
+    {
+      "id": "cargo-epopte",
+      "codigo": "epopte",
+      "nome": "Epopte",
+      "descricao": "Supervisão macro-regional; apazigua cismas entre Núcleos e zela pela unidade doutrinária nas expansões (C10:38, C10:39).",
+      "escopo": "estado",
+      "precedencia": 5,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "membros.editar",
+        "nucleos.editar",
+        "publicacoes.publicarOficial",
+        "eventos.gerenciar",
+        "presenca.registrar",
+        "tesouraria.visualizar",
+        "relatorios.gerar"
+      ]
+    },
+    {
+      "id": "cargo-afentis",
+      "codigo": "afentis",
+      "nome": "Afentis",
+      "descricao": "Mestre Titular do Núcleo. Primeira face da autoridade madura de proximidade; administra a unidade local (Est. Art. 60; C10:36).",
+      "escopo": "nucleo",
+      "precedencia": 6,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "membros.editar",
+        "publicacoes.publicarOficial",
+        "eventos.gerenciar",
+        "presenca.registrar",
+        "tesouraria.visualizar",
+        "relatorios.gerar"
+      ]
+    },
+    {
+      "id": "cargo-thesi",
+      "codigo": "thesi",
+      "nome": "Thési",
+      "descricao": "Supervisão sênior da etapa auxiliar; estabiliza o Núcleo na ausência do líder geral (C10:28, C10:29).",
+      "escopo": "nucleo",
+      "precedencia": 7,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "eventos.gerenciar",
+        "presenca.registrar",
+        "membros.editar"
+      ]
+    },
+    {
+      "id": "cargo-syntrofo",
+      "codigo": "syntrofo",
+      "nome": "Syntrofo",
+      "descricao": "Companheiro. Escudo operacional das lideranças de base; gere a logística da Symphyle (C10:26).",
+      "escopo": "nucleo",
+      "precedencia": 8,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "eventos.gerenciar",
+        "presenca.registrar"
+      ]
+    },
+    {
+      "id": "cargo-embaixador",
+      "codigo": "embaixador",
+      "nome": "Embaixador",
+      "descricao": "Representação protocolar e institucional da Ordem perante outras entidades. Nomeado por Ato Normativo Supremo (Est. Art. 16).",
+      "escopo": "proprio",
+      "precedencia": 8,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar",
+        "publicacoes.publicarOficial"
+      ]
+    },
+    {
+      "id": "cargo-membro",
+      "codigo": "membro",
+      "nome": "Membro",
+      "descricao": "Eunomita regular, com acesso pleno às áreas de participação e formação.",
+      "escopo": "proprio",
+      "precedencia": 9,
+      "sistema": 1,
+      "permissoes": [
+        "membros.visualizar",
+        "nucleos.visualizar",
+        "publicacoes.criar",
+        "documentos.visualizar",
+        "eventos.visualizar",
+        "propostas.criar"
+      ]
+    },
+    {
+      "id": "cargo-candidato",
+      "codigo": "candidato",
+      "nome": "Candidato",
+      "descricao": "Postulante com cadastro em análise. Acesso restrito a conteúdos abertos e à formação introdutória (Est. Art. 17).",
+      "escopo": "proprio",
+      "precedencia": 10,
+      "sistema": 1,
+      "permissoes": [
+        "eventos.visualizar",
+        "documentos.visualizar"
+      ]
+    }
+  ],
+  "graus": [
+    {
+      "id": "grau-recruta",
+      "codigo": "recruta",
+      "nome": "Recruta",
+      "categoria": "formacao",
+      "ordem": 1,
+      "descricao": "Ingressante acolhido pelo rito da Oikeiōsis, em reconhecimento inicial da irmandade.",
+      "xpSugerido": 0
+    },
+    {
+      "id": "grau-anchario",
+      "codigo": "anchario",
+      "nome": "Anchário",
+      "categoria": "formacao",
+      "ordem": 2,
+      "descricao": "Primeira firmeza na disciplina fraterna e no trato com os deveres do Códice.",
+      "xpSugerido": 400
+    },
+    {
+      "id": "grau-mathetes",
+      "codigo": "mathetes",
+      "nome": "Mathētēs",
+      "categoria": "formacao",
+      "ordem": 3,
+      "descricao": "O discípulo. Dedica-se ao estudo sistemático da Filosofia Perene no Spíti.",
+      "xpSugerido": 1000
+    },
+    {
+      "id": "grau-prokopos",
+      "codigo": "prokopos",
+      "nome": "Prókopos",
+      "categoria": "formacao",
+      "ordem": 4,
+      "descricao": "Aquele que progride. Demonstra domínio crescente sobre os próprios impulsos.",
+      "xpSugerido": 1800
+    },
+    {
+      "id": "grau-aretaios",
+      "codigo": "aretaios",
+      "nome": "Aretáios",
+      "categoria": "formacao",
+      "ordem": 5,
+      "descricao": "Avanço na reestruturação da alma e aquisição do caráter firme exigido nas fileiras (C10:23).",
+      "xpSugerido": 2800
+    },
+    {
+      "id": "grau-empeiros",
+      "codigo": "empeiros",
+      "nome": "Empeiros",
+      "categoria": "formacao",
+      "ordem": 6,
+      "descricao": "O experimentado. Encerra a base formativa e habilita-se à categoria mediadora.",
+      "xpSugerido": 4000
+    },
+    {
+      "id": "grau-syntrofo",
+      "codigo": "syntrofo",
+      "nome": "Syntrofo",
+      "categoria": "mediadora",
+      "ordem": 10,
+      "descricao": "O Companheiro. Escudo operacional das lideranças de base; gere a logística da Symphyle (C10:26).",
+      "xpSugerido": 5500
+    },
+    {
+      "id": "grau-thesi",
+      "codigo": "thesi",
+      "nome": "Thési",
+      "categoria": "mediadora",
+      "ordem": 12,
+      "descricao": "A Posição. Sentinela veterano que estabiliza o Núcleo; sua elevação exige aprovação de um Afentis (C10:28).",
+      "xpSugerido": 7500
+    },
+    {
+      "id": "grau-afentis",
+      "codigo": "afentis",
+      "nome": "Afentis",
+      "categoria": "mestria",
+      "ordem": 15,
+      "descricao": "Primeira face da autoridade madura de proximidade; transforma os princípios do Códice em conduta tangível (C10:36).",
+      "xpSugerido": 9500
+    },
+    {
+      "id": "grau-epopte",
+      "codigo": "epopte",
+      "nome": "Epopte",
+      "categoria": "mestria",
+      "ordem": 16,
+      "descricao": "Supervisão macro-regional; baluarte da ortodoxia territorial. Ascensão validada pelo Moderador ou pelo Grão-Mestre (C10:38).",
+      "xpSugerido": 12000
+    },
+    {
+      "id": "grau-auguere",
+      "codigo": "auguere",
+      "nome": "Auguere",
+      "categoria": "mestria",
+      "ordem": 17,
+      "descricao": "Mestre da estratégia superior e da erudição; corrige desvios doutrinários nos documentos da Ordem (C10:40).",
+      "xpSugerido": 15000
+    },
+    {
+      "id": "grau-moderador",
+      "codigo": "moderador",
+      "nome": "Moderador",
+      "categoria": "mestria",
+      "ordem": 18,
+      "descricao": "Autoridade doutrinária máxima em âmbito estadual ou nacional; última instância interpretativa abaixo da presidência (C10:42).",
+      "xpSugerido": 19000
+    },
+    {
+      "id": "grau-grao-mestre",
+      "codigo": "grao_mestre",
+      "nome": "Grão-Mestre",
+      "categoria": "mestria",
+      "ordem": 19,
+      "descricao": "Autoridade máxima, soberana e vitalícia; ponto de união de todos os graus e intérprete final da doutrina (C10:44).",
+      "xpSugerido": 24000
+    }
+  ],
+  "orgaosCentrais": [
+    {
+      "id": "org-assembleia",
+      "codigo": "assembleia_geral",
+      "nome": "Assembleia Geral",
+      "descricao": "Órgão soberano de deliberação, integrado pelos associados com direito a voto. Reúne-se ordinariamente ao menos uma vez por ano.",
+      "ambito": "central",
+      "nucleoId": null,
+      "minimoMembros": null,
+      "maximoMembros": null,
+      "mandatoAnos": null,
+      "competencias": [
+        "Eleger e destituir administradores, observados o contraditório e a ampla defesa",
+        "Apreciar o relatório da administração e deliberar sobre as contas da Diretoria Executiva",
+        "Aprovar o orçamento anual e o plano de trabalho",
+        "Deliberar sobre a continuidade do Grão-Mestre",
+        "Eleger ou destituir membros dos Conselhos Superiores de Contas e de Ética",
+        "Deliberar sobre alienação, oneração ou gravação de bens imóveis",
+        "Deliberar sobre reforma estatutária",
+        "Deliberar sobre dissolução da Ordem",
+        "Aprovar a política geral de remuneração, quando houver"
+      ],
+      "fundamento": "Est. Arts. 27 a 32"
+    },
+    {
+      "id": "org-grao-mestre",
+      "codigo": "grao_mestre",
+      "nome": "Moderador Presidente (Grão-Mestre)",
+      "descricao": "Dirigente máximo, representante legal, guardião da unidade institucional e autoridade executiva superior. Mandato de nove anos, admitida recondução.",
+      "ambito": "central",
+      "nucleoId": null,
+      "minimoMembros": 1,
+      "maximoMembros": 1,
+      "mandatoAnos": 9,
+      "competencias": [
+        "Representar a Ordem ativa e passivamente, judicial e extrajudicialmente",
+        "Convocar e presidir as sessões do Conselho Eclesia Supremo",
+        "Sancionar ou vetar Resoluções Gerais e demais atos internos",
+        "Nomear e exonerar dirigentes, coordenadores e responsáveis departamentais",
+        "Assinar, em conjunto com o Chanceler, contratos e instrumentos jurídicos relevantes",
+        "Expedir Atos Normativos Supremos de caráter geral",
+        "Firmar acordos, parcerias e termos de cooperação"
+      ],
+      "fundamento": "Est. Arts. 33 a 40"
+    },
+    {
+      "id": "org-diretoria",
+      "codigo": "diretoria_executiva",
+      "nome": "Diretoria Executiva",
+      "descricao": "Órgão colegiado de administração ordinária, composto no mínimo pelo Chanceler, pelo Secretário-Geral e pelo Tesoureiro-Geral.",
+      "ambito": "central",
+      "nucleoId": null,
+      "minimoMembros": 3,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [
+        "Conduzir a administração ordinária da Ordem",
+        "Analisar os requerimentos de admissão de associados",
+        "Elaborar a prestação anual de contas e o relatório de gestão"
+      ],
+      "fundamento": "Est. Arts. 41 e 42"
+    },
+    {
+      "id": "org-conselho-alto",
+      "codigo": "conselho_alto",
+      "nome": "Conselho Alto",
+      "descricao": "Câmara do Conselho Eclesia Supremo composta pelos membros da Mestria ou por conselheiros de alta confiança institucional.",
+      "ambito": "central",
+      "nucleoId": null,
+      "minimoMembros": 3,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [
+        "Apreciar, deliberar e aprovar Resoluções Gerais",
+        "Apreciar vetos do Grão-Mestre",
+        "Sabatinar o Epígonos Honorário para investidura como Epígonos Permanente",
+        "Aprovar a indicação dos membros do Conselho Superior de Ética"
+      ],
+      "fundamento": "Est. Arts. 43, 44 e 46"
+    },
+    {
+      "id": "org-conselho-baixo",
+      "codigo": "conselho_baixo",
+      "nome": "Conselho Baixo",
+      "descricao": "Câmara do Conselho Eclesia Supremo composta por representantes eleitos ou indicados, portadores do título de Kyrios.",
+      "ambito": "central",
+      "nucleoId": null,
+      "minimoMembros": 3,
+      "maximoMembros": null,
+      "mandatoAnos": 4,
+      "competencias": [
+        "Apreciar, deliberar e aprovar Resoluções Gerais",
+        "Apreciar vetos do Grão-Mestre",
+        "Aprovar a indicação dos membros do Conselho Superior de Contas",
+        "Representar os pequenos pelotões perante os conselhos superiores"
+      ],
+      "fundamento": "Est. Arts. 43, 45 e 46"
+    },
+    {
+      "id": "org-etica",
+      "codigo": "conselho_superior_etica",
+      "nome": "Conselho Superior de Ética",
+      "descricao": "Órgão colegiado de independência funcional, destinado ao julgamento ético-disciplinar e à interpretação oficial das normas internas. É vedado a seus membros ocupar cargo na Diretoria Executiva ou em coordenadoria local.",
+      "ambito": "central",
+      "nucleoId": null,
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [
+        "Julgar condutas e infrações de membros e dirigentes",
+        "Emitir pareceres e recomendar providências",
+        "Atuar como intérprete oficial das normas internas",
+        "Analisar a compatibilidade das normas internas com o Estatuto",
+        "Instruir o processo de destituição do Moderador Presidente"
+      ],
+      "fundamento": "Est. Arts. 50 a 53"
+    },
+    {
+      "id": "org-contas",
+      "codigo": "conselho_superior_contas",
+      "nome": "Conselho Superior de Contas",
+      "descricao": "Órgão colegiado de fiscalização econômico-financeira, patrimonial e contábil da Ordem.",
+      "ambito": "central",
+      "nucleoId": null,
+      "minimoMembros": 3,
+      "maximoMembros": 7,
+      "mandatoAnos": 4,
+      "competencias": [
+        "Fiscalizar receitas, despesas, patrimônio e execução orçamentária",
+        "Examinar livros e documentos contábeis",
+        "Emitir pareceres sobre a prestação de contas",
+        "Requisitar documentos necessários ao exercício da fiscalização"
+      ],
+      "fundamento": "Est. Arts. 54 a 56"
+    }
+  ],
+  "orgaosLocais": [
+    {
+      "codigo": "coordenadoria_local",
+      "nome": "Coordenadoria de Gestão Local",
+      "descricao": "Administra a unidade local, executa as deliberações superiores e representa o Núcleo perante os membros.",
+      "competencias": [
+        "Executar as deliberações dos órgãos centrais",
+        "Administrar as atividades e o expediente do Núcleo",
+        "Representar o Núcleo perante os membros"
+      ]
+    },
+    {
+      "codigo": "conselho_local_etica",
+      "nome": "Conselho Local de Ética",
+      "descricao": "Julga em primeira instância as infrações cometidas por associados vinculados ao Núcleo.",
+      "competencias": [
+        "Julgar em primeira instância as infrações do Núcleo (Est. Art. 66)",
+        "Instruir o processo disciplinar com ampla defesa",
+        "Encaminhar recurso aos órgãos gerais competentes"
+      ]
+    },
+    {
+      "codigo": "conselho_local_contas",
+      "nome": "Conselho Local de Contas",
+      "descricao": "Fiscaliza a arrecadação e a aplicação dos recursos do Núcleo.",
+      "competencias": [
+        "Fiscalizar a arrecadação local",
+        "Examinar a aplicação dos recursos do Núcleo",
+        "Emitir parecer sobre a prestação de contas local"
+      ]
+    }
+  ]
+}

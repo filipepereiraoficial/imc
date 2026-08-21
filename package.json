@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "fontes": "./scripts/fontes.sh",
     "icones:verificar": "./scripts/verificar-icones.sh",
-    "pagina-unica": "VITE_PAGINA_UNICA=1 vite build && node scripts/pagina-unica.mjs"
+    "pagina-unica": "VITE_PAGINA_UNICA=1 vite build && node scripts/pagina-unica.mjs",
+    "semente": "node --experimental-strip-types scripts/semente.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

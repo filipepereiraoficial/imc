@@ -1,0 +1,40 @@
+# Apache — pasta da API.
+#
+# Duas responsabilidades: impedir o acesso direto aos arquivos que não são
+# ponto de entrada e encaminhar /api/qualquer-coisa para index.php.
+
+# O arquivo de configuração guarda a senha do banco e a chave da instalação.
+# Se o PHP estiver desligado por engano, ele viraria texto servido ao público.
+<FilesMatch "^(config\.php|.*\.sql|.*\.json|.*\.md)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# O núcleo é biblioteca, não endereço.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteRule ^nucleo/ - [F,L]
+
+  # Arquivo ou diretório existente — inclusive o instalador — é servido direto.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # O restante é rota da API. O caminho vai como parâmetro em vez de
+  # PATH_INFO porque nem toda hospedagem compartilhada o preenche.
+  RewriteRule ^(.*)$ index.php?rota=/$1 [QSA,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Cache-Control "no-store"
+</IfModule>
+
+Options -Indexes

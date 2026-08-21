@@ -8,3 +8,9 @@ dist-ssr
 !.env.example
 tsconfig.tsbuildinfo
 dist-unico
+
+# Gerado pelo instalador: contém a senha do banco e a chave da instalação.
+api/config.php
+
+# Pacote de hospedagem montado por scripts/pacote-hospedagem.mjs
+dist-hospedagem/

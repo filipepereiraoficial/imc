@@ -1,5 +1,6 @@
 # Apache — hospedagem compartilhada (cPanel, Hostinger, Locaweb e afins).
 # Basta enviar o conteúdo de dist/ para public_html; este arquivo vai junto.
+# Com back-end, envie também a pasta api/ ao lado do index.html.
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -9,6 +10,9 @@
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
+
+  # A API tem roteador próprio; api/.htaccess cuida do restante.
+  RewriteRule ^api/ - [L]
 
   # Qualquer outro caminho devolve o index: o roteador do navegador assume.
   RewriteRule ^ index.html [L]
