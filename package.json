@@ -14,7 +14,8 @@
     "pagina-unica": "VITE_PAGINA_UNICA=1 vite build && node scripts/pagina-unica.mjs",
     "semente": "node --experimental-strip-types scripts/semente.mjs",
     "api:testes": "node testes/api.mjs",
-    "api:local": "php -S localhost:8080 -t dist-hospedagem implantacao/servidor-local.php"
+    "api:local": "php -S localhost:8080 -t dist-hospedagem implantacao/servidor-local.php",
+    "pacote": "npm run semente && npm run build && node scripts/pacote-hospedagem.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

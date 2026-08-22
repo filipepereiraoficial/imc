@@ -49,13 +49,20 @@ export function nomePais(base: BaseDados, id: ID | null | undefined): string {
   return base.paises.find((p) => p.id === id)?.nome ?? '—';
 }
 
-/** "Jaboatão dos Guararapes · PE · Brasil" */
+/**
+ * Localidade do membro — "Jaboatão dos Guararapes · PE · Brasil".
+ *
+ * Campos ainda nao preenchidos ficam de fora em vez de virar travessao: numa
+ * instalacao nova o endereco costuma estar vazio, e "— · — · —" nao informa
+ * nada e ainda parece defeito. Ausente por ausente, uma frase e melhor.
+ */
 export function localidade(base: BaseDados, membro: Membro): string {
-  return [
+  const partes = [
     nomeMunicipio(base, membro.municipioId),
     siglaEstado(base, membro.estadoId),
     nomePais(base, membro.paisId),
-  ].join(' · ');
+  ].filter((p) => p !== '' && p !== '—');
+  return partes.length > 0 ? partes.join(' · ') : 'Localidade não informada';
 }
 
 export function membrosDoNucleo(base: BaseDados, nucleoId: ID): Membro[] {

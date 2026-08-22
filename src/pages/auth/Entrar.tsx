@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { ErroAuth, SENHA_DEMONSTRACAO, useAuth } from '@/context/AuthContext';
+import { useServidor } from '@/context/ServidorContext';
 import { useDados } from '@/context/DadosContext';
 import { Avatar, Botao, Campo, Icone } from '@/components/ui';
 import { LayoutAuth } from './LayoutAuth';
@@ -17,6 +18,7 @@ const PERFIS_DEMO = [
 export function Entrar() {
   const { entrar, autenticado } = useAuth();
   const { base } = useDados();
+  const { noServidor, sistema } = useServidor();
   const navegar = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -64,6 +66,19 @@ export function Entrar() {
       titulo="Acesso do Eunomita"
       descricao="Use o e-mail registrado na Secretaria-Geral da Ordem."
       rodape={
+        // Com back-end instalado nao ha vitrine: as contas de exemplo e a
+        // senha compartilhada nao existem, e exibi-las convidaria a tentar.
+        noServidor ? (
+          <div className="rounded-card border border-line bg-surface-card p-4">
+            <p className="rotulo mb-2">Acesso institucional</p>
+            <p className="text-sm text-ink-soft">
+              {sistema
+                ? `Você está entrando em ${sistema}.`
+                : 'Você está entrando na instalação da sua Ordem.'}{' '}
+              Use o e-mail ou o nome de usuário registrado na Secretaria.
+            </p>
+          </div>
+        ) : (
         <div className="rounded-card border border-line bg-surface-card p-4">
           <p className="rotulo mb-3">Perfis de demonstração</p>
           <ul className="space-y-1">
@@ -93,6 +108,7 @@ export function Entrar() {
             Senha de todas as contas de demonstração: <code className="font-mono font-bold text-ink">{SENHA_DEMONSTRACAO}</code>
           </p>
         </div>
+        )
       }
     >
       <form onSubmit={enviar} className="space-y-4" noValidate>

@@ -175,12 +175,20 @@ final class Aparencia
         .aviso.bom{background:color-mix(in srgb,var(--bom) 10%,transparent);border-color:var(--bom);color:var(--tinta)}
         .aviso.info{background:var(--suave);border-color:var(--borda);color:var(--tinta-suave)}
         .aviso.alerta{background:color-mix(in srgb,var(--alerta) 12%,transparent);border-color:var(--alerta);color:var(--tinta)}
+        /* Grade, e nao flex: com flex o rotulo longo quebra em torno do
+           detalhe e os dois se atropelam na largura de um telefone. */
         .lista{list-style:none;margin:0 0 8px;padding:0}
-        .lista li{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--borda);align-items:baseline}
+        .lista li{display:grid;grid-template-columns:1.3em minmax(0,1fr) auto;gap:2px 10px;
+          padding:9px 0;border-bottom:1px solid var(--borda);align-items:baseline}
         .lista li:last-child{border-bottom:0}
-        .lista .nome{flex:1;min-width:0}
-        .lista .valor{color:var(--tinta-fraca);font-size:.85rem;text-align:right}
-        .sinal{font-weight:700;flex:none;width:1.2em}
+        .lista .nome{grid-column:2;min-width:0}
+        .lista .valor{grid-column:3;color:var(--tinta-fraca);font-size:.85rem;text-align:right;
+          min-width:0;overflow-wrap:anywhere}
+        .sinal{grid-column:1;font-weight:700}
+        @media (max-width:560px){
+          .lista li{grid-template-columns:1.3em minmax(0,1fr)}
+          .lista .valor{grid-column:2;text-align:left;font-size:.8rem}
+        }
         .sinal.ok{color:var(--bom)}
         .sinal.nao{color:var(--erro)}
         .sinal.talvez{color:var(--alerta)}

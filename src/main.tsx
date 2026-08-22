@@ -5,6 +5,7 @@ import { App } from './App';
 import { ProvedorAuth } from '@/context/AuthContext';
 import { ProvedorAviso } from '@/context/AvisoContext';
 import { ProvedorDados } from '@/context/DadosContext';
+import { ProvedorServidor } from '@/context/ServidorContext';
 import { ProvedorTema } from '@/context/TemaContext';
 import './index.css';
 
@@ -22,13 +23,15 @@ createRoot(raiz).render(
   <StrictMode>
     <Roteador>
       <ProvedorTema>
-        <ProvedorDados>
-          <ProvedorAviso>
-            <ProvedorAuth>
-              <App />
-            </ProvedorAuth>
-          </ProvedorAviso>
-        </ProvedorDados>
+        <ProvedorServidor>
+          <ProvedorDados>
+            <ProvedorAviso>
+              <ProvedorAuth>
+                <App />
+              </ProvedorAuth>
+            </ProvedorAviso>
+          </ProvedorDados>
+        </ProvedorServidor>
       </ProvedorTema>
     </Roteador>
   </StrictMode>,

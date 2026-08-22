@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
+import { useServidor } from '@/context/ServidorContext';
 import { AppShell } from '@/components/layout/AppShell';
+import { ConviteInstalacao } from '@/components/layout/ConviteInstalacao';
 
 import { Entrar } from '@/pages/auth/Entrar';
 import { Cadastro } from '@/pages/auth/Cadastro';
@@ -39,12 +41,34 @@ import { BotaoLink } from '@/components/ui/Botao';
 
 /** Barreira de autenticacao: rotas internas exigem sessao ativa. */
 function Protegida({ children }: { children: React.ReactNode }) {
-  const { autenticado } = useAuth();
+  const { autenticado, restaurando } = useAuth();
+  // Com back-end a sessao vive num cookie que so o servidor consegue ler.
+  // Ate ele responder nao se sabe se ha sessao, e redirecionar aqui
+  // expulsaria o membro a cada recarga de pagina.
+  if (restaurando) return <Carregando />;
   if (!autenticado) return <Navigate to="/entrar" replace />;
   return <>{children}</>;
 }
 
+function Carregando() {
+  return (
+    <div className="grid min-h-dvh place-items-center bg-surface">
+      <p className="text-sm text-ink-faint">Carregando…</p>
+    </div>
+  );
+}
+
 export function App() {
+  const { modo, procurando } = useServidor();
+
+  // Ha servidor, mas o instalador nao foi concluido: a primeira visita leva
+  // a instalacao em vez de a uma aplicacao sem base de dados.
+  if (modo === 'nao-instalado') return <ConviteInstalacao />;
+
+  // Enquanto a deteccao corre nao se decide entre servidor e demonstracao —
+  // comecar pela tela de entrada e depois trocar piscaria a interface.
+  if (procurando) return <Carregando />;
+
   return (
     <Routes>
       {/* Publicas */}
