@@ -1,7 +1,16 @@
 # Modelo de Dados
 
-As entidades abaixo estão declaradas em `src/types/index.ts` e têm DDL
-correspondente em [`schema.sql`](./schema.sql).
+As entidades abaixo estão declaradas em `src/types/index.ts` e têm DDL em dois
+dialetos:
+
+| Arquivo | Para quê |
+|---|---|
+| [`schema.sql`](./schema.sql) | PostgreSQL — referência de modelagem |
+| [`../api/instalacao/esquema.sql`](../api/instalacao/esquema.sql) | MySQL/MariaDB — **é o que o instalador executa** |
+
+São 31 tabelas no esquema do instalador. O prefixo aparece como `{P}` e é
+substituído na instalação, o que permite mais de uma instalação no mesmo banco
+— prática comum em hospedagem compartilhada.
 
 ## 1. Território
 

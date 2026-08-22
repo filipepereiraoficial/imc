@@ -32,22 +32,45 @@ npm run dev      # http://localhost:5173
 | `npm run pagina-unica` | Empacota tudo em um único arquivo HTML |
 | `npm run fontes` | Regenera as fontes auto-hospedadas |
 | `npm run icones:verificar` | Acusa ícones fora do subconjunto |
+| `npm run semente` | Exporta cargos, graus e órgãos de `src/data` para o servidor |
+| `npm run pacote` | Monta `dist-hospedagem/` — aplicação **e** back-end |
+| `npm run api:local` | Serve o pacote com o PHP embutido, para experimentar |
+| `npm run api:testes` | Percorre a API |
 
 ### Hospedar
 
-A plataforma compila para **arquivos estáticos** — não exige Node, banco nem
-runtime no servidor. Isso a torna instalável em praticamente qualquer lugar, e
-o repositório já traz o adaptador de cada plataforma:
+Há dois modos, e a escolha é a primeira decisão:
+
+**Com servidor** — PHP 8.1+ e MySQL/MariaDB. É como a Ordem usa de verdade: os
+dados ficam no banco, as senhas são cifradas com Argon2id e cada regra é
+aplicada no servidor.
+
+```bash
+npm run pacote      # gera dist-hospedagem/
+```
+
+Envie o conteúdo de `dist-hospedagem/` para `public_html` (cPanel, Plesk,
+Hostinger) ou `htdocs` (XAMPP), crie um banco vazio pelo painel, e abra o
+endereço: a aplicação leva ao instalador. São quatro passos — requisitos,
+conexão com o banco, nome do sistema e da organização com a conta de
+administração, e conclusão.
+
+**Só estática** — sem PHP nem banco. A aplicação roda inteira no navegador, com
+a massa de demonstração. Serve para avaliar as telas, demonstrar e arquivar;
+não para dados reais.
 
 | Plataforma | O que usar | Já configurado |
 |---|---|---|
-| Docker (qualquer VPS) | `docker build -t omcl . && docker run -p 8080:8080 omcl` | `Dockerfile`, `implantacao/nginx.conf` |
+| Apache · cPanel · XAMPP **com back-end** | Enviar `dist-hospedagem/` | `public/.htaccess`, `api/.htaccess` |
+| Docker **com back-end** | `docker compose -f implantacao/docker-compose-servidor.yml up -d` | `implantacao/Dockerfile.servidor` |
+| Docker (só estática) | `docker build -t omcl . && docker run -p 8080:8080 omcl` | `Dockerfile`, `implantacao/nginx.conf` |
 | Vercel | Importar o repositório | `vercel.json` |
 | Netlify · Cloudflare Pages | Importar o repositório | `netlify.toml`, `public/_redirects` |
 | GitHub Pages | Settings → Pages → GitHub Actions | `.github/workflows/paginas.yml` |
-| Apache · cPanel · hospedagem compartilhada | Enviar `dist/` para `public_html` | `public/.htaccess` |
 | Nginx próprio | Copiar `implantacao/nginx.conf` | ✓ |
 | Sem servidor algum | `npm run pagina-unica` | arquivo único de 740 KB |
+
+As quatro últimas linhas servem apenas o modo estático: não executam PHP.
 
 Detalhes e passo a passo em [`docs/IMPLANTACAO.md`](docs/IMPLANTACAO.md).
 
@@ -123,11 +146,24 @@ src/
 **Regra de dependência:** páginas → componentes → contextos → regras → modelo.
 Nada em `lib/` importa React; são funções puras, compartilháveis com um backend.
 
-**Onde entra o servidor.** `DadosContext` é a única camada que conhece a origem
-dos dados: hoje carrega a massa de demonstração e persiste no `localStorage`. Os
-tipos de `src/types` espelham `docs/schema.sql`, e cada função de
-`src/lib/consultas.ts` tem correspondência direta com uma query — a troca por uma
-API é mecânica.
+```
+api/
+├─ nucleo/        Banco · Seguranca · Rbac · Deliberacao · Requisicao · Resposta
+├─ rotas/         sessão · referências · membros · núcleos · feed · assembleias
+│                 · tesouraria · administração
+└─ instalacao/    o instalador em quatro passos, e o esquema SQL
+```
+
+**Onde entra o servidor.** A aplicação descobre na partida se há back-end. Com
+ele, identidade, cargos, permissões, quadro, Núcleos, feed, assembleias,
+tesouraria e auditoria vêm do banco; sem ele, tudo roda sobre a massa de
+demonstração no `localStorage`.
+
+`api/nucleo/Rbac.php` e `api/nucleo/Deliberacao.php` são portes deliberados de
+`src/lib/rbac.ts` e `src/lib/deliberacao.ts` — escritos para serem lidos lado a
+lado, porque a regra que vale é a do servidor e a do cliente não pode divergir
+dela. Cargos, graus e órgãos têm uma fonte só: `npm run semente` os exporta de
+`src/data` para o instalador.
 
 ---
 
@@ -142,7 +178,8 @@ API é mecânica.
 | [`docs/DESIGN-SYSTEM.md`](docs/DESIGN-SYSTEM.md) | Cor, tipografia, componentes, dataviz, acessibilidade |
 | [`docs/SEGURANCA.md`](docs/SEGURANCA.md) | O que está feito e o que exige servidor |
 | [`docs/MAPEAMENTO-NORMATIVO.md`](docs/MAPEAMENTO-NORMATIVO.md) | Estatuto e Códice → funções do sistema |
-| [`docs/IMPLANTACAO.md`](docs/IMPLANTACAO.md) | Como hospedar, em qualquer plataforma |
+| [`docs/BACKEND.md`](docs/BACKEND.md) | O servidor em PHP: disposição, rotas, respostas |
+| [`docs/IMPLANTACAO.md`](docs/IMPLANTACAO.md) | Como hospedar e instalar, em qualquer plataforma |
 
 ---
 
@@ -175,13 +212,21 @@ Manter os dois permite auditar a pontuação e recalcular tudo se uma regra muda
 
 ## Limites deste estágio
 
-O sistema roda inteiramente no navegador, sem backend. Portanto:
+**Sem back-end**, o sistema roda inteiramente no navegador. A verificação de
+permissão é então **de interface**, não há senha cifrada, e os dados vivem no
+`localStorage` de cada visitante. Esse modo é para avaliar e demonstrar.
 
-- A verificação de permissão é **de interface**. Em produção, cada regra precisa
-  ser repetida no servidor — ver [`docs/SEGURANCA.md`](docs/SEGURANCA.md).
-- Não há hash de senha real, nem 2FA, nem upload de arquivos.
-- Os dados vivem no `localStorage` do navegador. O Painel do Administrador tem
-  a opção de restaurar a massa original.
+**Com back-end**, o que ainda falta:
+
+- Autenticação em dois fatores. O campo e a tela existem; falta o serviço TOTP.
+- Envio de arquivos. O esquema guarda as URLs, mas não há rota de upload:
+  fotos de perfil e comprovantes ainda não sobem.
+- Áreas cujo esquema existe e cujas rotas não foram escritas — eventos,
+  documentos, formação, propostas, mensagens, notificações, processos
+  disciplinares, arbitragem e serviço honorífico. Funcionam, e o que se guarda
+  nelas continua no navegador. Ver [`docs/BACKEND.md`](docs/BACKEND.md).
+- HTTPS é responsabilidade da hospedagem, e é a pendência mais séria: sem ele o
+  cookie de sessão trafega em claro.
 - O QR Code da carteira é uma marca visual determinística; a validação real
   exige assinatura emitida pelo servidor.
 

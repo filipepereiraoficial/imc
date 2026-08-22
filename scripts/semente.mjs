@@ -19,8 +19,9 @@ const { CARGOS, GRUPOS_PERMISSAO, TODAS_PERMISSOES } = await import(`${raiz}/src
 const { GRAUS } = await import(`${raiz}/src/data/graus.ts`);
 const { ORGAOS_CENTRAIS, ORGAOS_OBRIGATORIOS_LOCAIS } = await import(`${raiz}/src/data/orgaos.ts`);
 
+// Sem carimbo de data: a regeracao a cada build produziria uma linha de
+// diferenca em todo commit, e o historico do repositorio ja registra quando.
 const semente = {
-  geradoEm: new Date().toISOString().slice(0, 10),
   permissoes: TODAS_PERMISSOES,
   gruposPermissao: GRUPOS_PERMISSAO,
   cargos: CARGOS.map((c) => ({

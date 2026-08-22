@@ -1,4 +1,9 @@
-# Verificação a cada envio: tipos, ícones e compilação.
+# Verificação a cada envio: tipos, ícones, compilação e o percurso da API.
+#
+# O percurso da API sobe um MariaDB, percorre o instalador e exercita as
+# regras que só o servidor pode garantir. É o único ponto do projeto onde a
+# ausência de teste custaria caro em silêncio: uma falha de escopo ou de
+# precedência não aparece na tela.
 name: Verificação
 
 on:
@@ -27,3 +32,59 @@ jobs:
 
       - name: Compilar
         run: npm run build
+
+      - name: Conferir sintaxe do PHP
+        run: |
+          erros=0
+          for arquivo in $(find api implantacao -name '*.php'); do
+            php -l "$arquivo" > /dev/null || erros=1
+          done
+          exit $erros
+
+  api:
+    runs-on: ubuntu-latest
+
+    services:
+      banco:
+        image: mariadb:11
+        env:
+          MARIADB_DATABASE: omcl_teste
+          MARIADB_USER: omcl
+          MARIADB_PASSWORD: senha_teste
+          MARIADB_ROOT_PASSWORD: raiz_teste
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=10s --health-timeout=5s --health-retries=12
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: pdo_mysql, mbstring, openssl
+
+      - run: npm ci
+
+      - name: Montar o pacote de hospedagem
+        run: npm run pacote
+
+      - name: Subir o servidor
+        run: |
+          php -S 127.0.0.1:8080 -t dist-hospedagem implantacao/servidor-local.php &
+          for i in $(seq 1 20); do
+            curl -sf http://127.0.0.1:8080/api/estado > /dev/null && break
+            sleep 1
+          done
+
+      - name: Percorrer o instalador
+        run: testes/instalar.sh http://127.0.0.1:8080 3306
+
+      - name: Percorrer a API
+        run: node testes/api.mjs http://127.0.0.1:8080

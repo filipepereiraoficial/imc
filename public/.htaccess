@@ -11,7 +11,10 @@
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # A API tem roteador próprio; api/.htaccess cuida do restante.
+  # Com back-end, a pasta api/ tem roteador próprio e as rotas passam direto.
+  # A condição importa: sem ela, uma publicação puramente estática devolveria
+  # 404 na sondagem que a aplicação faz para descobrir se há servidor.
+  RewriteCond %{DOCUMENT_ROOT}/api -d
   RewriteRule ^api/ - [L]
 
   # Qualquer outro caminho devolve o index: o roteador do navegador assume.

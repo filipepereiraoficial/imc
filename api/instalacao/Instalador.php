@@ -61,14 +61,17 @@ final class Instalador
                 : 'Ausente — a recuperação de senha ficará no registro do servidor',
         ];
 
-        $pasta = dirname(__DIR__);
+        // A configuração pode viver fora de api/ — ver Config::caminho().
+        $arquivo = Config::caminho();
+        $pasta = dirname($arquivo);
+        $podeGravar = is_file($arquivo) ? is_writable($arquivo) : is_writable($pasta);
         $itens[] = [
-            'nome'    => 'Escrita em api/',
+            'nome'    => 'Escrita da configuração',
             'exigido' => false,
-            'atende'  => is_writable($pasta),
-            'detalhe' => is_writable($pasta)
-                ? 'O instalador poderá gravar api/config.php'
-                : 'Sem permissão — o arquivo de configuração terá de ser criado à mão',
+            'atende'  => $podeGravar,
+            'detalhe' => $podeGravar
+                ? 'O instalador poderá gravar ' . $arquivo
+                : 'Sem permissão em ' . $pasta . ' — o arquivo terá de ser criado à mão',
         ];
         $itens[] = [
             'nome'    => 'Semente de cargos e graus',

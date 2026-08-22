@@ -32,7 +32,9 @@ if (preg_match('#^/api/(config\.php|nucleo/|.*\.sql$|.*\.json$)#', $caminho)) {
     exit;
 }
 
-if (str_starts_with($caminho, '/api')) {
+// Sem a pasta api/ nao ha back-end: a sondagem que a aplicacao faz para
+// descobrir isso cai no index.html, como cairia numa hospedagem estatica.
+if (str_starts_with($caminho, '/api') && is_file($raiz . '/api/index.php')) {
     $alvo = $raiz . $caminho;
     // O instalador e outros arquivos reais são servidos como estão.
     if (is_file($alvo)) {

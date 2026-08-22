@@ -1,0 +1,54 @@
+# Plataforma com back-end: aplicação, PHP e banco.
+#
+#   docker compose -f implantacao/docker-compose-servidor.yml up -d
+#
+# Depois abra http://localhost:8080 — a aplicação leva ao instalador. No passo
+# do banco use: servidor "banco", porta 3306, base "omcl", usuário "omcl" e a
+# senha definida em BANCO_SENHA.
+#
+# Nada de terminar TLS aqui dentro: ponha Caddy, Traefik ou o Nginx do
+# servidor à frente da porta 8080.
+
+services:
+  aplicacao:
+    build:
+      context: ..
+      dockerfile: implantacao/Dockerfile.servidor
+    restart: unless-stopped
+    ports:
+      - '8080:80'
+    depends_on:
+      banco:
+        condition: service_healthy
+    volumes:
+      # A configuração da instalação sobrevive à substituição da imagem: o
+      # arquivo é da instalação, não do código.
+      - configuracao:/dados
+    environment:
+      TZ: UTC
+      OMCL_CONFIG: /dados/config.php
+
+  banco:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: omcl
+      MARIADB_USER: omcl
+      MARIADB_PASSWORD: ${BANCO_SENHA:-troque-esta-senha}
+      MARIADB_ROOT_PASSWORD: ${BANCO_SENHA_RAIZ:-troque-esta-tambem}
+      MARIADB_AUTO_UPGRADE: '1'
+    command: >-
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - dados:/var/lib/mysql
+    healthcheck:
+      test: ['CMD', 'healthcheck.sh', '--connect', '--innodb_initialized']
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    # O banco não precisa de porta publicada: só a aplicação fala com ele.
+
+volumes:
+  dados:
+  configuracao:

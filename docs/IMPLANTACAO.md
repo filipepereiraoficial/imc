@@ -1,12 +1,153 @@
 # Implantação
 
-A plataforma compila para **arquivos estáticos**: HTML, JavaScript, CSS e
-fontes. Não exige Node em produção, nem banco de dados, nem runtime algum no
-servidor. Qualquer hospedagem capaz de servir arquivos serve a plataforma.
+Há duas maneiras de publicar, e a escolha entre elas é a primeira decisão:
 
-Isso vale enquanto os dados vivem no navegador. Ao introduzir o backend descrito
-em [`SEGURANCA.md`](./SEGURANCA.md), a parte estática continua igual — o que
-muda é o serviço de API ao lado dela.
+| | **Com servidor** | **Só estática** |
+|---|---|---|
+| O que se envia | a aplicação **e** a pasta `api/` | apenas a aplicação |
+| O que a hospedagem precisa ter | PHP 8.1+ e MySQL/MariaDB | nada além de servir arquivos |
+| Onde ficam os dados | no banco, no servidor | no navegador de cada pessoa |
+| Serve para | a Ordem de verdade | avaliar as telas, demonstrar, arquivar |
+
+A parte estática é a mesma nos dois casos. O que muda é a presença da pasta
+`api/` ao lado dela — e a aplicação descobre sozinha, na partida, em qual dos
+dois está.
+
+**Para instalar de verdade, vá para [Com servidor](#com-servidor).** As seções
+seguintes tratam da publicação estática, que continua valendo e não deixou de
+funcionar.
+
+---
+
+## Com servidor
+
+### 1. Monte o pacote
+
+```bash
+npm run pacote
+```
+
+Gera `dist-hospedagem/` com tudo lado a lado:
+
+```
+dist-hospedagem/
+  index.html  assets/  fontes/  .htaccess    a aplicação
+  api/                                        o servidor e o instalador
+```
+
+`api/config.php` **não** vai no pacote: ele é gerado no destino, pelo
+instalador, e carrega a senha do banco daquela hospedagem.
+
+### 2. Crie o banco
+
+Pelo painel da hospedagem (cPanel, Plesk) ou pelo phpMyAdmin. Anote nome do
+banco, usuário e senha. O instalador **não cria o banco**, para não exigir do
+usuário do banco um poder que ele não deve ter no dia a dia.
+
+Use `utf8mb4` com `utf8mb4_unicode_ci`.
+
+### 3. Envie os arquivos
+
+Copie **o conteúdo** de `dist-hospedagem/` para `public_html` (cPanel,
+Hostinger, Locaweb) ou `htdocs` (XAMPP). Confira que os arquivos ocultos foram
+junto: `.htaccess` na raiz e outro dentro de `api/`. Muitos clientes de FTP os
+escondem por padrão.
+
+### 4. Abra o endereço no navegador
+
+A aplicação percebe que há servidor sem instalação e leva ao instalador. São
+quatro passos:
+
+1. **Requisitos** — o instalador confere versão do PHP, extensões, permissão de
+   escrita e presença dos arquivos que ele mesmo vai usar.
+2. **Banco de dados** — nome, usuário, senha, servidor, porta e prefixo das
+   tabelas. O prefixo permite mais de uma instalação no mesmo banco, situação
+   comum em hospedagem compartilhada. O instalador só avança depois de
+   conseguir conectar.
+3. **Identidade e administração** — nome do sistema, nome da organização, país
+   e moeda, e a conta de administração: nome, e-mail e senha.
+4. **Conclusão** — o que fazer em seguida.
+
+Se a semeadura falhar no meio, as tabelas criadas são removidas: instalação
+pela metade é pior que instalação nenhuma. Corrija o que a mensagem indicar e
+recomece.
+
+### 5. Depois de instalar
+
+- **Apague `api/instalacao/` do servidor.** Ela não é necessária depois da
+  última tela. O instalador já se tranca sozinho — a chave `instalado_em` na
+  tabela de configuração é o trinco —, mas código que não está no servidor não
+  tem falha a explorar.
+- Confirme no navegador que `seu-dominio/api/config.php` **não** devolve
+  conteúdo. O `.htaccess` da pasta já o impede no Apache; confirme no ar.
+- Ative HTTPS. O cookie de sessão só recebe `Secure` quando a requisição chega
+  por HTTPS; em HTTP simples ele trafega em claro.
+- A conta criada na instalação é **técnica**: mantém a plataforma e não exerce
+  autoridade institucional. Os cargos estatutários são atribuídos depois, pela
+  via prevista no Estatuto.
+
+### XAMPP — instalação local
+
+Serve para experimentar antes de contratar hospedagem, e para uso em rede
+interna.
+
+1. Instale o XAMPP e inicie **Apache** e **MySQL** no painel de controle.
+2. Abra `http://localhost/phpmyadmin` e crie um banco — por exemplo `omcl`,
+   com `utf8mb4_unicode_ci`.
+3. Copie o conteúdo de `dist-hospedagem/` para `C:\xampp\htdocs\ordem`
+   (ou `/Applications/XAMPP/htdocs/ordem` no macOS).
+4. Abra `http://localhost/ordem`.
+5. No passo do banco: usuário `root`, **senha em branco**, servidor
+   `localhost`, porta `3306`. É a configuração padrão do XAMPP.
+
+Uma senha em branco no banco é aceitável numa máquina local e inaceitável em
+servidor exposto. Se a instalação sair da sua máquina, crie um usuário próprio
+com senha.
+
+### Sem XAMPP, para experimentar
+
+Basta ter PHP instalado:
+
+```bash
+npm run pacote
+npm run api:local       # php -S localhost:8080 -t dist-hospedagem
+```
+
+`implantacao/servidor-local.php` reproduz, sem Apache, o que os arquivos
+`.htaccess` fazem em produção.
+
+### Requisitos do servidor
+
+| | |
+|---|---|
+| PHP | 8.1 ou superior |
+| Extensões | `pdo_mysql`, `mbstring`, `json`, `openssl`, `filter` |
+| Banco | MySQL 5.7+ ou MariaDB 10.3+ |
+| Desejável | Argon2id para senhas; `mail()` para recuperação de senha |
+
+O instalador confere tudo isso na primeira tela e diz o que falta. Sem
+Argon2id as senhas usam bcrypt, que é aceitável. Sem `mail()` a recuperação de
+senha vai para o registro do servidor em vez de para a caixa do membro — o que
+serve em desenvolvimento e não serve em produção.
+
+### Atualizar uma instalação existente
+
+```bash
+npm run pacote
+```
+
+Envie tudo **menos** `api/config.php`, que é da instalação e não do código.
+`dist-hospedagem/` nunca o contém, de modo que uma cópia integral da pasta já
+faz a coisa certa.
+
+---
+
+## Publicação estática
+
+Sem a pasta `api/`, a plataforma roda inteira no navegador, sobre
+`localStorage`, com a massa de demonstração. Serve para avaliar as telas, para
+demonstrar e para arquivar — **não para dados reais**, já que não há segurança
+alguma nesse modo e cada visitante tem a sua própria cópia.
 
 ---
 
@@ -31,6 +172,19 @@ hospedagem precisa colaborar.
 O caminho mais portátil: funciona em VPS, Kubernetes, Cloud Run, Render, Fly.io,
 Railway, EasyPanel, Coolify, Dokploy e qualquer painel que aceite um Dockerfile.
 
+**Com back-end** — aplicação, PHP e banco:
+
+```bash
+docker compose -f implantacao/docker-compose-servidor.yml up -d
+```
+
+Abra `http://localhost:8080` e o instalador aparece. No passo do banco:
+servidor `banco`, porta `3306`, base `omcl`, usuário `omcl`, e a senha de
+`BANCO_SENHA`. A configuração da instalação fica num volume, apontada por
+`OMCL_CONFIG`, e sobrevive à substituição da imagem.
+
+**Só a parte estática** — sem PHP, sem banco:
+
 ```bash
 docker build -t omcl .
 docker run -d -p 8080:8080 --name omcl omcl
@@ -42,8 +196,8 @@ Ou com Compose:
 docker compose -f implantacao/docker-compose.yml up -d
 ```
 
-A imagem tem dois estágios: o primeiro compila com Node; o segundo serve com
-Nginx. A imagem final não contém Node nem código-fonte — apenas os estáticos e o
+A imagem estática tem dois estágios: o primeiro compila com Node; o segundo
+serve com Nginx. A imagem final não contém Node nem código-fonte — apenas os estáticos e o
 servidor, em poucos megabytes. Escuta na porta **8080** (não privilegiada), o que
 permite rodar sem root e atende ao padrão das plataformas gerenciadas.
 
@@ -77,6 +231,9 @@ Dois detalhes que o workflow já resolve:
   `404.html`, o que faz o Pages devolver a aplicação em vez de erro.
 
 ## Apache, cPanel e hospedagem compartilhada
+
+Esta seção trata da publicação **sem** back-end. Com PHP e banco, use
+[Com servidor](#com-servidor).
 
 ```bash
 npm run build
@@ -171,6 +328,17 @@ desenhado, e o defeito passa despercebido em revisão de código.
 ---
 
 ## Depois de publicar
+
+Com servidor, some a estes:
+
+- [ ] `api/instalacao/` removida.
+- [ ] `seu-dominio/api/config.php` não devolve conteúdo.
+- [ ] `seu-dominio/api/estado` devolve JSON com `"instalado": true`.
+- [ ] HTTPS ativo — sem ele o cookie de sessão trafega em claro.
+- [ ] A tela de acesso **não** mostra perfis de demonstração. Se mostrar, a
+      aplicação não encontrou a pasta `api/`.
+
+Em qualquer modo:
 
 - [ ] Recarregue uma rota interna diretamente (`/feed`) — deve carregar a
       aplicação, não 404.

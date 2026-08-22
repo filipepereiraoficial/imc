@@ -5,7 +5,9 @@
  * pode garantir — escopo, precedencia, quorum, unicidade do voto e as
  * restricoes normativas que a tela nao alcanca.
  *
- * Uso: node testes/api.mjs [http://127.0.0.1:8088]
+ * Pressupoe instalacao recem-feita — testes/instalar.sh a prepara.
+ *
+ * Uso: testes/instalar.sh && node testes/api.mjs [http://127.0.0.1:8088]
  */
 
 const BASE = process.argv[2] ?? 'http://127.0.0.1:8088';
@@ -185,6 +187,13 @@ let candidatoId;
   candidatoId = lista.dados?.[0]?.id;
   conferir('o postulante entra como pendente', lista.dados?.length === 1, JSON.stringify(lista).slice(0, 160));
 
+  if (!candidatoId) {
+    // O percurso pressupoe instalacao recem-feita. Rodar sobre uma base ja
+    // usada produziria falhas em cascata que nao dizem nada sobre o codigo.
+    console.log('\nInstalacao nao esta limpa. Refaca antes: testes/instalar.sh');
+    process.exit(1);
+  }
+
   const candidato = new Cliente('candidato');
   const tentativa = await candidato.entrar('helena@ordem.test', 'Vespera-Serena-1889');
   conferir('pendente nao entra antes do deferimento', tentativa.situacao === 403, `situacao ${tentativa.situacao}`);
@@ -236,6 +245,48 @@ titulo('Escalonamento de privilegio');
     permissoes: ['membros.editar'],
   });
   conferir('membro comum nao mexe em permissoes', concessao.situacao === 403);
+}
+
+titulo('Concessao de permissao — o teto e o proprio poder');
+{
+  // A guarda so aparece quando quem administra permissoes nao tem todas: o
+  // administrador da instalacao tem, e por ele o caso nunca seria exercitado.
+  const graoMestre = referencias.cargos.find((c) => c.codigo === 'grao_mestre');
+  const doGraoMestre = referencias.cargos.find((c) => c.codigo === 'grao_mestre').permissoes;
+
+  const habilita = await admin.put(`/cargos/${graoMestre.id}/permissoes`, {
+    permissoes: [...doGraoMestre, 'permissoes.gerenciar'],
+  });
+  conferir('o administrador concede o que ele mesmo possui', habilita.ok === true,
+    JSON.stringify(habilita).slice(0, 160));
+
+  const cargoAtual = (await admin.get(`/membros/${candidatoId}`)).dados.cargoId;
+  const promove = await admin.patch(`/membros/${candidatoId}`, { cargoId: graoMestre.id });
+  conferir('o administrador atribui cargo abaixo do seu', promove.ok === true,
+    JSON.stringify(promove).slice(0, 160));
+
+  const dirigente = new Cliente('grao-mestre');
+  await dirigente.entrar('helena@ordem.test', 'Vespera-Serena-1889');
+
+  const cargoTesoureiro = referencias.cargos.find((c) => c.codigo === 'tesoureiro_geral');
+  const excesso = await dirigente.put(`/cargos/${cargoTesoureiro.id}/permissoes`, {
+    permissoes: ['tesouraria.gerenciarContas'],
+  });
+  conferir(
+    'nao se concede permissao que nao se possui',
+    excesso.situacao === 403,
+    `situacao ${excesso.situacao}`,
+  );
+
+  const acima = await dirigente.put(`/cargos/${referencias.cargos.find((c) => c.codigo === 'administrador').id}/permissoes`, {
+    permissoes: ['membros.visualizar'],
+  });
+  conferir('nao se altera cargo de precedencia superior', acima.situacao === 403);
+
+  // Devolve o quadro ao estado anterior para nao contaminar o restante.
+  await admin.put(`/cargos/${graoMestre.id}/permissoes`, { permissoes: doGraoMestre });
+  await admin.patch(`/membros/${candidatoId}`, { cargoId: cargoAtual });
+  await membro.entrar('helena@ordem.test', 'Vespera-Serena-1889');
 }
 
 titulo('Feed');

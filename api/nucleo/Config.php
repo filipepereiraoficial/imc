@@ -14,8 +14,20 @@ final class Config
 {
     private static ?array $dados = null;
 
+    /**
+     * Onde vive o arquivo de configuração.
+     *
+     * Por padrão, api/config.php — que é onde a hospedagem compartilhada o
+     * espera. A variável OMCL_CONFIG permite tirá-lo dali: em contêiner, o
+     * arquivo precisa sobreviver à substituição da imagem, e por isso mora
+     * num volume, fora da árvore do código.
+     */
     public static function caminho(): string
     {
+        $doAmbiente = getenv('OMCL_CONFIG');
+        if (is_string($doAmbiente) && $doAmbiente !== '') {
+            return $doAmbiente;
+        }
         return dirname(__DIR__) . '/config.php';
     }
 

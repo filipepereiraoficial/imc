@@ -39,13 +39,14 @@ filtrado por permissão.
 │  layout/  AppShell, navegação, busca global, cabeçalho         │
 ├──────────────────────────────────────────────────────────────┤
 │  Contextos (src/context)                                       │
-│  DadosContext  estado da base + auditoria + persistência       │
-│  AuthContext   sessão, cadastro, RBAC aplicado                 │
+│  ServidorContext  há back-end? instalado?                      │
+│  DadosContext     estado da base + auditoria + persistência    │
+│  AuthContext      sessão, cadastro, RBAC aplicado              │
 │  TemaContext   claro/escuro/sistema                            │
 │  AvisoContext  notificações efêmeras (toasts)                  │
 ├──────────────────────────────────────────────────────────────┤
 │  Regras (src/lib)                                              │
-│  rbac  · consultas · xp · formato · senha · armazenamento      │
+│  rbac · deliberacao · consultas · xp · formato · api · mapear  │
 ├──────────────────────────────────────────────────────────────┤
 │  Modelo (src/types) + carga inicial (src/data)                 │
 └──────────────────────────────────────────────────────────────┘
@@ -55,16 +56,47 @@ filtrado por permissão.
 regras dependem apenas do modelo. Nada em `lib/` importa React — são funções
 puras, testáveis isoladamente.
 
-### Onde entra o backend
+### O servidor
 
-A camada de dados é a única que conhece a origem da informação. Hoje
-`DadosContext` carrega `criarBaseInicial()` e persiste no `localStorage`. Ao
-conectar uma API real, apenas esse contexto muda: as telas consomem os tipos de
-`src/types`, que já espelham o esquema relacional de `docs/schema.sql`.
+```
+┌──────────────────────────────────────────────────────────────┐
+│  api/index.php                                                 │
+│  cabeçalhos · verificação de instalação · CSRF · roteamento    │
+├──────────────────────────────────────────────────────────────┤
+│  api/rotas/                                                    │
+│  sessão · referências · membros · núcleos · publicações        │
+│  assembleias · financeiro · administração                      │
+├──────────────────────────────────────────────────────────────┤
+│  api/nucleo/                                                   │
+│  Seguranca   senhas, sessões, CSRF, limitação de tentativas    │
+│  Rbac        permissão + escopo — porte de src/lib/rbac.ts     │
+│  Deliberacao quórum e apuração — porte de src/lib/deliberacao  │
+│  Requisicao  toda entrada tipada e validada                    │
+│  Membros     privacidade do Est. Art. 21, VI na serialização   │
+│  Auditoria   somente acréscimo — Est. Art. 13                  │
+├──────────────────────────────────────────────────────────────┤
+│  api/nucleo/Banco.php  →  MySQL / MariaDB, 31 tabelas          │
+└──────────────────────────────────────────────────────────────┘
+```
+
+PHP puro, sem framework, porque a plataforma precisa ser instalável onde a
+Ordem consegue hospedar: cPanel barato, Plesk, XAMPP. Ver
+[`BACKEND.md`](./BACKEND.md).
+
+**Dois lugares, uma verdade.** `Rbac.php` e `Deliberacao.php` são portes
+deliberados de `src/lib/rbac.ts` e `src/lib/deliberacao.ts`, escritos para
+serem lidos lado a lado. Foi para isso que as regras nasceram sem dependência
+de React. Cargos, graus e órgãos têm fonte única em `src/data`, exportada por
+`npm run semente`.
+
+**Dois modos.** `ServidorContext` descobre na partida se há back-end. Com ele,
+`AuthContext` autentica pela API e a base local é esvaziada — uma Ordem
+recém-instalada não deve abrir com membros fictícios. Sem ele, a aplicação
+segue sobre `localStorage`, com a massa de demonstração.
 
 `src/lib/consultas.ts` reúne as consultas derivadas (ranking territorial, fluxo
 de caixa, indicadores). Cada função ali tem correspondência direta com uma query
-SQL — a migração é mecânica.
+SQL — o que resta migrar é mecânico.
 
 ---
 
@@ -212,8 +244,9 @@ Detalhamento em [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md).
 ## 8. Segurança
 
 Autenticação, sessão, RBAC, auditoria, validação e proteção de dados pessoais —
-com a distinção explícita entre o que o protótipo demonstra e o que precisa
-existir no servidor. Ver [`SEGURANCA.md`](./SEGURANCA.md).
+com a distinção explícita entre o que o servidor aplica, o que a interface
+apenas exibe e o que ainda depende de decisão de operação. Ver
+[`SEGURANCA.md`](./SEGURANCA.md).
 
 ---
 
@@ -225,15 +258,17 @@ e o ranking e os relatórios operam sobre esses eixos sem alteração de código
 
 Pontos de extensão preparados:
 
-- **Aplicativos Android e iOS** — a interface é mobile-first e a camada de dados
-  está isolada; um cliente nativo consome a mesma API.
+- **Aplicativos Android e iOS** — a interface é mobile-first e a API já existe;
+  um cliente nativo consome as mesmas rotas.
 - **QR Code e validação de carteira** — o componente já existe; falta a
   assinatura verificável emitida pelo servidor.
 - **Certificados e assinatura digital** — `Curso.emiteCertificado` e o registro
   de progresso são a base.
 - **Dois fatores** — o campo existe no membro e a interface de ativação está
   pronta; falta o serviço TOTP.
-- **Votação e assembleias digitais** — o modelo de propostas e tramitação é o
-  ponto de partida natural.
+- **Rotas que faltam** — eventos, documentos, formação, propostas, mensagens,
+  notificações, processos disciplinares e serviço honorífico têm tabela em
+  `esquema.sql` e ainda vivem no navegador. A rota é o único trabalho pendente
+  em cada um.
 - **Integrações** (e-mail, calendário, sistemas financeiros) e **API pública ou
   privada** — as consultas de `src/lib/consultas.ts` delimitam o contrato.
